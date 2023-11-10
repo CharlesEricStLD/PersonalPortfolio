@@ -1,7 +1,5 @@
 //Component of the ABout Me Page 
 
-import _default from "styled-components/dist/utils/createWarnTooManyClasses"
-
 const AboutMe= () => {
 
   return (
