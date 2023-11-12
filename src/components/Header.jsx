@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 //Scroll to : https://stackoverflow.com/questions/54715462/react-scroll-how-to-scroll-to-a-specific-targeted-component-when-clicking-on-n
 
@@ -8,13 +9,28 @@ const Header = () => {
   // and get in touch should be in the same page
     return (
       <>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/Aboutme">About Me</NavLink>
-            <NavLink>Projects</NavLink>
-            <NavLink>Get In Touch</NavLink>
-      </>
+        <HeaderContainer>
+            <NavItems to="/">Home</NavItems>
+            <NavItems to="/Aboutme">About Me</NavItems>
+            <NavItems>Projects</NavItems>
+            <NavItems>Get In Touch</NavItems>
+          </HeaderContainer>
+      </> 
     ) 
   
   } 
   
   export default Header;
+
+  const HeaderContainer = styled.div`
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: flex-end;
+  `
+
+  const NavItems = styled(NavLink)`
+    margin-right:5%;
+  `
+
+
+
