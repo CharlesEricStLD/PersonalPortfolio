@@ -13,21 +13,11 @@ import gitlogo from "./assets/gitLogo.png"
 import reactLogo from "./assets/reactLogo.png"
 import nodeJsLogo from "./assets/nodejsLogo.png"
 import mongoDbLogo from "./assets/mongodbLogo.png"
-import { useNavigate } from 'react-router-dom'
 import { SocialIcon } from 'react-social-icons'
-import ContactUs from './Components/Form'
 
 //Nic eportfolio exammple : https://sharon-yi.com///
 
 function App() {
-
-
-  const navigate = useNavigate();
-
-  const handleEmailClick =() => {
-    window.open('mailto:ce.stlouisdupuis@gmail.com?subject=Subject&body=Body%20goes%20here')
-  }
-
 
   return (
     <>
@@ -56,9 +46,20 @@ function App() {
       <SpacingSection>
       <h2>Down here you can see all my current projects...</h2>
       <ProjectGridContainer>
+        
+        
         <img src={NyanCatProject} alt= "Image of my NyanCat project"></img>
-        <img src={FruitStoreProject} alt= "Image of my Fruit Store webPage"></img>
+        
+        <div style={{position:"relative"}}>
+        <HoverlayEffect> <p>Simple Store to buy fruits from with a description page for each fruits</p> </HoverlayEffect>
+        <img src={FruitStoreProject} alt= "Image of my Fruit Store webPage" ></img>
+        </div>
+
+        <div style={{position:"relative"}}>
+        <HoverlayEffect> <p>The classic Cookie game clicker</p> </HoverlayEffect>
         <img src={CookieClickerProject} alt= "Image of my Cookie Clicker game"/>
+        </div>
+
       </ProjectGridContainer>
       </SpacingSection>
 
@@ -89,9 +90,10 @@ const SpacingSection = styled.div`
 const LogoSection = styled.div`
   display:flex;
   justify-content: space-between;
+  margin-top: 5%;
 
 img{
-  width:60px;
+  width:50px;
 }
 `
 
@@ -99,13 +101,41 @@ const ProjectGridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  grid-gap: 2%;
 
   img {
+  position:relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  z-index:-1;
   }
+`
 
+const HoverlayEffect = styled.div`
+position:absolute;
+width:100%;
+height:100%;
+display: flex;
+justify-content: center;
+
+&:hover, p:hover{
+  background-color: blue;
+  color: white;
+  animation: BackgroundChange 0.5s ease-in-out;
+}
+
+& p{
+  width:100%;
+  text-align: center;
+  padding-top:25%;
+  font-size: 1.2em;
+  color:#ffffff00
+}
+
+@keyframes BackgroundChange {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 `
 
 const GetInTouchSection = styled.footer`
