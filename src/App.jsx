@@ -14,6 +14,7 @@ import reactLogo from "./assets/reactLogo.png"
 import nodeJsLogo from "./assets/nodejsLogo.png"
 import mongoDbLogo from "./assets/mongodbLogo.png"
 import { SocialIcon } from 'react-social-icons'
+import Tooltip from '@mui/material/Tooltip';
 
 //Nic eportfolio exammple : https://sharon-yi.com///
 
@@ -34,12 +35,28 @@ function App() {
       <SpacingSection>
       <h2>Tools I work with</h2>
       <LogoSection>
+        <Tooltip title="Javascript" placement="top">
         <img src={javascriptLogo} alt="Logo of Javascript" />
+        </Tooltip>
+        <Tooltip title="CSS" placement="top">
         <img src={css3Logo} alt="Logo of Css" />
+        </Tooltip>
+
+        <Tooltip title="Git" placement="top">
         <img src={gitlogo} alt="Logo of Git" />
+        </Tooltip>
+
+        <Tooltip title="React" placement="top">
         <img src={reactLogo} alt='Logo of React'></img>
+        </Tooltip>
+
+        <Tooltip title="Node JS" placement="top">
         <img src={nodeJsLogo} alt='Logo of NodeJs'></img>
+        </Tooltip>
+
+        <Tooltip title="Mongo Database" placement="top">
         <img src={mongoDbLogo} alt='Logo of MongoDb'></img>
+        </Tooltip>
       </LogoSection>
       </SpacingSection>
 
@@ -68,6 +85,7 @@ function App() {
       <GetInTouchIcon>    
       <SocialIcon target="_blank" bgColor="blue" network="linkedin" href='https://www.linkedin.com/in/charles-%C3%A9ric-st-l-dupuis-2704981b9'></SocialIcon>
       <SocialIcon target="_blank" bgColor="blue" network="email" href='mailto:ce.stlouisdupuis@gmail.com'> </SocialIcon>
+      <SocialIcon target="_blank" bgColor="blue" network="github" href='https://github.com/CharlesEricStLD'> </SocialIcon>
       <p>ce.stlouisdupuis@gmail.com</p>
       </GetInTouchIcon>
       </GetInTouchSection>
