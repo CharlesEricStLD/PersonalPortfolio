@@ -13,7 +13,6 @@ import {Route} from "react-router-dom";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-<React.StrictMode>
     <BrowserRouter>
     <Header/>
     <Routes>
@@ -21,5 +20,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/AboutMe" element={<AboutMe/>}></Route> 
     </Routes>
     </BrowserRouter>
-</React.StrictMode>,
 )

@@ -23,6 +23,7 @@ const Header = () => {
   export default Header;
 
   const HeaderContainer = styled.header`
+    margin-top: 2%;
     display: flex;
     justify-content: flex-end;
   `
