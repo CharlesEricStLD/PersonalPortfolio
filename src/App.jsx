@@ -1,8 +1,9 @@
 //Hero Section 
 
-import { useState } from 'react'
 import './App.css'
-import styled from 'styled-components'
+import { useState } from 'react'
+import styled, { keyframes } from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 import FruitStoreProject from "./assets/FruitStoreWorkshop.png"
 import CookieClickerProject from "./assets/CookieClickerProject.png"
 import javascriptLogo from "./assets/javascript.png"
@@ -13,31 +14,36 @@ import nodeJsLogo from "./assets/nodejsLogo.png"
 import mongoDbLogo from "./assets/mongodbLogo.png"
 import { SocialIcon } from 'react-social-icons'
 import Tooltip from '@mui/material/Tooltip';
+import { Snackbar, Alert } from '@mui/material'
 import HomePagePhoto from "./assets/HomePagePhoto.png"
+import fizzGame from "./assets/FizzGame.png"
+
 
 //Nic eportfolio exammple : https://sharon-yi.com///
 // https://www.adhamdannaway.com/contact
 
-const name = "Hi, I'm Charles-Eric";
+const name = "Hi, I'm  Charles-Eric";
 const lettersArray = name.split('');
-let LetterLenght = lettersArray.lenght; 
 
 function App() {
 
+const [open, SetOpen] = useState(false);
+
   return (
     <>
+      <IntroSection>
       <TitleSpacingSection>
       <img src={HomePagePhoto}></img>
-      <div>{lettersArray.map((letter, index) => <MySpan key={index}>{letter}</MySpan>)}</div>
+      {lettersArray.map((letter, index) => <MySpan $index={index} key={index}>{letter}</MySpan>)}
       </TitleSpacingSection>
 
       <SubTitleSpacingSection>
       <h2>a passionate developper that like to work hard and build nices projects</h2>
       <h3>If you need a project well done, with passion and good vibes, I'm your dev !</h3>
       </SubTitleSpacingSection>
+      </IntroSection>
 
-
-      <SpacingSection>
+      <ToolsSection>
       <h2>Tools I work with</h2>
       <LogoSection>
         <Tooltip title="Javascript" placement="top" >
@@ -64,12 +70,17 @@ function App() {
         <img src={mongoDbLogo} alt='Logo of MongoDb'></img>
         </Tooltip>
       </LogoSection>
-      </SpacingSection>
+      </ToolsSection>
 
-      <SpacingSection>
+      <ProjectSection>
       <h2>My current projects</h2>
       <ProjectGridContainer>
         
+      <div style={{position:"relative"}} onClick={()=> window.open("https://fizz-game.vercel.app/", "_blank")} >
+        <HoverlayEffect> <p>The old Fizz Buzz game, made with vanilla Js and Html</p> </HoverlayEffect>
+        <img src={fizzGame} alt= "Image of my FizzBuzz game" />
+        </div>
+
         <div style={{position:"relative"}}>
         <HoverlayEffect> <p>Simple Store to buy fruits from with a description page for each fruits</p> </HoverlayEffect>
         <img src={FruitStoreProject} alt= "Image of my Fruit Store webPage" ></img>
@@ -81,7 +92,7 @@ function App() {
         </div>
 
       </ProjectGridContainer>
-      </SpacingSection>
+      </ProjectSection>
 
       <GetInTouchSection>
       <h2 className="GetInTouch">Get in Touch</h2>
@@ -89,7 +100,15 @@ function App() {
       <SocialIcon target="_blank" bgColor="black" network="linkedin" href='https://www.linkedin.com/in/charles-%C3%A9ric-st-l-dupuis-2704981b9' style={{ height: 75, width: 75, marginRight:50}}  ></SocialIcon>
       <SocialIcon target="_blank" bgColor="black" network="email" href='mailto:ce.stlouisdupuis@gmail.com'  style={{ height: 75, width: 75, marginRight:50}}> </SocialIcon>
       <SocialIcon target="_blank" bgColor="black" network="github" href='https://github.com/CharlesEricStLD'  style={{ height: 75, width: 75, marginRight:50}}> </SocialIcon>
+      <div>
       <p>ce.stlouisdupuis@gmail.com</p>
+      <button onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>Copy</button>
+      <Snackbar open={open} autoHideDuration={4000}>
+      <Alert severity="success">
+      Email copied to clipboard!
+      </Alert>
+      </Snackbar> 
+      </div>
       </GetInTouchIcon>
       </GetInTouchSection>
     </>
@@ -98,24 +117,27 @@ function App() {
 
 export default App
 
-const MySpan = styled.span`
-div span {
-  display: inline-block;
-  text-transform: uppercase;
-  animation: flip 1s infinite;
-  animation-delay: calc(.2s * ${(props) => (props.key)})
-}
-
-@keyframes flip {
-  0%,80% {
+const FlipAnimation = keyframes`
+  100% {
     transform: rotateY(360deg) 
   }
-}
+`
+const MySpan = styled.span`
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  animation: ${FlipAnimation} 2s;
+  animation-delay: ${(props) => 0.2 * props.$index}s;
+  white-space:pre;
+  font-family: "LarkenExtraBold";
 `
 
-const TitleSpacingSection= styled.section`
-  padding-top: 10%;
+const IntroSection = styled.section`
+  margin-bottom: 20%;
+`
 
+const TitleSpacingSection= styled.div`
+  margin-top: 10%;
 
   img{
     width:50%;
@@ -126,11 +148,7 @@ const TitleSpacingSection= styled.section`
 `
 
 
-const SubTitleSpacingSection = styled.section`
-`
-
-const SpacingSection = styled.div`
-  padding-top:15%;
+const SubTitleSpacingSection = styled.div`
 `
 
 const LogoSection = styled.div`
@@ -143,9 +161,17 @@ const LogoSection = styled.div`
   }
 `
 
-export const ProjectGridContainer = styled.div`
+const ToolsSection = styled.section`
+  margin-top:10%;
+`
+const ProjectSection = styled.section`
+  margin-top: 10%;
+`
+
+
+const ProjectGridContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-gap: 2%;
 
@@ -189,7 +215,7 @@ border-radius: 15px;
 
 const GetInTouchSection = styled.footer`
   text-align: right;
-  padding-top:20%;
+  margin-top:20%;
 `
 
 const GetInTouchIcon = styled.div`
@@ -202,4 +228,19 @@ const GetInTouchIcon = styled.div`
     margin-right:5%;
   }
 
+  div{
+    display: flex;
+  }
+
+  button{
+    font-family: "Larken";
+    border-radius: 5px;
+    font-size: 0.7em;
+    width:30%;
+    height:30%;
+    float: right;
+    margin: auto;
+    text-align: center;
+    margin-left:5%;
+  }
 `
