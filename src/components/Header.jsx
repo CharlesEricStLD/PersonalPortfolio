@@ -12,8 +12,8 @@ const Header = () => {
         <HeaderContainer>
             <NavItems to="/">Home</NavItems>
             <NavItems to="/Aboutme">About Me</NavItems>
-            <NavItems>Projects</NavItems>
-            <NavItems>Get In Touch</NavItems>
+            <a href="#projectsSection" scroll>Projects</a> 
+            <a href="#getInTouchSection">Get In Touch</a>
           </HeaderContainer>
       </> 
     ) 
@@ -28,7 +28,7 @@ const Header = () => {
     justify-content: flex-end;
   `
 
-  const NavItems = styled(NavLink)`
+const NavItems = styled(NavLink)`
     margin-right:5%;
 
       

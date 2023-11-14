@@ -11,7 +11,6 @@
   url("./fonts/LarkenDEMO-Regular.otf") format('opentype');
 }
 
-
 :root {
   font-family: "Larken", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -35,6 +34,8 @@
 
   /* In Firefox */
   scrollbar-width: none;
+
+  scroll-behavior: smooth;
 }
 
 /* In chrome base */
@@ -47,4 +48,36 @@ h1{
   font-family: "LarkenExtraBold";
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+a{
+  margin-right:5%;
+  color: #646cff;
+  text-decoration: inherit;
+  font-family: "LarkenExtraBold";
+}
+
+area:hover {
+  color: #fff3af;
+}
+
+a::after {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 0;
+  height: 3px;
+  background: #fff3af;
+  border-radius: 5px;
+}
+
+@keyframes borderAnimation{
+  0%   {width:0;}
+  100% {width:100%;}
+}
+
+
+a:hover::after {
+  animation: borderAnimation 1s;;
+  width: 100%;
 }

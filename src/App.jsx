@@ -72,7 +72,7 @@ const [open, SetOpen] = useState(false);
       </LogoSection>
       </ToolsSection>
 
-      <ProjectSection>
+      <ProjectSection id="projectsSection">
       <h2>My current projects</h2>
       <ProjectGridContainer>
         
@@ -94,7 +94,7 @@ const [open, SetOpen] = useState(false);
       </ProjectGridContainer>
       </ProjectSection>
 
-      <GetInTouchSection>
+      <GetInTouchSection id="getInTouchSection">
       <h2 className="GetInTouch">Get in Touch</h2>
       <GetInTouchIcon>    
       <SocialIcon target="_blank" bgColor="black" network="linkedin" href='https://www.linkedin.com/in/charles-%C3%A9ric-st-l-dupuis-2704981b9' style={{ height: 75, width: 75, marginRight:50}}  ></SocialIcon>
@@ -103,7 +103,7 @@ const [open, SetOpen] = useState(false);
       <div>
       <p>ce.stlouisdupuis@gmail.com</p>
       <button onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>Copy</button>
-      <Snackbar open={open} autoHideDuration={4000}>
+      <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(false)}>
       <Alert severity="success">
       Email copied to clipboard!
       </Alert>
