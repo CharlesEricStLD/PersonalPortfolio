@@ -2,14 +2,13 @@
 
 import { useState } from 'react'
 import './App.css'
-import styled from "styled-components"
-import NyanCatProject from "./assets/NyanCatImg.gif"
+import styled from 'styled-components'
 import FruitStoreProject from "./assets/FruitStoreWorkshop.png"
 import CookieClickerProject from "./assets/CookieClickerProject.png"
-import javascriptLogo from "./assets/javascriptLogo.png"
-import css3Logo from "./assets/css3Logo.png"
-import gitlogo from "./assets/gitLogo.png"
-import reactLogo from "./assets/reactLogo.png"
+import javascriptLogo from "./assets/javascript.png"
+import css3Logo from "./assets/css3.png"
+import gitlogo from "./assets/git.png"
+import reactLogo from "./assets/react.png"
 import nodeJsLogo from "./assets/nodejsLogo.png"
 import mongoDbLogo from "./assets/mongodbLogo.png"
 import { SocialIcon } from 'react-social-icons'
@@ -34,10 +33,11 @@ function App() {
       <SpacingSection>
       <h2>Tools I work with</h2>
       <LogoSection>
-        <Tooltip title="Javascript" placement="top">
+        <Tooltip title="Javascript" placement="top" >
         <img src={javascriptLogo} alt="Logo of Javascript" />
         </Tooltip>
-        <Tooltip title="CSS" placement="top">
+
+        <Tooltip title="CSS-3" placement="top">
         <img src={css3Logo} alt="Logo of Css" />
         </Tooltip>
 
@@ -53,7 +53,7 @@ function App() {
         <img src={nodeJsLogo} alt='Logo of NodeJs'></img>
         </Tooltip>
 
-        <Tooltip title="Mongo Database" placement="top">
+        <Tooltip title="Mongo Database" placement="top" >
         <img src={mongoDbLogo} alt='Logo of MongoDb'></img>
         </Tooltip>
       </LogoSection>
@@ -62,9 +62,6 @@ function App() {
       <SpacingSection>
       <h2>Down here you can see all my current projects...</h2>
       <ProjectGridContainer>
-        
-        
-        <img src={NyanCatProject} alt= "Image of my NyanCat project"></img>
         
         <div style={{position:"relative"}}>
         <HoverlayEffect> <p>Simple Store to buy fruits from with a description page for each fruits</p> </HoverlayEffect>
@@ -110,13 +107,13 @@ const LogoSection = styled.div`
   margin-top: 5%;
 
 img{
-  width:70px;
+  width:10%;
 }
 `
 
 export const ProjectGridContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-gap: 2%;
 
@@ -125,6 +122,7 @@ export const ProjectGridContainer = styled.div`
   width: 100%;
   height: 100%;
   z-index:-1;
+  border-radius: 15px;
   }
 `
 
@@ -134,6 +132,7 @@ width:100%;
 height:100%;
 display: flex;
 justify-content: center;
+border-radius: 15px;
 
 &:hover, p:hover{
   background-color: #fff3af;

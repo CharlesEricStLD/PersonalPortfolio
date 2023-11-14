@@ -1,12 +1,25 @@
+
+@font-face {
+  font-family: "LarkenExtraBold";
+  src: local("Larken"),
+  url("./fonts/LarkenDEMO-ExtraBold.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "Larken";
+  src: local("Larken"),
+  url("./fonts/LarkenDEMO-Regular.otf") format('opentype');
+}
+
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Larken", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-size: 1.5em;
 
   color-scheme: light dark;
   color:#fff3af;
   background: linear-gradient(#0f2030, #b0d6e6be);
-  
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,10 +28,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
+h1{
+  font-family: "LarkenExtraBold";
+}
+
 a {
-  font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+  font-family: "LarkenExtraBold";
 }
 
 a:hover {
