@@ -32,8 +32,8 @@ const [open, SetOpen] = useState(false);
   return (
     <>
       <IntroSection>
-      <TitleSpacingSection>
       <img src={HomePagePhoto}></img>
+      <TitleSpacingSection>
       {lettersArray.map((letter, index) => <MySpan $index={index} key={index}>{letter}</MySpan>)}
       </TitleSpacingSection>
 
@@ -102,8 +102,8 @@ const [open, SetOpen] = useState(false);
       <SocialIcon target="_blank" bgColor="black" network="github" href='https://github.com/CharlesEricStLD'  style={{ height: 75, width: 75, marginRight:50}}> </SocialIcon>
       <div>
       <p>ce.stlouisdupuis@gmail.com</p>
-      <button onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>Copy</button>
-      <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(false)}>
+      <button  variant="contained" onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>Copy</button>
+      <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
       <Alert severity="success">
       Email copied to clipboard!
       </Alert>
@@ -134,6 +134,59 @@ const MySpan = styled.span`
 
 const IntroSection = styled.section`
   margin-bottom: 20%;
+
+  img{
+    width:50%;
+    position:relative;
+    left:-8%;
+    float: left;
+  }
+
+  //tablet view
+  @media ( min-width: 600px) and (max-width:768px) {
+    font-size: 0.70em;
+    h2 {
+      font-size: 1.1em;
+      margin:0;
+      text-align: center;
+    }
+    h3{
+      font-size: 0.9em;
+    }
+    span:nth-of-type(9) {
+    height:0;
+    }
+    span:nth-of-type(9) {
+    display: block;
+    }
+    img{
+      padding-bottom:10%;
+    }
+  }
+
+  //Phone view 
+  @media ( min-width: 375px) and (max-width:767px) {
+    font-size: 0.6em;
+    h2 {
+      font-size: 1.1em;
+      margin:0;
+      text-align: center;
+    }
+    h3{
+      font-size: 0.9em;
+    }
+    span:nth-of-type(9) {
+    height:0;
+    }
+    span:nth-of-type(9) {
+    display: block;
+    }
+    img{
+      width:40%;
+      float:left;
+      padding-bottom:10%;
+    }
+  }
 `
 
 const TitleSpacingSection= styled.div`
@@ -145,10 +198,17 @@ const TitleSpacingSection= styled.div`
     left:-8%;
     float: left;
   }
+
+  @media ( min-width: 600px) and (max-width:768px) {
+    img{
+      width:45%;
+    }
+  }
 `
 
 
 const SubTitleSpacingSection = styled.div`
+font-size: 1.2;
 `
 
 const LogoSection = styled.div`
@@ -163,17 +223,23 @@ const LogoSection = styled.div`
 
 const ToolsSection = styled.section`
   margin-top:10%;
+
+   //tablet view
+  @media ( min-width: 600px) and (max-width:768px)  {
+  margin-top: 5%;
+  }
+
 `
 const ProjectSection = styled.section`
   margin-top: 10%;
 `
 
-
 const ProjectGridContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 2%;
+  width:100%;
 
   img {
   position:relative;
@@ -228,6 +294,10 @@ const GetInTouchIcon = styled.div`
     margin-right:5%;
   }
 
+  p{
+    font-size: 1.2em;
+  }
+
   div{
     display: flex;
   }
@@ -236,11 +306,18 @@ const GetInTouchIcon = styled.div`
     font-family: "Larken";
     border-radius: 5px;
     font-size: 0.7em;
+    padding:1% 2%;
     width:30%;
-    height:30%;
     float: right;
     margin: auto;
     text-align: center;
     margin-left:5%;
+    background-color: #646cff;
+  }
+
+  @media ( min-width: 375px) and (max-width:767px) {
+  p{
+    font-size: 0.8em;
+  }
   }
 `

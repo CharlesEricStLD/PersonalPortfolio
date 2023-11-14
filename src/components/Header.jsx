@@ -12,8 +12,8 @@ const Header = () => {
         <HeaderContainer>
             <NavItems to="/">Home</NavItems>
             <NavItems to="/Aboutme">About Me</NavItems>
-            <a href="#projectsSection" scroll>Projects</a> 
-            <a href="#getInTouchSection">Get In Touch</a>
+            <a class="header" href="#projectsSection" scroll>Projects</a> 
+            <a class="header" href="#getInTouchSection">Get In Touch</a>
           </HeaderContainer>
       </> 
     ) 
@@ -26,6 +26,16 @@ const Header = () => {
     margin-top: 2%;
     display: flex;
     justify-content: flex-end;
+    font-size: 1.4em;
+
+    //tablet view
+    @media ( min-width: 600px) and (max-width:768px) {
+    font-size: 0.9em;
+    }
+
+    @media ( min-width: 375px) and (max-width:767px) {
+    
+    }
   `
 
 const NavItems = styled(NavLink)`
