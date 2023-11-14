@@ -117,10 +117,14 @@ const [open, SetOpen] = useState(false);
 
 export default App
 
+
+
 const FlipAnimation = keyframes`
+  
   100% {
     transform: rotateY(360deg) 
   }
+
 `
 const MySpan = styled.span`
   display: inline-block;
@@ -133,6 +137,7 @@ const MySpan = styled.span`
 `
 
 const IntroSection = styled.section`
+  
   margin-bottom: 20%;
 
   img{
@@ -165,7 +170,7 @@ const IntroSection = styled.section`
   }
 
   //Phone view 
-  @media ( min-width: 375px) and (max-width:767px) {
+  @media ( min-width: 375px) and (max-width:600px) {
     font-size: 0.6em;
     h2 {
       font-size: 1.1em;

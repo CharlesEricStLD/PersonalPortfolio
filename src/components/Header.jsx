@@ -1,19 +1,22 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import NavBarPhone from "./NavBarPhone"
+import { useState } from 'react'
 
 //Scroll to : https://stackoverflow.com/questions/54715462/react-scroll-how-to-scroll-to-a-specific-targeted-component-when-clicking-on-n
 
 const Header = () => {
 
-  //About me should redirect me to another Page, but Project 
-  // and get in touch should be in the same page
     return (
       <>
+        <MenuHiding>
+        <NavBarPhone/>
+        </MenuHiding>
         <HeaderContainer>
             <NavItems to="/">Home</NavItems>
             <NavItems to="/Aboutme">About Me</NavItems>
-            <a class="header" href="#projectsSection" scroll>Projects</a> 
-            <a class="header" href="#getInTouchSection">Get In Touch</a>
+            <a className="header" href="#projectsSection" scroll>Projects</a> 
+            <a className="header" href="#getInTouchSection">Get In Touch</a>
           </HeaderContainer>
       </> 
     ) 
@@ -26,15 +29,27 @@ const Header = () => {
     margin-top: 2%;
     display: flex;
     justify-content: flex-end;
-    font-size: 1.4em;
+    font-size: 1.4em;  
 
     //tablet view
     @media ( min-width: 600px) and (max-width:768px) {
-    font-size: 0.9em;
+      font-size: 0.9em;
     }
 
-    @media ( min-width: 375px) and (max-width:767px) {
+    @media ( min-width: 375px) and (max-width:599px) {
+      display: none;
+    }
+  `
+
+  const MenuHiding = styled.div`
+    display:none;
+
+    @media ( min-width: 600px) and (max-width:768px) {
+      display:none;
+    }
     
+    @media ( min-width: 375px) and (max-width:599px) {
+      display: block;
     }
   `
 

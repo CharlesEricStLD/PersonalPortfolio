@@ -4,7 +4,6 @@ import App from './App.jsx'
 import './index.css'
 import AboutMe from './components/AboutMe.jsx'
 import Header from './components/Header.jsx'
-
 import { BrowserRouter } from "react-router-dom";
 import {Routes} from "react-router-dom";
 import {Route} from "react-router-dom";
