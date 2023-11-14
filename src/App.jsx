@@ -13,19 +13,26 @@ import nodeJsLogo from "./assets/nodejsLogo.png"
 import mongoDbLogo from "./assets/mongodbLogo.png"
 import { SocialIcon } from 'react-social-icons'
 import Tooltip from '@mui/material/Tooltip';
+import HomePagePhoto from "./assets/HomePagePhoto.png"
 
 //Nic eportfolio exammple : https://sharon-yi.com///
+// https://www.adhamdannaway.com/contact
+
+const name = "Hi, I'm Charles-Eric";
+const lettersArray = name.split('');
+let LetterLenght = lettersArray.lenght; 
 
 function App() {
 
   return (
     <>
       <TitleSpacingSection>
-      <h1> HI MY NAME IS CHARLES-ERIC </h1>
+      <img src={HomePagePhoto}></img>
+      <div>{lettersArray.map((letter, index) => <MySpan key={index}>{letter}</MySpan>)}</div>
       </TitleSpacingSection>
 
       <SubTitleSpacingSection>
-      <h2>I'm a passionate developper that like to work hard and build nices projects</h2>
+      <h2>a passionate developper that like to work hard and build nices projects</h2>
       <h3>If you need a project well done, with passion and good vibes, I'm your dev !</h3>
       </SubTitleSpacingSection>
 
@@ -60,7 +67,7 @@ function App() {
       </SpacingSection>
 
       <SpacingSection>
-      <h2>Down here you can see all my current projects...</h2>
+      <h2>My current projects</h2>
       <ProjectGridContainer>
         
         <div style={{position:"relative"}}>
@@ -79,9 +86,9 @@ function App() {
       <GetInTouchSection>
       <h2 className="GetInTouch">Get in Touch</h2>
       <GetInTouchIcon>    
-      <SocialIcon target="_blank" bgColor="black" network="linkedin" href='https://www.linkedin.com/in/charles-%C3%A9ric-st-l-dupuis-2704981b9'></SocialIcon>
-      <SocialIcon target="_blank" bgColor="black" network="email" href='mailto:ce.stlouisdupuis@gmail.com'> </SocialIcon>
-      <SocialIcon target="_blank" bgColor="black" network="github" href='https://github.com/CharlesEricStLD'> </SocialIcon>
+      <SocialIcon target="_blank" bgColor="black" network="linkedin" href='https://www.linkedin.com/in/charles-%C3%A9ric-st-l-dupuis-2704981b9' style={{ height: 75, width: 75, marginRight:50}}  ></SocialIcon>
+      <SocialIcon target="_blank" bgColor="black" network="email" href='mailto:ce.stlouisdupuis@gmail.com'  style={{ height: 75, width: 75, marginRight:50}}> </SocialIcon>
+      <SocialIcon target="_blank" bgColor="black" network="github" href='https://github.com/CharlesEricStLD'  style={{ height: 75, width: 75, marginRight:50}}> </SocialIcon>
       <p>ce.stlouisdupuis@gmail.com</p>
       </GetInTouchIcon>
       </GetInTouchSection>
@@ -91,9 +98,34 @@ function App() {
 
 export default App
 
+const MySpan = styled.span`
+div span {
+  display: inline-block;
+  text-transform: uppercase;
+  animation: flip 1s infinite;
+  animation-delay: calc(.2s * ${(props) => (props.key)})
+}
+
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+`
+
 const TitleSpacingSection= styled.section`
   padding-top: 10%;
+
+
+  img{
+    width:50%;
+    position:relative;
+    left:-8%;
+    float: left;
+  }
 `
+
+
 const SubTitleSpacingSection = styled.section`
 `
 
@@ -106,9 +138,9 @@ const LogoSection = styled.div`
   justify-content: space-between;
   margin-top: 5%;
 
-img{
-  width:10%;
-}
+  img{
+    width:10%;
+  }
 `
 
 export const ProjectGridContainer = styled.div`
@@ -144,6 +176,7 @@ border-radius: 15px;
   width:100%;
   text-align: center;
   padding-top:25%;
+  margin:0 2%;
   font-size: 1.2em;
   color:#ffffff00
 }

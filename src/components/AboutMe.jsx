@@ -14,7 +14,7 @@ const AboutMe= () => {
 <Description>
 <p>
 I am a dynamic and autonomous person who enjoys interacting with clients and colleagues. 
-I had the opportunity, two years ago, to work on the small problems of the website, where I was working, at Les Affutés, Montréal. When i was there and really like it. I just finished my web development Bootcamp at COncordia University and am eager to know more and to take real life challenge on the technological market ! 
+I just finished my web development Bootcamp at COncordia University and am eager to know more and to take real life challenge on the technological market ! 
 </p>
 </Description>
 </AboutMeStyling>
@@ -32,7 +32,7 @@ const AboutMeStyling = styled.section`
     width:40%;
     display:inline-block;
     margin:0 5%;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 `
 

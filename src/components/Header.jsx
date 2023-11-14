@@ -30,7 +30,42 @@ const Header = () => {
 
   const NavItems = styled(NavLink)`
     margin-right:5%;
+
+      
+& {
+  color: #646cff;
+  text-decoration: inherit;
+  font-family: "LarkenExtraBold";
+}
+
+&:hover {
+  color: #fff3af;
+}
+
+&::after {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 0;
+  height: 3px;
+  background: #fff3af;
+  border-radius: 5px;
+}
+
+@keyframes borderAnimation{
+  0%   {width:0;}
+  100% {width:100%;}
+}
+
+
+&:hover::after {
+  animation: borderAnimation 1s;;
+  width: 100%;
+}
   `
+
+
+
 
 
 
