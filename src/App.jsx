@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import './App.css'
-import AboutMe from './components/AboutMe'
 import styled from "styled-components"
 import NyanCatProject from "./assets/NyanCatImg.gif"
 import FruitStoreProject from "./assets/FruitStoreWorkshop.png"
@@ -83,9 +82,9 @@ function App() {
       <GetInTouchSection>
       <h2 className="GetInTouch">Get in Touch</h2>
       <GetInTouchIcon>    
-      <SocialIcon target="_blank" bgColor="blue" network="linkedin" href='https://www.linkedin.com/in/charles-%C3%A9ric-st-l-dupuis-2704981b9'></SocialIcon>
-      <SocialIcon target="_blank" bgColor="blue" network="email" href='mailto:ce.stlouisdupuis@gmail.com'> </SocialIcon>
-      <SocialIcon target="_blank" bgColor="blue" network="github" href='https://github.com/CharlesEricStLD'> </SocialIcon>
+      <SocialIcon target="_blank" bgColor="black" network="linkedin" href='https://www.linkedin.com/in/charles-%C3%A9ric-st-l-dupuis-2704981b9'></SocialIcon>
+      <SocialIcon target="_blank" bgColor="black" network="email" href='mailto:ce.stlouisdupuis@gmail.com'> </SocialIcon>
+      <SocialIcon target="_blank" bgColor="black" network="github" href='https://github.com/CharlesEricStLD'> </SocialIcon>
       <p>ce.stlouisdupuis@gmail.com</p>
       </GetInTouchIcon>
       </GetInTouchSection>
@@ -111,11 +110,11 @@ const LogoSection = styled.div`
   margin-top: 5%;
 
 img{
-  width:50px;
+  width:70px;
 }
 `
 
-const ProjectGridContainer = styled.div`
+export const ProjectGridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -137,8 +136,8 @@ display: flex;
 justify-content: center;
 
 &:hover, p:hover{
-  background-color: blue;
-  color: white;
+  background-color: #fff3af;
+  color: #535bf2;
   animation: BackgroundChange 0.5s ease-in-out;
 }
 
