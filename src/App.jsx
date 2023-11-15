@@ -3,19 +3,19 @@
 import './App.css'
 import { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
-import FruitStoreProject from "./assets/FruitStoreWorkshop.png"
-import CookieClickerProject from "./assets/CookieClickerProject.png"
+import FruitStoreProject from "./assets/fruitStoreWorkshop.png"
+import CookieClickerProject from "./assets/cookieClickerProject.png"
 import javascriptLogo from "./assets/javascript.png"
 import css3Logo from "./assets/css3.png"
 import gitlogo from "./assets/git.png"
-import reactLogo from "./assets/React.png"
+import reactLogo from "./assets/react.png"
 import nodeJsLogo from "./assets/nodejsLogo.png"
 import mongoDbLogo from "./assets/mongodbLogo.png"
 import { SocialIcon } from 'react-social-icons'
 import Tooltip from '@mui/material/Tooltip';
 import { Snackbar, Alert } from '@mui/material'
-import HomePagePhoto from "./assets/HomePagePhoto.png"
-import fizzGame from "./assets/FizzGame.png"
+import HomePagePhoto from "./assets/homePagePhoto.png"
+import fizzGame from "./assets/fizzGame.png"
 
 
 //Nic eportfolio exammple : https://sharon-yi.com///
