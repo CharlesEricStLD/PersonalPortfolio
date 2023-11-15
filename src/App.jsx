@@ -3,13 +3,12 @@
 import './App.css'
 import { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { useNavigate } from 'react-router-dom'
 import FruitStoreProject from "./assets/FruitStoreWorkshop.png"
 import CookieClickerProject from "./assets/CookieClickerProject.png"
 import javascriptLogo from "./assets/javascript.png"
 import css3Logo from "./assets/css3.png"
 import gitlogo from "./assets/git.png"
-import reactLogo from "./assets/react.png"
+import reactLogo from "./assets/React.png"
 import nodeJsLogo from "./assets/nodejsLogo.png"
 import mongoDbLogo from "./assets/mongodbLogo.png"
 import { SocialIcon } from 'react-social-icons'
