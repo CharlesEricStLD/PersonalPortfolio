@@ -34,8 +34,6 @@
 
   /* In Firefox */
   scrollbar-width: none;
-
-  scroll-behavior: smooth;
 }
 
 /* In chrome base */
