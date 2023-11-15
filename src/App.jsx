@@ -25,6 +25,10 @@ import fizzGame from "./assets/FizzGame.png"
 const name = "Hi, I'm  Charles-Eric";
 const lettersArray = name.split('');
 
+const SocialIconDesktopView = {
+
+}
+
 function App() {
 
 const [open, SetOpen] = useState(false);
@@ -95,12 +99,11 @@ const [open, SetOpen] = useState(false);
       </ProjectSection>
 
       <GetInTouchSection id="getInTouchSection">
-      <h2 className="GetInTouch">Get in Touch</h2>
+      <h2 id="getInTouchTitle" className="GetInTouch">Get in Touch</h2>
       <GetInTouchIcon>    
-      <SocialIcon target="_blank" bgColor="black" network="linkedin" href='https://www.linkedin.com/in/charles-%C3%A9ric-st-l-dupuis-2704981b9' style={{ height: 75, width: 75, marginRight:50}}  ></SocialIcon>
-      <SocialIcon target="_blank" bgColor="black" network="email" href='mailto:ce.stlouisdupuis@gmail.com'  style={{ height: 75, width: 75, marginRight:50}}> </SocialIcon>
-      <SocialIcon target="_blank" bgColor="black" network="github" href='https://github.com/CharlesEricStLD'  style={{ height: 75, width: 75, marginRight:50}}> </SocialIcon>
-      <div>
+      <SocialIcon style={{ height: 100, width: 100, marginRight:40 }} target="_blank" bgColor="black" network="linkedin" href='https://www.linkedin.com/in/charles-%C3%A9ric-st-l-dupuis-2704981b9'   ></SocialIcon>
+      <SocialIcon style={{ height: 100, width: 100, marginRight:40 }} target="_blank" bgColor="black" nstyle={{ height: 100, width: 100 }} network="github" href='https://github.com/CharlesEricStLD'  > </SocialIcon>
+      </GetInTouchIcon>
       <p>ce.stlouisdupuis@gmail.com</p>
       <button  variant="contained" onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>Copy</button>
       <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
@@ -108,8 +111,7 @@ const [open, SetOpen] = useState(false);
       Email copied to clipboard!
       </Alert>
       </Snackbar> 
-      </div>
-      </GetInTouchIcon>
+      
       </GetInTouchSection>
     </>
   )
@@ -243,7 +245,7 @@ const ProjectGridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 2%;
+  grid-gap: 4%;
   width:100%;
 
   img {
@@ -273,7 +275,7 @@ border-radius: 15px;
   width:100%;
   text-align: center;
   padding-top:25%;
-  margin:0 2%;
+  margin:0 8%;
   font-size: 1.2em;
   color:#ffffff00
 }
@@ -282,11 +284,54 @@ border-radius: 15px;
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+//tablet view
+@media ( min-width: 600px) and (max-width:768px) {
+  
+  p{
+    font-size: 0.9em;
+  }
+}
+
+//Phone view
+@media ( min-width: 375px) and (max-width:600px) {
+  p{
+    font-size: 0.5em;
+  }
+}
 `
 
 const GetInTouchSection = styled.footer`
   text-align: right;
   margin-top:20%;
+  display:flex;
+  flex-direction: column;
+
+  button{
+    font-family: "Larken";
+    border-radius: 5px;
+    font-size: 0.7em;
+    padding:0.5% 1%;
+    margin: auto;
+    text-align: center;
+    margin-left:85%;
+    background-color: #646cff;
+  }
+
+  //Tablet view
+  @media ( min-width: 600px) and (max-width:768px)  {
+
+    #getInTouchTitle  {
+      margin:none;
+    }
+
+  }   
+
+  //phone view 
+  @media ( min-width: 375px) and (max-width:767px) {
+
+  }
+
 `
 
 const GetInTouchIcon = styled.div`
@@ -307,22 +352,28 @@ const GetInTouchIcon = styled.div`
     display: flex;
   }
 
-  button{
-    font-family: "Larken";
-    border-radius: 5px;
-    font-size: 0.7em;
-    padding:1% 2%;
-    width:30%;
-    float: right;
-    margin: auto;
-    text-align: center;
-    margin-left:5%;
-    background-color: #646cff;
-  }
+  //tablet view
+  @media ( min-width: 600px) and (max-width:768px)  {
 
-  @media ( min-width: 375px) and (max-width:767px) {
-  p{
+    p{
     font-size: 0.8em;
   }
+
+  div{
+    display: flex;
+  }
+}
+
+  //Phone view
+  @media ( min-width: 375px) and (max-width:767px) {
+    
+    p{
+    font-size: 0.8em;
+  }
+
+  div{
+      display: flex;
+    }
+
   }
 `
