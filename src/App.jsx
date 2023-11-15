@@ -17,16 +17,8 @@ import { Snackbar, Alert } from '@mui/material'
 import HomePagePhoto from "./assets/homePagePhoto.png"
 import fizzGame from "./assets/fizzGame.png"
 
-
-//Nic eportfolio exammple : https://sharon-yi.com///
-// https://www.adhamdannaway.com/contact
-
 const name = "Hi, I'm  Charles-Eric";
 const lettersArray = name.split('');
-
-const SocialIconDesktopView = {
-
-}
 
 function App() {
 
@@ -104,7 +96,7 @@ const [open, SetOpen] = useState(false);
       <SocialIcon style={{ height: 100, width: 100, marginRight:40 }} target="_blank" bgColor="black" nstyle={{ height: 100, width: 100 }} network="github" href='https://github.com/CharlesEricStLD'  > </SocialIcon>
       </GetInTouchIcon>
       <p>ce.stlouisdupuis@gmail.com</p>
-      <button  variant="contained" onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>Copy</button>
+      <button  variant="contained" onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>Copy Email</button>
       <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
       <Alert severity="success">
       Email copied to clipboard!
