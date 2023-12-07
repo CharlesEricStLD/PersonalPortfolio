@@ -16,6 +16,7 @@ import Tooltip from '@mui/material/Tooltip';
 import { Snackbar, Alert } from '@mui/material'
 import HomePagePhoto from "./assets/homePagePhoto.png"
 import fizzGame from "./assets/fizzGame.png"
+import Header from "./Components/Header"
 
 const name = "Hi, I'm  Charles-Eric";
 const lettersArray = name.split('');
@@ -26,6 +27,7 @@ const [open, SetOpen] = useState(false);
 
   return (
     <>
+      <Header/>
       <IntroSection>
       <img src={HomePagePhoto}></img>
       <TitleSpacingSection>

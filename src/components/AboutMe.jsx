@@ -2,10 +2,13 @@
 
 import PersonalPicture from "../assets/PersonalPicture.jpg"
 import styled from "styled-components";
+import Header from "./Header";
 
 const AboutMe= () => {
 
   return (
+<>
+<Header/>
 <AboutMeStyling>
 <h1>About me ....</h1>
 <ImageStyling>
@@ -18,6 +21,7 @@ I just finished my web development Bootcamp at COncordia University and am eager
 </p>
 </Description>
 </AboutMeStyling>
+</>
   )
 }
 

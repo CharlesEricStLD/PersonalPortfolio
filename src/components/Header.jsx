@@ -1,25 +1,28 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import NavBarPhone from "./NavBarPhone"
+import NavBarPhone from "./NavBarPhone";
+import { useState } from "react";
 
 //Scroll to : https://stackoverflow.com/questions/54715462/react-scroll-how-to-scroll-to-a-specific-targeted-component-when-clicking-on-n
 
 const Header = () => {
+  
+  //Get path of WebBrowser
+  const [OnHomePage, setOnHomePage] = useState(useLocation().pathname);
 
-    return (
+  return (
       <>
         <MenuHiding>
         <NavBarPhone/>
         </MenuHiding>
-        <HeaderContainer>
-            <NavItems to="/">Home</NavItems>
-            <NavItems to="/Aboutme">About Me</NavItems>
-            <a className="header" href="#projectsSection" scroll>Projects</a> 
-            <a className="header" href="#getInTouchSection">Get In Touch</a>
+        <HeaderContainer OnHomePage={(OnHomePage === "/")}>
+            {OnHomePage === "/" ? <NavItems to="/">Home</NavItems> : <NavItems to="/"> Back to Home</NavItems>}
+            {OnHomePage === "/" ? <NavItems to="/Aboutme">About Me</NavItems> : null}
+            {OnHomePage === "/" ? <a className="header" href="#projectsSection" scroll>Projects</a> : null }
+            {OnHomePage === "/" ? <a className="header" href="#getInTouchSection">Get In Touch</a> : null}
           </HeaderContainer>
-      </> 
+      </>   
     ) 
-  
   } 
   
   export default Header;
@@ -27,7 +30,8 @@ const Header = () => {
   const HeaderContainer = styled.header`
     margin-top: 2%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: ${props => props.OnHomePage ? "flex-end" : "left"};
+
     font-size: 1.4em;  
 
     //tablet view
