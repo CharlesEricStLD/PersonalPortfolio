@@ -3,10 +3,10 @@
 import './App.css'
 import { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
-import  ToolsSection from './Components/ToolsSection'
 import { SocialIcon } from 'react-social-icons'
 import { Snackbar, Alert } from '@mui/material'
 import HomePagePhoto from "./assets/homePagePhoto.png"
+import ToolsSection from "./Components/ToolsSection"
 import Header from "./Components/Header"
 import ProjectsSection from './Components/ProjectsSection'
 
