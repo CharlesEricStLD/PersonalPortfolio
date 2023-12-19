@@ -1,6 +1,6 @@
 //Component of the ABout Me Page 
 
-import PersonalPicture from "../assets/PersonalPicture.jpg"
+import personalPicture from "../assets/personalPicture.jpg"
 import styled from "styled-components";
 import Header from "./Header";
 
@@ -12,7 +12,7 @@ const AboutMe= () => {
 <AboutMeStyling>
 <h1>About me ....</h1>
 <ImageStyling>
-<img src={PersonalPicture}></img>
+<img src={personalPicture}></img>
 </ImageStyling>
 <Description>
 <p>

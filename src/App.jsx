@@ -5,7 +5,7 @@ import { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { SocialIcon } from 'react-social-icons'
 import { Snackbar, Alert } from '@mui/material'
-import HomePagePhoto from "./assets/homePagePhoto.png"
+import homePagePhoto from "./assets/homePagePhoto.png"
 import ToolsSection from "./Components/ToolsSection"
 import Header from "./Components/Header"
 import ProjectsSection from './Components/ProjectsSection'
@@ -21,7 +21,7 @@ const [open, SetOpen] = useState(false);
     <>
       <Header/>
       <IntroSection>
-      <img src={HomePagePhoto}></img>
+      <img src={homePagePhoto}></img>
       <TitleSpacingSection>
       {lettersArray.map((letter, index) => <MySpan $index={index} key={index}>{letter}</MySpan>)}
       </TitleSpacingSection>

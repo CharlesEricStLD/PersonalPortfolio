@@ -2,7 +2,7 @@
 
 import styled from "styled-components"
 
-import FruitStoreProject from "../assets/fruitStoreWorkshop.png"
+import fruitStoreProject from "../assets/fruitStoreWorkshop.png"
 import crossCountryFinder from "../assets/crossCountryFinder.png"
 import fizzGame from "../assets/fizzGame.png"
 
@@ -17,14 +17,14 @@ const ProjectsSection = () => {
         <img src={fizzGame} alt= "Image of my FizzBuzz game"/>
         </ProjectContainer>
 
-        <ProjectContainer>
-        <HoverlayEffect> <p>Simple Store to buy fruits from with a description page for each fruits</p> </HoverlayEffect>
-        <img src={FruitStoreProject} alt= "Image of my Fruit Store webPage" ></img>
-        </ProjectContainer>
-
         <ProjectContainer style={{cursor:"pointer"}} onClick={()=> window.open("https://github.com/CharlesEricStLD/FinalProject", "_blank")}>
         <HoverlayEffect> <p>Fullstack website to find update condition of all crossCountry center in Quebec (to deployed soon)</p> </HoverlayEffect>
         <img src={crossCountryFinder} alt= "Image of CrossCountry Finder" ></img>
+        </ProjectContainer>
+
+        <ProjectContainer>
+        <HoverlayEffect> <p>Simple Store to buy fruits from with a description page for each fruits</p> </HoverlayEffect>
+        <img src={fruitStoreProject} alt= "Image of my Fruit Store webPage" ></img>
         </ProjectContainer>
 
 
