@@ -48,7 +48,7 @@ const tools = [
 ]
 
 
-export const ToolsSection = () => {
+const ToolsSection = () => {
 
   return (
     
@@ -74,4 +74,4 @@ const LogoSection = styled.div`
   }
 `
 
-
+export default ToolsSection;
