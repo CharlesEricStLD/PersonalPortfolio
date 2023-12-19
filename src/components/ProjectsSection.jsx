@@ -3,7 +3,7 @@
 import styled from "styled-components"
 
 import FruitStoreProject from "../assets/fruitStoreWorkshop.png"
-import CookieClickerProject from "../assets/cookieClickerProject.png"
+import crossCountryFinder from "../assets/crossCountryFinder.png"
 import fizzGame from "../assets/fizzGame.png"
 
 
@@ -22,10 +22,11 @@ const ProjectsSection = () => {
         <img src={FruitStoreProject} alt= "Image of my Fruit Store webPage" ></img>
         </ProjectContainer>
 
-        <ProjectContainer style={{position:"relative"}}>
-        <HoverlayEffect> <p>The classic Cookie game clicker</p> </HoverlayEffect>
-        <img src={CookieClickerProject} alt= "Image of my Cookie Clicker game"/>
+        <ProjectContainer style={{cursor:"pointer"}} onClick={()=> window.open("https://github.com/CharlesEricStLD/FinalProject", "_blank")}>
+        <HoverlayEffect> <p>Fullstack website to find update condition of all crossCountry center in Quebec (to deployed soon)</p> </HoverlayEffect>
+        <img src={crossCountryFinder} alt= "Image of CrossCountry Finder" ></img>
         </ProjectContainer>
+
 
       </ProjectGridContainer>
   )
@@ -38,13 +39,15 @@ const ProjectGridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 4%;
+  gap: 4%;
   width:100%;
 
   img {
   position:relative;
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 500px;
+  max-height: 500px;
   z-index:-1;
   border-radius: 15px;
   }
@@ -55,8 +58,10 @@ const ProjectContainer = styled.div`
 
 const HoverlayEffect = styled.div`
 position:absolute;
-width:100%;
-height:100%;
+max-width: 500px;
+max-height: 500px;
+min-width:100%;
+min-height:100%;
 display: flex;
 justify-content: center;
 border-radius: 15px;
@@ -82,7 +87,7 @@ border-radius: 15px;
 }
 
 //tablet view
-@media ( min-width: 600px) and (max-width:768px) {
+@media ( min-width: 601px) and (max-width:768px) {
   
   p{
     font-size: 0.9em;
