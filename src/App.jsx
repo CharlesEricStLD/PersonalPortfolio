@@ -6,9 +6,9 @@ import styled, { keyframes } from 'styled-components'
 import { SocialIcon } from 'react-social-icons'
 import { Snackbar, Alert } from '@mui/material'
 import homePagePhoto from "./assets/homePagePhoto.png"
-import ToolsSection from "./Components/ToolsSection"
-import Header from "./Components/Header"
-import ProjectsSection from './Components/ProjectsSection'
+import ToolsSection from "./components/ToolsSection"
+import Header from "./components/Header"
+import ProjectsSection from './components/ProjectsSection'
 
 const name = "Hi, I'm  Charles-Eric";
 const lettersArray = name.split('');
