@@ -3,23 +3,23 @@ import styled from "styled-components";
 import NavBarPhone from "./NavBarPhone";
 import { useState } from "react";
 
-//Scroll to : https://stackoverflow.com/questions/54715462/react-scroll-how-to-scroll-to-a-specific-targeted-component-when-clicking-on-n
-
 const Header = () => {
   
+  const location = useLocation();
+
   //Get path of WebBrowser
-  const [OnHomePage, setOnHomePage] = useState(useLocation().pathname);
+  const [userOnHomePage] = useState(location.pathname === "/");
 
   return (
       <>
         <MenuHiding>
         <NavBarPhone/>
         </MenuHiding>
-        <HeaderContainer OnHomePage={(OnHomePage === "/")}>
-            {OnHomePage === "/" ? <NavItems to="/">Home</NavItems> : <NavItems to="/"> Back to Home</NavItems>}
-            {OnHomePage === "/" ? <NavItems to="/Aboutme">About Me</NavItems> : null}
-            {OnHomePage === "/" ? <a className="header" href="#projectsSection" scroll>Projects</a> : null }
-            {OnHomePage === "/" ? <a className="header" href="#getInTouchSection">Get In Touch</a> : null}
+        <HeaderContainer $useronhomepage={userOnHomePage}>
+            {userOnHomePage ? <NavItems to="/"> Home</NavItems> : <NavItems to="/"> Back to Home</NavItems>}
+            {userOnHomePage ? <NavItems to="/Aboutme"> About Me</NavItems> : null}
+            {userOnHomePage ? <a className="header" href="#projectsSection">Projects</a> : null }
+            {userOnHomePage ? <a className="header" href="#getInTouchSection">Get In Touch</a> : null}
           </HeaderContainer>
       </>   
     ) 
@@ -30,9 +30,13 @@ const Header = () => {
   const HeaderContainer = styled.header`
     margin-top: 2%;
     display: flex;
-    justify-content: ${props => props.OnHomePage ? "flex-end" : "left"};
+    justify-content: ${props => props.useronhomepage ? "flex-end" : "left"};
 
-    font-size: 1.4em;  
+    font-size: 1.4em; 
+    
+    a {
+    scroll-behavior:smooth
+    }
 
     //tablet view
     @media ( min-width: 600px) and (max-width:768px) {
