@@ -159,7 +159,7 @@ const TitleSpacingSection= styled.div`
 
 
 const SubTitleSpacingSection = styled.div`
-font-size: 1.2;
+font-size: 1.2em;
 `
 
 const ToolsSectionStyling = styled.section`
