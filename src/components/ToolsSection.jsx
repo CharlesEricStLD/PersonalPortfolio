@@ -26,11 +26,6 @@ const tools = [
     image :css3Logo
   },
   {
-    name : "Git", 
-    link : "https://git-scm.com/",
-    image : gitlogo
-  }, 
-  {
     name : "React", 
     link : "https://react.dev/",
     image : reactLogo
@@ -54,7 +49,7 @@ const ToolsSection = () => {
     
     <LogoSection>
     {tools.map(tool => (
-    <Tooltip interactive     
+    <Tooltip interactive="true" key={tool.name}    
     title={<a href={tool.link} target='blank' style={{textDecoration:"none", color:"#fff3af"}}>{tool.name}</a>} placement="top">
     <img src={tool.image} alt={`Logo of ${tool}`}/>
     </Tooltip>
