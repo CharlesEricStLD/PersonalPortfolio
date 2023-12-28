@@ -44,7 +44,7 @@ const [open, SetOpen] = useState(false);
       <GetInTouchSection id="getInTouchSection">
       <h2 id="getInTouchTitle" className="GetInTouch">Get in Touch</h2>
       <GetInTouchIcon> 
-      <SocialIcon className="linkedInIcon" target="_blank" bgColor="black" network="linkedin" href='https://www.linkedin.com/in/charles-%C3%A9ric-st-l-dupuis-2704981b9'   ></SocialIcon>
+      <SocialIcon className="linkedInIcon" target="_blank" bgColor="black" network="linkedin" href="https://www.linkedin.com/in/charleseric-stlouisdupuis/"   ></SocialIcon>
       <SocialIcon className="gitHubIcon" target="_blank" bgColor="black" network="github" href='https://github.com/CharlesEricStLD'  > </SocialIcon>
       </GetInTouchIcon>
       <p>ce.stlouisdupuis@gmail.com</p>
