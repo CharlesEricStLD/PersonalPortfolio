@@ -38,6 +38,30 @@ const AboutMeStyling = styled.section`
     margin:0 5%;
     font-size: 1.2em;
   }
+
+   //tablet view
+    @media ( min-width: 580px) and (max-width:700px) {
+      h1 {
+        font-size: 1em;
+      }
+      
+      p{
+        width:100%;
+        font-size: 1em;
+      }
+    }
+    //Phone view
+    @media ( min-width: 320px) and (max-width:579px) {
+      h1 {
+        font-size: 0.9em;
+      }
+      
+      p{
+        width:100%;
+        margin:10% 5%;
+        font-size: 0.7em;
+      }
+    }
 `
 
 const Description = styled.div`
@@ -54,6 +78,12 @@ const ImageStyling = styled.div`
     border-radius: 50px;
   }
 
+  //Phone view
+  @media ( min-width: 320px) and (max-width:579px) {
+  img {
+    display: none;
+  }
+  }
 
 `
 
