@@ -39,11 +39,11 @@ const Header = () => {
     }
 
     //tablet view
-    @media ( min-width: 600px) and (max-width:768px) {
+    @media ( min-width: 580px) and (max-width:700px) {
       font-size: 0.9em;
     }
-
-    @media ( min-width: 375px) and (max-width:599px) {
+    //Phone view
+    @media ( min-width: 320px) and (max-width:579px) {
       display: none;
     }
   `
@@ -51,11 +51,12 @@ const Header = () => {
   const MenuHiding = styled.div`
     display:none;
 
-    @media ( min-width: 600px) and (max-width:768px) {
+    //tablet view
+    @media ( min-width: 580px) and (max-width:700px) {
       display:none;
     }
-    
-    @media ( min-width: 375px) and (max-width:599px) {
+    //Phone view
+    @media ( min-width: 320px) and (max-width:579px) {
       display: block;
     }
   `

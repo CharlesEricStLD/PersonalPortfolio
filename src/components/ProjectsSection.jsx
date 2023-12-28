@@ -51,6 +51,26 @@ const ProjectGridContainer = styled.div`
   z-index:-1;
   border-radius: 15px;
   }
+
+//tablet view
+@media ( min-width: 580px) and (max-width:700px) {
+
+  grid-template-columns: 1fr;
+}
+
+//Phone view
+@media ( min-width: 320px) and (max-width:579px) {
+  grid-template-columns: 1fr;
+
+  img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  }
+
+}
+
 `
 const ProjectContainer = styled.div`
   position: relative;
@@ -87,15 +107,15 @@ border-radius: 15px;
 }
 
 //tablet view
-@media ( min-width: 601px) and (max-width:768px) {
-  
+@media ( min-width: 580px) and (max-width:700px) {
+
   p{
     font-size: 0.9em;
   }
 }
 
 //Phone view
-@media ( min-width: 375px) and (max-width:600px) {
+@media ( min-width: 320px) and (max-width:579px) {
   p{
     font-size: 0.5em;
   }
