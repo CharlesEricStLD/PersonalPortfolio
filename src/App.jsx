@@ -176,7 +176,7 @@ const ProjectSectionStyling = styled.section`
 
 const GetInTouchSection = styled.footer`
   text-align: right;
-  margin-top:20%;
+  margin-top:10%;
   display:flex;
   flex-direction: column;
 
@@ -194,15 +194,20 @@ const GetInTouchSection = styled.footer`
   //Tablet view
   @media ( min-width: 580px) and (max-width:700px)  {
 
-    #getInTouchTitle  {
-      margin:none;
+    button {
+      font-size: 0.7em;
+      width:20%;
     }
 
   }   
 
   //phone view 
   @media ( min-width: 320px) and (max-width:579px) {
-
+    button {
+      font-size: 0.7em;
+      width:40%;
+      margin-left:65%;
+    }
   }
 
 `
