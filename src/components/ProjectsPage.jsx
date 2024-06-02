@@ -1,4 +1,4 @@
-//Component of the fdescription of Project Page
+//Component of the description of Project Page
 
 //Title
 // Read time
@@ -11,7 +11,6 @@
 //Problems and Thought Process
 
 const ProjectsPage = () => {
-
   return (
     <ProjectsPage>
     <h1>{nameOfProject}</h1>
@@ -34,7 +33,5 @@ const ProjectsPage = () => {
     <p>{lessonsLearned}</p>    
     </ProjectsPage>
   )
-
-
 }
 
