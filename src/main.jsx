@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import App from './pages/App.jsx'
 import './index.css'
-import AboutMe from './components/AboutMe.jsx'
+import AboutMe from './pages/AboutMe.jsx'
+import {ProjectsPage} from "./pages/ProjectsPage.jsx"
 import { BrowserRouter } from "react-router-dom";
 import {Routes} from "react-router-dom";
 import {Route} from "react-router-dom";
@@ -13,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Routes>
         <Route path="/" element ={<App/>}> </Route>
         <Route path="/AboutMe" element={<AboutMe/>}></Route>
-        <Route path="/projects/CrossCountryFinder" element={<CrossCountryFinder/>}></Route>
+        <Route path="/test" element={<ProjectsPage/>}></Route>
     </Routes>
     </BrowserRouter>
     </>
