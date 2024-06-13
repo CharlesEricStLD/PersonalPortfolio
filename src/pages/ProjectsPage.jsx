@@ -42,47 +42,47 @@ lessonsLearned: "This project was substantial but highly engaging. I gained exte
 const allStack = CrossCountryProject.stacks;
 
 
-export const ProjectsPage = () => {
+export const ProjectsPage = ({project}) => {
   return (
     <ProjectDescription>
-    <h1>{CrossCountryProject.nameOfProject}</h1>
-    <p>{CrossCountryProject.readTime}</p>
-    <p>{CrossCountryProject.smalldescriptionOfProject}</p>
+    <h1>{project.nameOfProject}</h1>
+    <p>{project.readTime}</p>
+    <p>{project.smalldescriptionOfProject}</p>
     {/* table of 3 columns */}
     <PropertyOfProject>
     <div>
     <h2>Type</h2>
-    <p>{CrossCountryProject.type}</p>
+    <p>{project.type}</p>
     </div>
     <div>
     <h2>Stack</h2>
     {
-    CrossCountryProject.stacks.map(stack => (
+    project.stacks.map(stack => (
     <p>{stack}</p>
     ))
     }
     </div>
     <div>
-    {CrossCountryProject.githubLink ? 
-    <><h2>Github</h2><p> <a href="{CrossCountryProject.githubLink}">GitHub</a> </p></>: <> <h2>Live</h2> <p>{CrossCountryProject.liveLink}</p> </>}
+    {project.githubLink ? 
+    <><h2>Github</h2><p> <a href="{project.githubLink}">GitHub</a> </p></>: <> <h2>Live</h2> <p>{project.liveLink}</p> </>}
     </div>
     </PropertyOfProject>
     {/* End of table of 3 columns */}
     
     {/* ScreenShot of the app*/}
     
-    <ScreenShot src={CrossCountryProject.screenShot1} alt="Screeshot of the Home page of the app"></ScreenShot>
+    <ScreenShot src={project.screenShot1} alt="Screeshot of the Home page of the app"></ScreenShot>
     <h2>Project Purpose and Goal</h2>
-    <p>{CrossCountryProject.projectPurposeAndGoal}</p>
+    <p>{project.projectPurposeAndGoal}</p>
     <h2>Web Stack and Explanation</h2>
-    <p>{CrossCountryProject.WebStackAndExplanation}</p>
+    <p>{project.WebStackAndExplanation}</p>
     <h2>Problems and Thought Process</h2>
-    {CrossCountryProject.ProblemsAndToughtProcess.map(problem => (
+    {project.ProblemsAndToughtProcess.map(problem => (
       <p>{problem}</p>
     ))}
     
     <h2>Lessons Learned & Future Work</h2>
-    <p>{CrossCountryProject.lessonsLearned}</p>    
+    <p>{project.lessonsLearned}</p>    
     </ProjectDescription>
   )
 }
