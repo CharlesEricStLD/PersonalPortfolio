@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import crossCountryFinderScreenShot from  "../../public/ScreenShot1CrossCountryFinder.png"
 
 //Component of the description of Project Page
 //Alejandro model : https://www.aaspinwall.com/projects/ing
@@ -15,8 +16,9 @@ import styled from "styled-components";
 
 const CrossCountryProject = 
 {
-nameOfProject : "CrossCountryFinder",
-readTime : "2 min", 
+nameOfProject : "Cross Country Finder",
+screenShot1 : crossCountryFinderScreenShot,
+readTime : "5 min", 
 smalldescriptionOfProject : "This full-stack website is devoted to finding and presenting the current snow conditions for all cross-country ski centers in Quebec, ensuring users have quick access to the latest updates.",
 type: "Outdoor utility platform",
 stacks: ["JavaScript","React","Vite","NodesJS","MongoDB","OpenAi API","Puppeteer"],
@@ -24,7 +26,7 @@ githubLink : "https://github.com/CharlesEricStLD/FinalProject",
 liveLink: "To be deployed",
 projectPurposeAndGoal: "In Quebec, cross-country centers are typically managed by private operators, each maintaining their own website and presenting snow conditions in varying formats. This fragmentation means that to check conditions across multiple centers, users must tediously search and navigate each website individually. The aim of this project is to address this issue by creating a centralized database for up-to-date snow conditions in all Quebec cross-country centers. Our platform offers users a streamlined experience, allowing them to easily find the latest conditions for their favorite centers, login in their profile and creating favorite.",
 WebStackAndExplanation : "The stack for this project is JavaScript-based. For the front end, I chose React with Vite for its fast build times and efficient development experience. On the back end, I used Node.js due to my familiarity with it and its robust performance. To gather the necessary data from various websites, I implemented automation with Puppeteer, a powerful JavaScript tool for web scraping and automating web-based tasks. Finally, I selected MongoDB for the database to effectively manage and store the collected snow condition data and centers informations. To parse the conditions into a uniform format, I decided to leverage AI. Given my familiarity with the ChatGPT prompt style, I opted to use the OpenAI API for this purpose.",
-ProblemsAndToughtProcess : [" My first problem was that there wasn't any database of all the cross-country centers in Quebec. So, my first task was to extract as much information as possible from other websites or blogs and confirm that each center still existed.", "To address this problem, I decided to use Puppeteer for its automation and scraping functionality. I first wrote a script to scrape an existing but very outdated database on the web and check if the web links were still active (i.e., they didn't lead to a dead or 404 page). After that, I needed to get the address, phone number, and email of each center. So, I created a second Puppeteer script to automate a Google search and scrape the data returned by the script. Once my database was validated and imported into MongoDB, I needed to find the snow conditions for each center. Some conditions were on the homepage, while others were on a specific URL on the website. For this part, I decided to divide my task into multiple groups. The first group was to create a function for websites hosted by the same server platform and to create a function for each of them. After that, for the rest that were too different, I did it manually by going through each site and finding the HTML elements to scrape to find the conditions. After that, I could just run my Puppeteer script to scrape all my website-specific HTML elements each day. My third big problem was to standardize all the data I scraped from the web because the goal of using a database of conditions was to be faster than visiting the websites directly. To achieve this, I decided to use the OpenAI API to parse my data. I first thought about the questions I wanted to answer in my condition report and the best way to display my data. I decided to ask these questions: Was it open or closed? Were there any closed tracks, snow conditions, or important warnings? And what was the last updated date? I decided to present this information in a table format for ease of understanding and efficiency. Finally, to ensure that I always received the same format of answers from the API, I asked the OpenAI API to return the data in JSON format and to add a null answer if the AI couldn't find the answer."],
+ProblemsAndToughtProcess : [" My first problem was that there wasn't any database of all the cross-country centers in Quebec. So, my first task was to extract as much information as possible from other websites or blogs and confirm that each center still existed.", "To address this problem, I decided to use Puppeteer for its automation and scraping functionality. I first wrote a script to scrape an existing but very outdated database on the web and check if the web links were still active (i.e., they didn't lead to a dead or 404 page). After that, I needed to get the address, phone number, and email of each center. So, I created a second Puppeteer script to automate a Google search and scrape the data returned by the script.", "Once my database was validated and imported into MongoDB, I needed to find the snow conditions for each center. Some conditions were on the homepage, while others were on a specific URL on the website. For this part, I decided to divide my task into multiple groups. The first group was to create a function for websites hosted by the same server platform and to create a function for each of them. After that, for the rest that were too different, I did it manually by going through each site and finding the HTML elements to scrape to find the conditions. After that, I could just run my Puppeteer script to scrape all my website-specific HTML elements each day.", "My third big problem was to standardize all the data I scraped from the web because the goal of using a database of conditions was to be faster than visiting the websites directly. To achieve this, I decided to use the OpenAI API to parse my data. I first thought about the questions I wanted to answer in my condition report and the best way to display my data. I decided to ask these questions: Was it open or closed? Were there any closed tracks, snow conditions, or important warnings? And what was the last updated date? I decided to present this information in a table format for ease of understanding and efficiency.", "Finally, to ensure that I always received the same format of answers from the API, I asked the OpenAI API to return the data in JSON format and to add a null answer if the AI couldn't find the answer."],
 lessonsLearned: "This project was substantial but highly engaging. I gained extensive knowledge about Puppeteer, automation, and web scraping. I've realized that some tasks, such as checking ski conditions at various cross-country centers, are better done manually, while others can be swiftly automated when website structures are consistent. Additionally, having never used the OpenAI API before, I learned about prompt structuring, various formulation techniques, and parameters like temperature to control response variability. This allowed me to leverage AI with greater precision for parsing large and diverse datasets."
 }
 
@@ -39,9 +41,10 @@ lessonsLearned: "This project was substantial but highly engaging. I gained exte
 
 const allStack = CrossCountryProject.stacks;
 
+
 export const ProjectsPage = () => {
   return (
-    <>
+    <ProjectDescription>
     <h1>{CrossCountryProject.nameOfProject}</h1>
     <p>{CrossCountryProject.readTime}</p>
     <p>{CrossCountryProject.smalldescriptionOfProject}</p>
@@ -67,16 +70,20 @@ export const ProjectsPage = () => {
     {/* End of table of 3 columns */}
     
     {/* ScreenShot of the app*/}
-    <img>{CrossCountryProject.screenShot1}</img>
+    
+    <ScreenShot src={CrossCountryProject.screenShot1} alt="Screeshot of the Home page of the app"></ScreenShot>
     <h2>Project Purpose and Goal</h2>
     <p>{CrossCountryProject.projectPurposeAndGoal}</p>
     <h2>Web Stack and Explanation</h2>
     <p>{CrossCountryProject.WebStackAndExplanation}</p>
     <h2>Problems and Thought Process</h2>
-    <p>{CrossCountryProject.ProblemsAndToughtProcess}</p>
+    {CrossCountryProject.ProblemsAndToughtProcess.map(problem => (
+      <p>{problem}</p>
+    ))}
+    
     <h2>Lessons Learned & Future Work</h2>
     <p>{CrossCountryProject.lessonsLearned}</p>    
-    </>
+    </ProjectDescription>
   )
 }
 
@@ -86,3 +93,12 @@ grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr;
 `
 
+const ProjectDescription = styled.div`
+p {
+  font-size: 0.8em;
+}
+`
+const ScreenShot = styled.img`
+  max-width:100%;
+  max-height: auto;
+`
