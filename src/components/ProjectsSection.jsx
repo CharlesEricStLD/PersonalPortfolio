@@ -5,10 +5,18 @@ import styled from "styled-components"
 import fruitStoreProject from "../assets/fruitStoreWorkshop.png"
 import crossCountryFinder from "../assets/crossCountryFinder.png"
 import fizzGame from "../assets/fizzGame.png"
+import { useNavigate } from "react-router-dom"
+
 
 
 const ProjectsSection = () => {
+  
+  const navigate = useNavigate();
 
+  const goToNewPage = (path) => {
+    navigate(path);
+  } 
+  
   return (
     <ProjectGridContainer>
         
@@ -16,8 +24,8 @@ const ProjectsSection = () => {
         <HoverlayEffect> <p>The old Fizz Buzz game, made with vanilla Js and Html</p> </HoverlayEffect>
         <img src={fizzGame} alt= "Image of my FizzBuzz game"/>
         </ProjectContainer>
-
-        <ProjectContainer style={{cursor:"pointer"}} onClick={()=> window.open("https://github.com/CharlesEricStLD/FinalProject", "_blank")}>
+        
+        <ProjectContainer style={{cursor:"pointer"}} onClick={() => goToNewPage("/CrossCountryFinder")}>
         <HoverlayEffect> <p>Fullstack website to find update condition of all crossCountry center in Quebec (to deployed soon)</p> </HoverlayEffect>
         <img src={crossCountryFinder} alt= "Image of CrossCountry Finder" ></img>
         </ProjectContainer>
