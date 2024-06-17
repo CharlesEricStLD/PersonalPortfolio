@@ -1,6 +1,5 @@
 //Page with the description and the details of the Crosws Country Finder project
 
-import styled from "styled-components";
 import crossCountryFinderScreenShot from  "../../public/ScreenShot1CrossCountryFinder.png"
 import { ProjectsPage } from "./ProjectsPage";
 
@@ -24,7 +23,7 @@ screenShot1 : crossCountryFinderScreenShot,
 readTime : "5 min", 
 smalldescriptionOfProject : "This full-stack website is devoted to finding and presenting the current snow conditions for all cross-country ski centers in Quebec, ensuring users have quick access to the latest updates.",
 type: "Outdoor utility platform",
-stacks: ["JavaScript","React","Vite","NodesJS","MongoDB","OpenAi API","Puppeteer"],
+stacks: ["JavaScript","React","NodesJS","Vite","MongoDB","OpenAi API","Puppeteer"],
 githubLink : "https://github.com/CharlesEricStLD/FinalProject",
 liveLink: "To be deployed",
 projectPurposeAndGoal: "In Quebec, cross-country centers are typically managed by private operators, each maintaining their own website and presenting snow conditions in varying formats. This fragmentation means that to check conditions across multiple centers, users must tediously search and navigate each website individually. The aim of this project is to address this issue by creating a centralized database for up-to-date snow conditions in all Quebec cross-country centers. Our platform offers users a streamlined experience, allowing them to easily find the latest conditions for their favorite centers, login in their profile and creating favorite.",
