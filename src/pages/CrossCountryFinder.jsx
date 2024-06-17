@@ -1,6 +1,6 @@
 //Page with the description and the details of the Crosws Country Finder project
 
-import crossCountryFinderScreenShot from  "../../public/ScreenShot1CrossCountryFinder.png"
+import crossCountryFinderScreenShot from  "../assets/screenShot1CrossCountryFinder.png"
 import { ProjectsPage } from "./ProjectsPage";
 
 //Component of the description of Project Page
