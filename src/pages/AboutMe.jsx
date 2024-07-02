@@ -2,7 +2,7 @@
 
 import personalPicture from "../assets/personalPicture.jpg"
 import styled from "styled-components";
-import Header from "./Header";
+import Header from "../components/Header";
 
 const AboutMe= () => {
 
