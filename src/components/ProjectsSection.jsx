@@ -19,22 +19,22 @@ const ProjectsSection = () => {
   
   return (
     <ProjectGridContainer>
-        
-      {/* <ProjectContainer style={{cursor:"pointer"}} onClick={()=> window.open("https://fizz-game.vercel.app/", "_blank")}  >
-        <HoverlayEffect> <p>The old Fizz Buzz game, made with vanilla Js and Html</p> </HoverlayEffect>
-        <img src={fizzGame} alt= "Image of my FizzBuzz game"/>
-        </ProjectContainer> */}
-        
+
         <ProjectContainer style={{cursor:"pointer"}} onClick={() => goToNewPage("/CrossCountryFinder")}>
         <HoverlayEffect> <p>Fullstack website to find update condition of all crossCountry center in Quebec (to deployed soon)</p> </HoverlayEffect>
         <img src={crossCountryFinder} alt= "Image of CrossCountry Finder" ></img>
         </ProjectContainer>
 
-        {/* <ProjectContainer>
+        
+        <ProjectContainer style={{cursor:"pointer"}} onClick={()=> window.open("https://fizz-game.vercel.app/", "_blank")}  >
+        <HoverlayEffect> <p>The old Fizz Buzz game, made with vanilla Js and Html</p> </HoverlayEffect>
+        <img src={fizzGame} alt= "Image of my FizzBuzz game"/>
+        </ProjectContainer>
+        
+        <ProjectContainer>
         <HoverlayEffect> <p>Simple Store to buy fruits from with a description page for each fruits</p> </HoverlayEffect>
         <img src={fruitStoreProject} alt= "Image of my Fruit Store webPage" ></img>
-        </ProjectContainer> */}
-
+        </ProjectContainer>
 
       </ProjectGridContainer>
   )
