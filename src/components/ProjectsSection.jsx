@@ -18,36 +18,40 @@ const ProjectsSection = () => {
   } 
   
   return (
-    <ProjectGridContainer>
-
-        <ProjectContainer style={{cursor:"pointer"}} onClick={() => goToNewPage("/CrossCountryFinder")}>
-        <HoverlayEffect> <p>Fullstack website to find update condition of all crossCountry center in Quebec (to deployed soon)</p> </HoverlayEffect>
-        <img src={crossCountryFinder} alt= "Image of CrossCountry Finder" ></img>
-        </ProjectContainer>
-
-        
-        <ProjectContainer style={{cursor:"pointer"}} onClick={()=> window.open("https://fizz-game.vercel.app/", "_blank")}  >
-        <HoverlayEffect> <p>The old Fizz Buzz game, made with vanilla Js and Html</p> </HoverlayEffect>
-        <img src={fizzGame} alt= "Image of my FizzBuzz game"/>
-        </ProjectContainer>
+    <ProjectsGridContainer>
         
         <ProjectContainer>
-        <HoverlayEffect> <p>Simple Store to buy fruits from with a description page for each fruits</p> </HoverlayEffect>
-        <img src={fruitStoreProject} alt= "Image of my Fruit Store webPage" ></img>
+        <ProjectDescription><p>Lorem Ipsum</p></ProjectDescription>
+        <ProjectImage style={{cursor:"pointer"}} onClick={() => goToNewPage("/CrossCountryFinder")}>
+        <HoverlayEffect> <p>Fullstack website to find update condition of all crossCountry center in Quebec (to deployed soon)</p> </HoverlayEffect>
+        <img src={crossCountryFinder} alt= "Image of CrossCountry Finder" ></img>
+        </ProjectImage>
         </ProjectContainer>
 
-      </ProjectGridContainer>
+        
+        <ProjectImage style={{cursor:"pointer"}} onClick={()=> window.open("https://fizz-game.vercel.app/", "_blank")}  >
+        <HoverlayEffect> <p>The old Fizz Buzz game, made with vanilla Js and Html</p> </HoverlayEffect>
+        <img src={fizzGame} alt= "Image of my FizzBuzz game"/>
+        </ProjectImage>
+        
+        <ProjectImage>
+        <HoverlayEffect> <p>Simple Store to buy fruits from with a description page for each fruits</p> </HoverlayEffect>
+        <img src={fruitStoreProject} alt= "Image of my Fruit Store webPage" ></img>
+        </ProjectImage>
+
+      </ProjectsGridContainer>
   )
 
 }
 
 export default ProjectsSection
 
-const ProjectGridContainer = styled.div`
-  display: grid;
+const ProjectsGridContainer = styled.div`
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 4%;
+  grid-template-rows: 1fr 1fr; */
+  /* gap: 4%; */
+  margin-bottom:4% ;
   width:100%;
 
   img {
@@ -77,10 +81,17 @@ const ProjectGridContainer = styled.div`
   max-height: 300px;
   }
 
-}
+}`
 
-`
 const ProjectContainer = styled.div`
+display: grid;
+grid-template-columns: 3fr 2fr;
+` 
+const ProjectDescription = styled.div`
+  border : solid black;
+`
+
+const ProjectImage = styled.div`
   position: relative;
 `
 
