@@ -8,7 +8,7 @@ import reactLogo from "../assets/react.png"
 import nodeJsLogo from "../assets/nodejsLogo.png"
 import mongoDbLogo from "../assets/mongodbLogo.png"
 import html5Logo from "../assets/html5Logo.png"
-import wordpressLogo from "../assets/worpressLogo.png"
+import wordpressLogo from "../assets/wordpressLogo.png"
 import shopifyLogo from "../assets/shopifyLogo.png"
 import Tooltip from '@mui/material/Tooltip';
 
