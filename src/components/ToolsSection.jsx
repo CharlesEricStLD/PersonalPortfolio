@@ -48,13 +48,18 @@ const ToolsSection = () => {
   return (
     
     <LogoSection>
+    
     {tools.map(tool => (
+    <ToolContainer>
     <Tooltip interactive="true" key={tool.name}    
     title={<a href={tool.link} target='blank' style={{textDecoration:"none", color:"#fff3af"}}>{tool.name}</a>} placement="top">
     <img src={tool.image} alt={`Logo of ${tool}`}/>
     </Tooltip>
+    <p>{tool.name}</p>
+    </ToolContainer>
     ))
   }
+    
   </LogoSection>
   )
 }
@@ -65,8 +70,18 @@ const LogoSection = styled.div`
   margin-top: 5%;
 
   img{
-    width:10%;
+    width:50%;
   }
+
+  p{
+    display: block;
+  }
+`
+
+const ToolContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export default ToolsSection;
