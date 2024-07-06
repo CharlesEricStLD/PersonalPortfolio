@@ -91,6 +91,9 @@ const LogoSection = styled.ul`
 
 const ToolContainer = styled.li`
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
 
   p{
