@@ -8,7 +8,7 @@ import reactLogo from "../assets/react.png"
 import nodeJsLogo from "../assets/nodejsLogo.png"
 import mongoDbLogo from "../assets/mongodbLogo.png"
 import html5Logo from "../assets/html5Logo.png"
-// import wordpressLogo from "../assets/wordpressLogo.png"
+import wordpressLogo from "../assets/wordpressLogo.png"
 import shopifyLogo from "../assets/shopifyLogo.png"
 import Tooltip from '@mui/material/Tooltip';
 
@@ -47,17 +47,17 @@ const tools = [
     name : "HTML",
     link: "https://en.wikipedia.org/wiki/HTML5",
     image: html5Logo
+  },
+  {
+    name: "Wordpress",
+    link : "https://wordpress.com/",
+    image : wordpressLogo
   }, 
   {
     name: "Shopify",
     link : "https://www.shopify.com/ca", 
     image : shopifyLogo 
   }, 
-  // {
-  //   name: "Wordpress",
-  //   link : "https://wordpress.com/",
-  //   image : wordpressLogo
-  // }
 ]
 
 
