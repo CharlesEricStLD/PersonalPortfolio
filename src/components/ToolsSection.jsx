@@ -8,7 +8,7 @@ import reactLogo from "../assets/react.png"
 import nodeJsLogo from "../assets/nodejsLogo.png"
 import mongoDbLogo from "../assets/mongodbLogo.png"
 import html5Logo from "../assets/html5Logo.png"
-import wordpressLogo from "../assets/wordpressLogo.png"
+// import wordpressLogo from "../assets/wordpressLogo.png"
 import shopifyLogo from "../assets/shopifyLogo.png"
 import Tooltip from '@mui/material/Tooltip';
 
@@ -53,11 +53,11 @@ const tools = [
     link : "https://www.shopify.com/ca", 
     image : shopifyLogo 
   }, 
-  {
-    name: "Wordpress",
-    link : "https://wordpress.com/",
-    image : wordpressLogo
-  }
+  // {
+  //   name: "Wordpress",
+  //   link : "https://wordpress.com/",
+  //   image : wordpressLogo
+  // }
 ]
 
 
@@ -66,7 +66,6 @@ const ToolsSection = () => {
   return (
     
     <LogoSection>
-    
     {tools.map(tool => (
     <ToolContainer>
     <Tooltip interactive="true" key={tool.name}    
@@ -81,24 +80,29 @@ const ToolsSection = () => {
   )
 }
 
-const LogoSection = styled.div`
+const LogoSection = styled.ul`
   display:flex;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: center;
   margin-top: 5%;
+`
 
-  img{
-    width:50%;
-  }
+const ToolContainer = styled.li`
+  list-style-type: none;
+  
 
   p{
-    display: block;
+    text-align: center;
   }
+
+  img{
+    max-width: 100px;
+  }
+
+
 `
 
-const ToolContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
 
 export default ToolsSection;
