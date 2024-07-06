@@ -36,8 +36,8 @@ const ProjectsSection = () => {
         </ResumeOfProject>
         <ViewProjectButton onClick={() => goToNewPage("/CrossCountryFinder")}>View project</ViewProjectButton>
           </ProjectDescription>
-        <ProjectImage style={{cursor:"pointer"}} onClick={() => goToNewPage("/CrossCountryFinder")}>
-        <HoverlayEffect> <p>Fullstack website to find update condition of all crossCountry center in Quebec (to deployed soon)</p> </HoverlayEffect>
+        <ProjectImage onClick={() => goToNewPage("/CrossCountryFinder")}>
+        {/* <HoverlayEffect> <p>Fullstack website to find update condition of all crossCountry center in Quebec (to deployed soon)</p> </HoverlayEffect> */}
         <img src={crossCountryFinder} alt= "Image of CrossCountry Finder" ></img>
         </ProjectImage>
         
@@ -63,21 +63,10 @@ export default ProjectsSection
 
 const ProjectsGridContainer = styled.div`
   margin-bottom:4% ;
-  width:100%;
-
-  img {
-  position:relative;
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 500px;
-  max-height: 500px;
-  z-index:-1;
-  border-radius: 15px;
-  }
+  border:solid 3px;
 
 //tablet view
 @media ( min-width: 580px) and (max-width:700px) {
-
   grid-template-columns: 1fr;
 }
 
@@ -85,30 +74,14 @@ const ProjectsGridContainer = styled.div`
 @media ( min-width: 320px) and (max-width:579px) {
   grid-template-columns: 1fr;
 
-  img {
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 300px;
-  max-height: 300px;
-  }
-
 }`
 
 const ProjectContainer = styled.div`
 display: grid;
 grid-template-columns: 3fr 2fr;
-gap:4%;
 ` 
 const ProjectDescription = styled.div`
-  padding:4% 0% 4% 4%;
-
-  
-
-  h3 {
-    font-size: 1.5em;
-    margin: 1%;
-  }
-
+  padding:4% 4% 4% 4%;
 `
 const TechsUsed = styled.div`
   display:flex;
@@ -131,7 +104,17 @@ const ResumeOfProject = styled.div`
   margin-top:4%;
 `
 const ProjectImage = styled.div`
-  position: relative;
+  margin:15% 8% 8% 8%;
+  cursor: pointer;
+  width:fit-content;
+  height:fit-content;
+
+  img {
+    object-fit: contain;
+    width:100%;
+    height:100%;
+    border-radius:15px;
+  }
 `
 const ViewProjectButton = styled.button`
   padding:2%;
