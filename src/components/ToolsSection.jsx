@@ -14,25 +14,20 @@ import Tooltip from '@mui/material/Tooltip';
 
 const tools = [
   {
+    name : "React", 
+    link : "https://react.dev/",
+    image : reactLogo
+  },
+  {
   name : "Javascript", 
   link : "https://en.wikipedia.org/wiki/JavaScript",
   image : javascriptLogo 
-  },
-  { 
-  name : "Git",
-  link : "https://git-scm.com/",
-  image : gitlogo
   },
   {
     name : "CSS-3",
     link : "https://en.wikipedia.org/wiki/CSS",
     image :css3Logo
   },
-  {
-    name : "React", 
-    link : "https://react.dev/",
-    image : reactLogo
-  }, 
   {
     name : "NodeJs",
     link: "https://nodejs.org/en",
@@ -42,7 +37,7 @@ const tools = [
     name : "Mongo Database",
     link : "https://www.mongodb.com/",
     image : mongoDbLogo
-  }, 
+  },
   {
     name : "HTML",
     link: "https://en.wikipedia.org/wiki/HTML5",
@@ -58,6 +53,11 @@ const tools = [
     link : "https://www.shopify.com/ca", 
     image : shopifyLogo 
   }, 
+  { 
+    name : "Git",
+    link : "https://git-scm.com/",
+    image : gitlogo
+  }
 ]
 
 
@@ -84,7 +84,6 @@ const LogoSection = styled.ul`
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: stretch;
   justify-content: center;
   margin-top: 5%;
 `
@@ -92,8 +91,11 @@ const LogoSection = styled.ul`
 const ToolContainer = styled.li`
   list-style-type: none;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding:0 2.5% 0 2.5%;
+  max-width: 100px;
   
 
   p{
@@ -101,10 +103,26 @@ const ToolContainer = styled.li`
   }
 
   img{
-    max-width: 100px;
+    object-fit:contain;
+    width:100%;
+    height:100%;
   }
 
+  //tablet view
+@media ( min-width: 580px) and (max-width:700px) {
 
+  p{
+    font-size:0.8em;
+  }
+}
+
+//Phone view
+@media ( min-width: 320px) and (max-width:579px) {
+
+  p{
+    font-size:0.5em;
+  }
+}
 `
 
 
