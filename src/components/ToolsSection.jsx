@@ -10,7 +10,6 @@ import mongoDbLogo from "../assets/mongodbLogo.png"
 import html5Logo from "../assets/html5Logo.png"
 import wordpressLogo from "../assets/wordpressLogo.png"
 import shopifyLogo from "../assets/shopifyLogo.png"
-import Tooltip from '@mui/material/Tooltip';
 
 const tools = [
   {
@@ -67,11 +66,8 @@ const ToolsSection = () => {
     
     <LogoSection>
     {tools.map(tool => (
-    <ToolContainer>
-    <Tooltip interactive="true" key={tool.name}    
-    title={<a href={tool.link} target='blank' style={{textDecoration:"none", color:"#fff3af"}}>{tool.name}</a>} placement="top">
+    <ToolContainer key={tool.name}>
     <img src={tool.image} alt={`Logo of ${tool}`}/>
-    </Tooltip>
     <p>{tool.name}</p>
     </ToolContainer>
     ))
@@ -86,6 +82,7 @@ const LogoSection = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 5%;
+  padding:unset;
 `
 
 const ToolContainer = styled.li`
