@@ -80,7 +80,6 @@ const LogoSection = styled.ul`
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   margin-top: 5%;
   padding:unset;
 `
@@ -107,6 +106,7 @@ const ToolContainer = styled.li`
 
   //tablet view
 @media ( min-width: 580px) and (max-width:700px) {
+  max-width: 75px;
 
   p{
     font-size:0.8em;
@@ -115,6 +115,7 @@ const ToolContainer = styled.li`
 
 //Phone view
 @media ( min-width: 320px) and (max-width:579px) {
+  max-width: 60px;
 
   p{
     font-size:0.5em;
