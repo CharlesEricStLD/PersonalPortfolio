@@ -68,30 +68,61 @@ const ProjectsGridContainer = styled.div`
 //tablet view
 @media ( min-width: 580px) and (max-width:700px) {
   grid-template-columns: 1fr;
+
 }
 
 //Phone view
 @media ( min-width: 320px) and (max-width:579px) {
   grid-template-columns: 1fr;
-
 }`
 
 const ProjectContainer = styled.div`
 display: grid;
 grid-template-columns: 3fr 2fr;
+
+//tablet view
+@media ( min-width: 580px) and (max-width:700px) {
+  display:flex;
+  flex-direction: column;
+}
+
+//Phone view
+@media ( min-width: 320px) and (max-width:579px) {
+  display:flex;
+  flex-direction: column;
+}
+
 ` 
 const ProjectDescription = styled.div`
   padding:4% 4% 4% 4%;
+
+  //tablet view
+@media ( min-width: 580px) and (max-width:700px) {
+  padding:0% 4% 4% 4%;
+
+  h2 {
+    margin: 2% 0 2% 0;
+  }
+}
+
+//Phone view
+@media ( min-width: 320px) and (max-width:579px) {
+  padding:0% 4% 4% 4%;
+
+  h2 {
+    margin: 2% 0 2% 0;
+  }
+
+}
 `
 const TechsUsed = styled.div`
   display:flex;
   flex-wrap: wrap;
-  height: 10%;
 `
 
 const TechUse = styled.div`
   background-color: black;
-  margin: 2% 2% 0 0;
+  margin: 2% 2% 2% 0;
   padding:0.5% 1%;
   border-radius: 10px;
 
@@ -103,6 +134,8 @@ const TechUse = styled.div`
 const ResumeOfProject = styled.div`
   margin-top:4%;
 `
+
+
 const ProjectImage = styled.div`
   margin:15% 8% 8% 8%;
   cursor: pointer;
@@ -119,7 +152,6 @@ const ProjectImage = styled.div`
 const ViewProjectButton = styled.button`
   padding:2%;
   text-align: center;
-  margin-left:40%;
   font-size: 1.2em;
   background-color: black;
   color:#fff3af;
