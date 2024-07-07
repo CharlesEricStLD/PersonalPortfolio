@@ -1,6 +1,5 @@
 //Component to render the Logo Section 
 import styled from "styled-components"
-
 import javascriptLogo from "../assets/javascript.png"
 import css3Logo from "../assets/css3.png"
 import gitlogo from "../assets/git.png"
@@ -42,11 +41,8 @@ const tools = [
   }
 ]
 
-
 const ToolsSection = () => {
-
   return (
-    
     <LogoSection>
     {tools.map(tool => (
     <Tooltip interactive="true" key={tool.name}    
@@ -68,5 +64,4 @@ const LogoSection = styled.div`
     width:10%;
   }
 `
-
 export default ToolsSection;
