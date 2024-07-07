@@ -63,7 +63,10 @@ export default ProjectsSection
 
 const ProjectsGridContainer = styled.div`
   margin-bottom:4% ;
-  border:solid 3px;
+
+  h5 {
+    margin:unset;
+  }
 
 //tablet view
 @media ( min-width: 580px) and (max-width:700px) {
@@ -79,6 +82,8 @@ const ProjectsGridContainer = styled.div`
 const ProjectContainer = styled.div`
 display: grid;
 grid-template-columns: 3fr 2fr;
+padding:4% 4% 4% 4%;
+column-gap: 4%;
 
 //tablet view
 @media ( min-width: 580px) and (max-width:700px) {
@@ -94,11 +99,10 @@ grid-template-columns: 3fr 2fr;
 
 ` 
 const ProjectDescription = styled.div`
-  padding:4% 4% 4% 4%;
 
-  //tablet view
+//tablet view
 @media ( min-width: 580px) and (max-width:700px) {
-  padding:0% 4% 4% 4%;
+  margin-bottom: 8%;
 
   h2 {
     margin: 2% 0 2% 0;
@@ -107,12 +111,13 @@ const ProjectDescription = styled.div`
 
 //Phone view
 @media ( min-width: 320px) and (max-width:579px) {
-  padding:0% 4% 4% 4%;
+
+  font-size: 0.7em;
+  margin-bottom: 8%;
 
   h2 {
     margin: 2% 0 2% 0;
   }
-
 }
 `
 const TechsUsed = styled.div`
@@ -123,7 +128,7 @@ const TechsUsed = styled.div`
 const TechUse = styled.div`
   background-color: black;
   margin: 2% 2% 2% 0;
-  padding:0.5% 1%;
+  padding:0.5% 2%;
   border-radius: 10px;
 
   span{
@@ -135,9 +140,8 @@ const ResumeOfProject = styled.div`
   margin-top:4%;
 `
 
-
 const ProjectImage = styled.div`
-  margin:15% 8% 8% 8%;
+  margin:auto;
   cursor: pointer;
   width:fit-content;
   height:fit-content;
