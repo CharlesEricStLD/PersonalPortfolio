@@ -68,6 +68,10 @@ const ProjectsGridContainer = styled.div`
     margin:unset;
   }
 
+  h2 {
+    margin:unset
+  }
+
 //tablet view
 @media ( min-width: 580px) and (max-width:700px) {
   grid-template-columns: 1fr;
@@ -82,7 +86,6 @@ const ProjectsGridContainer = styled.div`
 const ProjectContainer = styled.div`
 display: grid;
 grid-template-columns: 3fr 2fr;
-padding:4% 4% 4% 4%;
 column-gap: 4%;
 
 //tablet view
