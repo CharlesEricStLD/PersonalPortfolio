@@ -43,6 +43,7 @@ const [open, SetOpen] = useState(false);
 
       <GetInTouchSection id="getInTouchSection">
       <h2 id="getInTouchTitle" className="GetInTouch">Let's have a chat !</h2>
+      {/* url of the picture i want to use : https://www.flaticon.com/free-icon/phone_10049137?term=satellite+phone&page=1&position=57&origin=tag&related_id=10049137 */}
       <a href="https://www.flaticon.com/free-icons/forest" title="forest icons">Forest icons created by Leremy - Flaticon</a>
       <p>ce.stlouisdupuis@gmail.com</p>
       <button  variant="contained" onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>Copy Email</button>
