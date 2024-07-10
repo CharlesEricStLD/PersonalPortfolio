@@ -42,13 +42,14 @@ const [open, SetOpen] = useState(false);
       </ProjectSectionStyling>
 
       <GetInTouchSection id="getInTouchSection">
-      <h2 id="getInTouchTitle" className="GetInTouch">Get in Touch</h2>
+      <h2 id="getInTouchTitle" className="GetInTouch">Let's have a chat !</h2>
+      <a href="https://www.flaticon.com/free-icons/forest" title="forest icons">Forest icons created by Leremy - Flaticon</a>
+      <p>ce.stlouisdupuis@gmail.com</p>
+      <button  variant="contained" onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>Copy Email</button>
       <GetInTouchIcon> 
       <SocialIcon className="linkedInIcon" target="_blank" bgColor="black" network="linkedin" href="https://www.linkedin.com/in/charleseric-stlouisdupuis/"   ></SocialIcon>
       <SocialIcon className="gitHubIcon" target="_blank" bgColor="black" network="github" href='https://github.com/CharlesEricStLD'  > </SocialIcon>
       </GetInTouchIcon>
-      <p>ce.stlouisdupuis@gmail.com</p>
-      <button  variant="contained" onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>Copy Email</button>
       <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
       <Alert severity="success">
       Email copied to clipboard! 
@@ -175,19 +176,26 @@ const ProjectSectionStyling = styled.section`
 `
 
 const GetInTouchSection = styled.footer`
-  text-align: right;
-  margin-top:10%;
+  text-align: center;
+  margin-top:5%;
   display:flex;
   flex-direction: column;
+
+  h2 {
+    margin: 0;
+  }
+
+  p {
+    margin:0;
+  }
 
   button{
     font-family: "Larken";
     border-radius: 5px;
     font-size: 0.7em;
     padding:0.5% 1%;
-    margin: auto;
+    margin: 2% auto 2% auto;
     text-align: center;
-    margin-left:85%;
     background-color: #646cff;
   }
 
@@ -213,9 +221,9 @@ const GetInTouchSection = styled.footer`
 `
 
 const GetInTouchIcon = styled.div`
-  text-align: right;
+  text-align: center;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 
   p{
     font-size: 1.2em;
