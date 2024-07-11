@@ -3,12 +3,12 @@
 import { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { SocialIcon } from 'react-social-icons'
-import { Snackbar, Alert } from '@mui/material'
+import { Snackbar, Alert, Tooltip } from '@mui/material'
 import homePagePhoto from "../assets/homePagePhoto.png"
 import ToolsSection from "../components/ToolsSection"
 import Header from '../components/Header'
 import ProjectsSection from '../components/ProjectsSection'
-
+import contactMeIcon from "../assets/contactMeIcon.png"
 const name = "Hi, I'm  Charles-Eric";
 const lettersArray = name.split('');
 
@@ -42,15 +42,21 @@ const [open, SetOpen] = useState(false);
       </ProjectSectionStyling>
 
       <GetInTouchSection id="getInTouchSection">
+      <GetInTouchContainer>
       <h2 id="getInTouchTitle" className="GetInTouch">Let's have a chat !</h2>
-      {/* url of the picture i want to use : https://www.flaticon.com/free-icon/phone_10049137?term=satellite+phone&page=1&position=57&origin=tag&related_id=10049137 */}
-      <a href="https://www.flaticon.com/free-icons/forest" title="forest icons">Forest icons created by Leremy - Flaticon</a>
-      <p>ce.stlouisdupuis@gmail.com</p>
-      <button  variant="contained" onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>Copy Email</button>
-      <GetInTouchIcon> 
+      <GetInTouchEmailContainer>
+      <p onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>ce.stlouisdupuis@gmail.com</p>
+      </GetInTouchEmailContainer>
+      <CustomTooltip interactive="true" title="Click for more icon create by Leremy!" followCursor wrapping sx={{color:"white", textDecoration:"unset", textAlign:"center"}}>
+      <a href="https://www.flaticon.com/authors/leremy" target='blank'>
+      <img src={contactMeIcon} alt="Icon of a guy with a telephone" style={{width:"200px"}}/>
+      </a>
+      </CustomTooltip>
+      </GetInTouchContainer>
+      {/* <SocialMediaIcon> 
       <SocialIcon className="linkedInIcon" target="_blank" bgColor="black" network="linkedin" href="https://www.linkedin.com/in/charleseric-stlouisdupuis/"   ></SocialIcon>
-      <SocialIcon className="gitHubIcon" target="_blank" bgColor="black" network="github" href='https://github.com/CharlesEricStLD'  > </SocialIcon>
-      </GetInTouchIcon>
+      <SocialIcon className="gitHubIcon" target="_blank" bgColor="black" network="github" href='https://github.com/CharlesEricStLD'> </SocialIcon>
+      </SocialMediaIcon> */}
       <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
       <Alert severity="success">
       Email copied to clipboard! 
@@ -178,24 +184,26 @@ const ProjectSectionStyling = styled.section`
 
 const GetInTouchSection = styled.footer`
   text-align: center;
-  margin-top:5%;
   display:flex;
   flex-direction: column;
+  padding:unset;
+  margin:unset;
 
   h2 {
-    margin: 0;
+    margin-bottom: 0.3em;
+    font-size: 2.5rem;
   }
 
   p {
     margin:0;
+    font-size: 1em;
   }
 
   button{
     font-family: "Larken";
     border-radius: 5px;
     font-size: 0.7em;
-    padding:0.5% 1%;
-    margin: 2% auto 2% auto;
+    margin-left: 2%;
     text-align: center;
     background-color: #646cff;
   }
@@ -221,7 +229,37 @@ const GetInTouchSection = styled.footer`
 
 `
 
-const GetInTouchIcon = styled.div`
+const GetInTouchContainer = styled.div `
+display: flex;
+flex-direction: column;
+
+a{
+    align-self: flex-end;
+    position: relative;
+    bottom:3em;
+  }
+`
+
+const CustomTooltip = styled(Tooltip)`
+  text-align: center;
+  text-decoration: none;
+  color:pink;
+`
+
+const GetInTouchEmailContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  p{
+    cursor: pointer;
+  }
+
+  `
+
+
+const SocialMediaIcon = styled.div`
   text-align: center;
   display: flex;
   justify-content: center;
