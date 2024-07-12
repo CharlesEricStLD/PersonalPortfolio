@@ -8,7 +8,7 @@ import ToolsSection from "../components/ToolsSection"
 import Header from '../components/Header'
 import ProjectsSection from '../components/ProjectsSection'
 import contactMeIcon from "../assets/contactMeIcon.png"
-import MediaIcons from "../components/MediaIcons"
+import {MediaIcons} from "../components/MediaIcons"
 
 const name = "Hi, I'm  Charles-Eric";
 const lettersArray = name.split('');

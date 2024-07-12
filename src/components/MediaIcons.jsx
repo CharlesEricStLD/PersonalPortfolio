@@ -1,11 +1,17 @@
-//Component to render the Logo Section 
+//Component to render the Logo Section
+
+import { useState } from 'react'
 import styled from "styled-components"
-import githubIcon from "../assets/githubIcon"
-import linkedIcon from "../assets/linkedIcon"
-import emailIcon from "../assets/emailIcon"
+import githubIcon from "../assets/githubIcon.png"
+import linkedIcon from "../assets/linkedin.png"
+import emailIcon from "../assets/emailIcon.png"
+import { Snackbar, Alert} from '@mui/material'
 
 
 export const MediaIcons = () => {
+  
+  const [open, SetOpen] = useState(false);
+
   return (
     <LogoSection>
     
@@ -16,13 +22,23 @@ export const MediaIcons = () => {
     </IconContainer>
 
     <IconContainer>
+    <a href="https://www.linkedin.com/in/charleseric-stlouisdupuis/" target="blank">
     <img src={linkedIcon} alt={`Icon of Linked In`}/>
+    </a>
     </IconContainer>
 
     <IconContainer>
+    <a href="https://github.com/CharlesEricStLD" target="blank">
     <img src={githubIcon} alt={`Logo of GitHub`}/>
+    </a>
     </IconContainer>
+    <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
+      <Alert severity="success">
+      Email copied to clipboard! 
+      </Alert>
+      </Snackbar> 
   </LogoSection>
+  
 )
 }
 
@@ -30,7 +46,6 @@ const LogoSection = styled.ul`
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 5%;
   padding:unset;
 `
 
@@ -41,14 +56,14 @@ const IconContainer = styled.li`
   flex-direction: column;
   align-items: center;
   padding:0 2.5% 0 2.5%;
-  max-width: 100px;
+  max-width: 50px;
   
 
   p{
     text-align: center;
   }
 
-  img{
+  a > img{
     object-fit:contain;
     width:100%;
     height:100%;
