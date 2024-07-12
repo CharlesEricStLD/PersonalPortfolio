@@ -1,19 +1,28 @@
 //Component to render the Logo Section 
 import styled from "styled-components"
+import githubIcon from "../assets/githubIcon"
+import linkedIcon from "../assets/linkedIcon"
+import emailIcon from "../assets/emailIcon"
 
-export const IconsSection = ({icons}) => {
+
+export const MediaIcons = () => {
   return (
-    icons? (
     <LogoSection>
-    {icons.map(icon => (
-    <IconContainer key={icon.name}>
-    <img src={icon.image} alt={`Logo of ${icon.name}`}/>
-    <p>{icon.name}</p>
+    
+    <IconContainer>
+    <a href="mailto:ce.stlouisdupuis@gmail.com" onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>
+    <img src={emailIcon} alt={`Icon of email`}/>
+    </a>
     </IconContainer>
-    ))
-  }
+
+    <IconContainer>
+    <img src={linkedIcon} alt={`Icon of Linked In`}/>
+    </IconContainer>
+
+    <IconContainer>
+    <img src={githubIcon} alt={`Logo of GitHub`}/>
+    </IconContainer>
   </LogoSection>
-  ): null
 )
 }
 
@@ -63,4 +72,3 @@ const IconContainer = styled.li`
   }
 }
 `
-

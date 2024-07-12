@@ -2,13 +2,14 @@
 
 import { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { SocialIcon } from 'react-social-icons'
 import { Snackbar, Alert, Tooltip } from '@mui/material'
 import homePagePhoto from "../assets/homePagePhoto.png"
 import ToolsSection from "../components/ToolsSection"
 import Header from '../components/Header'
 import ProjectsSection from '../components/ProjectsSection'
 import contactMeIcon from "../assets/contactMeIcon.png"
+import MediaIcons from "../components/MediaIcons"
+
 const name = "Hi, I'm  Charles-Eric";
 const lettersArray = name.split('');
 
@@ -28,6 +29,7 @@ const [open, SetOpen] = useState(false);
       <SubTitleSpacingSection>
       <h2>a passionate developper that like to work hard and build nices projects</h2>
       <h3>If you need a project well done, with passion and good vibes, I'm your dev !</h3>
+      <MediaIcons/>
       </SubTitleSpacingSection>
       </IntroSection>
 
