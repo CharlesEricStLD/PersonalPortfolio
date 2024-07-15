@@ -23,7 +23,7 @@ export const MediaIcons = () => {
 
     <IconContainer>
     <a href="https://www.linkedin.com/in/charleseric-stlouisdupuis/" target="blank">
-    <img src={linkedIcon} alt={`Icon of Linked In`}/>
+    <img src={linkedIcon} alt={`Icon of LinkedIn`}/>
     </a>
     </IconContainer>
 
@@ -71,10 +71,13 @@ const IconContainer = styled.li`
   }
 
   a > img[alt='Icon of email'] {
-    object-fit:contain;
     height: 100%;
     width:135%;
     max-width: 2.7em;
+  }
+
+  a > img[alt='Icon of LinkedIn'] {
+    padding-left: 12%;
   }
 
   //tablet view
