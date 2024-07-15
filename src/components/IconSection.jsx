@@ -1,14 +1,20 @@
 //Component to render the Logo Section 
 import styled from "styled-components"
-import {IconsSection} from "./IconSection"
-import {toolsList} from "../assets/ToolsList"
 
-const ToolsSection = () => {
+export const IconsSection = ({icons}) => {
   return (
+    icons? (
     <LogoSection>
-    <IconsSection icons={toolsList}></IconsSection>
+    {icons.map(icon => (
+    <IconContainer key={icon.name}>
+    <img src={icon.image} alt={`Logo of ${icon.name}`}/>
+    <p>{icon.name}</p>
+    </IconContainer>
+    ))
+  }
   </LogoSection>
-  )
+  ): null
+)
 }
 
 const LogoSection = styled.ul`
@@ -19,7 +25,7 @@ const LogoSection = styled.ul`
   padding:unset;
 `
 
-const ToolContainer = styled.li`
+const IconContainer = styled.li`
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -58,5 +64,3 @@ const ToolContainer = styled.li`
 }
 `
 
-
-export default ToolsSection;
