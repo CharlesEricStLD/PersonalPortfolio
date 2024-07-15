@@ -47,17 +47,17 @@ const LogoSection = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   padding:unset;
+  justify-content: flex-start;
 `
 
 const IconContainer = styled.li`
   list-style-type: none;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
   padding:0 2.5% 0 2.5%;
-  max-width: 50px;
-  
+  max-width: 2em;
+  max-height: 2em ;
 
   p{
     text-align: center;
@@ -67,6 +67,14 @@ const IconContainer = styled.li`
     object-fit:contain;
     width:100%;
     height:100%;
+    max-width: 2em;
+  }
+
+  a > img[alt='Icon of email'] {
+    object-fit:contain;
+    height: 100%;
+    width:135%;
+    max-width: 2.7em;
   }
 
   //tablet view
