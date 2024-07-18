@@ -38,6 +38,10 @@ const Header = () => {
     scroll-behavior:smooth
     }
 
+    a:hover, .header:hover {
+    color: #fff3af;
+    }
+
     //tablet view
     @media ( min-width: 580px) and (max-width:700px) {
       font-size: 0.9em;
@@ -64,15 +68,10 @@ const Header = () => {
 const NavItems = styled(NavLink)`
     margin-right:5%;
 
-      
 & {
   color: #646cff;
   text-decoration: inherit;
   font-family: "LarkenExtraBold";
-}
-
-&:hover {
-  color: #fff3af;
 }
 
 &::after {
