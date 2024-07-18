@@ -1,7 +1,7 @@
 //Component to render the Logo Section 
 import styled from "styled-components"
 import {IconsSection} from "./IconSection"
-import {toolsList} from "../assets/ToolsList"
+import {toolsList} from "../assets/ToolsList.js"
 
 const ToolsSection = () => {
   return (
