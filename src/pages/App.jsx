@@ -89,7 +89,7 @@ const MySpan = styled.span`
 
 const IntroSection = styled.section`
   
-  margin-bottom: 20%;
+  margin-bottom: 15%;
 
   img{
     width:45%;
@@ -168,7 +168,10 @@ font-size: 1.2em;
 `
 
 const ToolsSectionStyling = styled.section`
-  margin-top:10%;
+
+h2 {
+  margin: 0;
+}
 
    //tablet view
   @media ( min-width: 579px) and (max-width:700px)  {
