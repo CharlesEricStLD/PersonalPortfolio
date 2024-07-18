@@ -55,10 +55,6 @@ const [open, SetOpen] = useState(false);
       </a>
       </CustomTooltip>
       </GetInTouchContainer>
-      {/* <SocialMediaIcon> 
-      <SocialIcon className="linkedInIcon" target="_blank" bgColor="black" network="linkedin" href="https://www.linkedin.com/in/charleseric-stlouisdupuis/"   ></SocialIcon>
-      <SocialIcon className="gitHubIcon" target="_blank" bgColor="black" network="github" href='https://github.com/CharlesEricStLD'> </SocialIcon>
-      </SocialMediaIcon> */}
       <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
       <Alert severity="success">
       Email copied to clipboard! 
