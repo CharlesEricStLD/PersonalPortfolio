@@ -51,7 +51,7 @@ const [open, SetOpen] = useState(false);
       </GetInTouchEmailContainer>
       <CustomTooltip interactive="true" title="Click for more icon create by Leremy!" followCursor wrapping sx={{color:"white", textDecoration:"unset", textAlign:"center"}}>
       <a href="https://www.flaticon.com/authors/leremy" target='blank'>
-      <img src={contactMeIcon} alt="Icon of a guy with a telephone" style={{width:"200px"}}/>
+      <img src={contactMeIcon} alt="Icon of a guy with a telephone"/>
       </a>
       </CustomTooltip>
       </GetInTouchContainer>
@@ -234,17 +234,34 @@ const GetInTouchContainer = styled.div `
 display: flex;
 flex-direction: column;
 
-a{
+a {
     align-self: flex-end;
     position: relative;
     bottom:3em;
   }
+
+@media (max-width:700px) {
+  a {
+    align-self: unset;
+    position: unset;
+    bottom:3em;
+  }
+
+  }
+
 `
 
 const CustomTooltip = styled(Tooltip)`
   text-align: center;
   text-decoration: none;
-  color:pink;
+  
+  img {
+    width:200px;
+  }
+
+
+  
+
 `
 
 const GetInTouchEmailContainer = styled.div`
