@@ -192,7 +192,7 @@ const GetInTouchSection = styled.footer`
 
   h2 {
     margin-bottom: 0.3em;
-    font-size: 2.5rem;
+    font-size: 2.5em;
   }
 
   p {
@@ -212,6 +212,15 @@ const GetInTouchSection = styled.footer`
   //Tablet view
   @media ( min-width: 580px) and (max-width:700px)  {
 
+    h2 {
+    margin-bottom: 0.3em;
+    font-size: 1.75em;
+  }
+
+  p{
+    font-size: 0.75em;
+  }
+
     button {
       font-size: 0.7em;
       width:20%;
@@ -226,8 +235,17 @@ const GetInTouchSection = styled.footer`
       width:40%;
       margin-left:65%;
     }
+
+    h2 {
+    margin-bottom: 0.3em;
+    font-size: 1.75em;
   }
 
+  p {
+    font-size: 0.75em;
+  }
+
+  }
 `
 
 const GetInTouchContainer = styled.div `
@@ -254,14 +272,10 @@ a {
 const CustomTooltip = styled(Tooltip)`
   text-align: center;
   text-decoration: none;
-  
+
   img {
     width:200px;
   }
-
-
-  
-
 `
 
 const GetInTouchEmailContainer = styled.div`
