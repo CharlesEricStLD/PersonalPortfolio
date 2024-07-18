@@ -51,14 +51,10 @@ const [open, SetOpen] = useState(false);
       </GetInTouchEmailContainer>
       <CustomTooltip interactive="true" title="Click for more icon create by Leremy!" followCursor wrapping sx={{color:"white", textDecoration:"unset", textAlign:"center"}}>
       <a href="https://www.flaticon.com/authors/leremy" target='blank'>
-      <img src={contactMeIcon} alt="Icon of a guy with a telephone" style={{width:"200px"}}/>
+      <img src={contactMeIcon} alt="Icon of a guy with a telephone"/>
       </a>
       </CustomTooltip>
       </GetInTouchContainer>
-      {/* <SocialMediaIcon> 
-      <SocialIcon className="linkedInIcon" target="_blank" bgColor="black" network="linkedin" href="https://www.linkedin.com/in/charleseric-stlouisdupuis/"   ></SocialIcon>
-      <SocialIcon className="gitHubIcon" target="_blank" bgColor="black" network="github" href='https://github.com/CharlesEricStLD'> </SocialIcon>
-      </SocialMediaIcon> */}
       <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
       <Alert severity="success">
       Email copied to clipboard! 
@@ -85,18 +81,18 @@ const MySpan = styled.span`
   display: inline-block;
   text-transform: uppercase;
   font-size: 2.5em;
-  animation: ${FlipAnimation} 2s;
-  animation-delay: ${(props) => 0.2 * props.$index}s;
+  animation: ${FlipAnimation} 1s;
+  animation-delay: ${(props) => 0.1 * props.$index}s;
   white-space:pre;
   font-family: "LarkenExtraBold";
 `
 
 const IntroSection = styled.section`
   
-  margin-bottom: 20%;
+  margin-bottom: 15%;
 
   img{
-    width:50%;
+    width:45%;
     position:relative;
     left:-8%;
     float: left;
@@ -172,7 +168,10 @@ font-size: 1.2em;
 `
 
 const ToolsSectionStyling = styled.section`
-  margin-top:10%;
+
+h2 {
+  margin: 0;
+}
 
    //tablet view
   @media ( min-width: 579px) and (max-width:700px)  {
@@ -193,7 +192,7 @@ const GetInTouchSection = styled.footer`
 
   h2 {
     margin-bottom: 0.3em;
-    font-size: 2.5rem;
+    font-size: 2.5em;
   }
 
   p {
@@ -213,6 +212,15 @@ const GetInTouchSection = styled.footer`
   //Tablet view
   @media ( min-width: 580px) and (max-width:700px)  {
 
+    h2 {
+    margin-bottom: 0.3em;
+    font-size: 1.75em;
+  }
+
+  p{
+    font-size: 0.75em;
+  }
+
     button {
       font-size: 0.7em;
       width:20%;
@@ -227,25 +235,47 @@ const GetInTouchSection = styled.footer`
       width:40%;
       margin-left:65%;
     }
+
+    h2 {
+    margin-bottom: 0.3em;
+    font-size: 1.75em;
   }
 
+  p {
+    font-size: 0.75em;
+  }
+
+  }
 `
 
 const GetInTouchContainer = styled.div `
 display: flex;
 flex-direction: column;
 
-a{
+a {
     align-self: flex-end;
     position: relative;
     bottom:3em;
   }
+
+@media (max-width:700px) {
+  a {
+    align-self: unset;
+    position: unset;
+    bottom:3em;
+  }
+
+  }
+
 `
 
 const CustomTooltip = styled(Tooltip)`
   text-align: center;
   text-decoration: none;
-  color:pink;
+
+  img {
+    width:200px;
+  }
 `
 
 const GetInTouchEmailContainer = styled.div`

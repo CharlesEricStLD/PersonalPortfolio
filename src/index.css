@@ -18,7 +18,7 @@
 
   color-scheme: light dark;
   color:#fff3af;
-  background: linear-gradient(#0f2030, #b0d6e6be);
+  background: linear-gradient(#0f2030, #b0d6e65a);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,7 +26,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  padding:5%;
+  padding:5% 5% 0 5%;
   scroll-behavior:smooth;
 
   /* In IE (Internet Explorer) and Edge */
