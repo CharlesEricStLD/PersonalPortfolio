@@ -81,8 +81,8 @@ const MySpan = styled.span`
   display: inline-block;
   text-transform: uppercase;
   font-size: 2.5em;
-  animation: ${FlipAnimation} 2s;
-  animation-delay: ${(props) => 0.2 * props.$index}s;
+  animation: ${FlipAnimation} 1s;
+  animation-delay: ${(props) => 0.1 * props.$index}s;
   white-space:pre;
   font-family: "LarkenExtraBold";
 `
@@ -92,7 +92,7 @@ const IntroSection = styled.section`
   margin-bottom: 20%;
 
   img{
-    width:50%;
+    width:45%;
     position:relative;
     left:-8%;
     float: left;
