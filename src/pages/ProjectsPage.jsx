@@ -71,7 +71,8 @@ export const ProjectsPage = ({project}) => {
     ))}
     
     <h2>Lessons Learned & Future Work</h2>
-    <p>{project.lessonsLearned}</p>    
+    {project.lessonsLearned.map(lessonLearned => (
+      <p>{lessonLearned}</p>))}   
     </ProjectDescription>
     </>
   )
