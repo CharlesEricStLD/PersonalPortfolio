@@ -11,6 +11,11 @@
   url("./fonts/LarkenDEMO-Regular.otf") format('opentype');
 }
 
+p{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
 :root {
   font-family: "Larken", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -18,7 +23,7 @@
 
   color-scheme: light dark;
   color:#fff3af;
-  background: linear-gradient(#0f2030, #b0d6e65a);
+  background: linear-gradient(#0f2030, #48b8e830);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
