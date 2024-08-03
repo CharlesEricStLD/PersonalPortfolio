@@ -47,8 +47,9 @@ export const Header = () => {
       inset : 0 0 0 50%;
       display: flex;
       flex-direction: column;
-      gap:2em;  
-      padding:1em 0 0 1em; 
+      gap:2em; 
+      margin-top : 0;
+      padding:0 0 0 1em; 
       background-color: hsl(100 0 0%/0.1);
       backdrop-filter: blur(1em);
     }
