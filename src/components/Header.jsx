@@ -45,7 +45,7 @@ export const Header = () => {
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
     --x-width: calc(var(--hamburger-height) * calc(sqrt(2)));
-    --left-mobile-menu-padding: 2em;
+    --left-mobile-menu-padding: 1.5em;
   `
 
   const NavigationMenu = styled.div`
@@ -69,7 +69,7 @@ export const Header = () => {
   //Phone view
   @media ( min-width: 320px) and (max-width:579px) {
       z-index: 1;
-      font-size  : 1em;
+      font-size  : 1.3em;
       position: fixed;
       inset : 0 50% 0 0;
       display: flex;
@@ -88,7 +88,7 @@ export const Header = () => {
     box-sizing: border-box;
     display:none;
     width: max-content;
-    position: absolute;
+    position: fixed;
     top : 16em;
     left: 70vw;
     z-index: 1;
