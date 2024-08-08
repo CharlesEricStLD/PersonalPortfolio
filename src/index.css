@@ -24,8 +24,8 @@ p{
 
   color-scheme: light dark;
   color:#fff3af;
+  background-color: #0f2030;
   background: linear-gradient(#0f2030, #3281a230);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
