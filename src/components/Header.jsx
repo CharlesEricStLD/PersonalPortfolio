@@ -71,7 +71,7 @@ export const Header = () => {
       z-index: 1;
       font-size  : 1.3em;
       position: fixed;
-      inset : 0 50% 0 0;
+      inset : 0 30% 0 0;
       display: flex;
       flex-direction: column;
       gap:2em;
@@ -90,7 +90,7 @@ export const Header = () => {
     width: max-content;
     position: fixed;
     top : 16em;
-    left: 70vw;
+    left: 75vw;
     z-index: 1;
     cursor: pointer;
     background-color: black;
