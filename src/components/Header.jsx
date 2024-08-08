@@ -12,10 +12,8 @@ export const Header = () => {
 
   const openMenu = (event) => {
       if ((event.target.checked)) {
-        console.log("OpenMenu")
         setIsMobileMenuOpen(true);
       } else {
-        console.log("CloseMenu")
         setIsMobileMenuOpen(false);
       }
   }
