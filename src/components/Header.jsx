@@ -76,8 +76,11 @@ export const Header = () => {
       margin-top:0;
       padding-top:calc(var(--hamburger-height) + 2em);
       padding-left:var(--left-mobile-menu-padding);
+      background-color: #000000d5;
       background-color: hsl(100 0 0%/0.1);
+      -webkit-backdrop-filter: blur(1em);
       backdrop-filter: blur(1em);
+
       translate: ${props => props.$ismobilemenuopen? "0" : "-100%"};
       transition: translate var(--animation-timing);
     }
