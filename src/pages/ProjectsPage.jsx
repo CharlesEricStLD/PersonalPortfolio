@@ -53,7 +53,7 @@ export const ProjectsPage = ({project}) => {
 
     <div>
     {project.githubLink ? 
-    <><h2>Github</h2><p> <a href="{project.githubLink}">GitHub</a> </p></>: <> <h2>Live</h2> <p>{project.liveLink}</p> </>}
+    <><h2>Github</h2><p> <a href={project.githubLink}>GitHub</a> </p></>: <> <h2>Live</h2> <p>{project.liveLink}</p> </>}
     </div>
     </PropertyOfProject>
     {/* End of table of 3 columns */}
