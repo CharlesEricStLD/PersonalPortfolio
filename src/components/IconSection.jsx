@@ -33,6 +33,7 @@ const IconContainer = styled.li`
   align-items: center;
   padding:0 2.5% 0 2.5%;
   max-width: 100px;
+  min-width:60px;
   
 
   p{
