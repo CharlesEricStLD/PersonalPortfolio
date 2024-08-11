@@ -10,7 +10,7 @@ import ProjectsSection from '../components/ProjectsSection'
 import contactMeIcon from "../assets/contactMeIcon.png"
 import {MediaIcons} from "../components/MediaIcons"
 
-const name = "Hi, I'm  Charles-Eric";
+const name = "Hi, I'm Charles- Eric";
 const lettersArray = name.split('');
 
 function App() {
@@ -80,17 +80,26 @@ const FlipAnimation = keyframes`
 const MySpan = styled.span`
   display: inline-block;
   text-transform: uppercase;
-  font-size: 2.5em;
+  font-size: calc(3.8vw + 3.8vh);
   animation: ${FlipAnimation} 1s;
   animation-delay: ${(props) => 0.1 * props.$index}s;
   white-space:pre;
   font-family: "LarkenExtraBold";
+
+  //tablet view
+  @media ( min-width: 580px) and (max-width:700px) {
+    font-size: calc(3.5vw + 3.5vh);
+  }
+
+  //Phone view 
+  @media ( min-width: 320px) and (max-width:579px) {
+    font-size: calc(3vw + 3vh);
+  }
 `
 
 const IntroSection = styled.section`
-  
   margin-bottom: 15%;
-
+  font-size: calc(1.45vw + 1.45vh);
   img{
     width:45%;
     position:relative;
@@ -100,43 +109,14 @@ const IntroSection = styled.section`
 
   //tablet view
   @media ( min-width: 580px) and (max-width:700px) {
-    font-size: 0.70em;
-    h2 {
-      font-size: 1.1em;
-      margin:0;
-      text-align: center;
-    }
-    h3{
-      font-size: 0.9em;
-    }
-    span:nth-of-type(9) {
-    height:0;
-    }
-    span:nth-of-type(9) {
-    display: block;
-    }
     img{
       padding-bottom:10%;
     }
-  }
+  } 
 
   //Phone view 
   @media ( min-width: 320px) and (max-width:579px) {
-    font-size: 0.6em;
-    h2 {
-      font-size: 1.1em;
-      margin:0;
-      text-align: center;
-    }
-    h3{
-      font-size: 0.9em;
-    }
-    span:nth-of-type(9) {
-    height:0;
-    }
-    span:nth-of-type(9) {
-    display: block;
-    }
+    
     img{
       width:40%;
       float:left;
@@ -147,12 +127,22 @@ const IntroSection = styled.section`
 
 const TitleSpacingSection= styled.div`
   margin-top: 10%;
+  span:nth-child(8) {
+    display: block;
+    height:0;
+    background-color: aliceblue;
+  }
+  span:nth-child(17) {
+    display: none;
+  }
 
-  img{
-    width:50%;
-    position:relative;
-    left:-8%;
-    float: left;
+  //Phone view 
+    @media ( min-width: 320px) and (max-width:579px) {
+      span:nth-child(17) {
+      display: block;
+      height:0;
+      background-color: aliceblue;
+    }
   }
 
    //tablet view
@@ -173,7 +163,7 @@ h2 {
   margin: 0;
 }
 
-   //tablet view
+  //tablet view
   @media ( min-width: 579px) and (max-width:700px)  {
   margin-top: 5%;
   }
@@ -312,7 +302,7 @@ const SocialMediaIcon = styled.div`
   }
 }
 
-  //Phone view
+//Phone view
   @media ( min-width: 320px) and (max-width:579px) {
     
     p{
