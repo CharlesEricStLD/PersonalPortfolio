@@ -8,6 +8,8 @@ import {CrossCountryFinder} from "./pages/CrossCountryFinder.jsx"
 import { BrowserRouter } from "react-router-dom";
 import {Routes} from "react-router-dom";
 import {Route} from "react-router-dom";
+import "./index.css"
+import "./variable.css"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <>

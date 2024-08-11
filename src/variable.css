@@ -1,0 +1,9 @@
+/* variables.css */
+
+:root {
+  --tablet-min-width: 580px;
+  --tablet-max-width: 700px;
+  --phone-min-width: 320px;
+  --phone-max-width: 579px;
+  --test: pink;
+}

@@ -17,8 +17,7 @@ p{
 }
 
 :root {
-
-  --fallbackBackgroundColor: #0f2030 ;
+  --fallbackBackgroundColor: #0f2030;
 
   font-family: "Larken", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -44,7 +43,7 @@ p{
   /* In Firefox */
   scrollbar-width: none;
 
-  @media (min-width: 320px) and (max-width: 579px) {
+  @media(min-width: 320px) and (max-width: 579px) {
     background: var(--fallbackBackgroundColor);
   }
 }
