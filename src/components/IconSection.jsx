@@ -56,7 +56,7 @@ const IconContainer = styled.li`
 }
 
 //Phone view
-@media ( min-width: 320px) and (max-width:579px) {
+@media(max-width:579px) {
   max-width: 60px;
 
   p{

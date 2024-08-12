@@ -103,7 +103,7 @@ const AboutMeStyling = styled.section`
     }
   }
   //Phone view
-  @media (min-width: 320px) and (max-width: 579px) {
+  @media(max-width: 579px) {
     h1 {
       font-size: 0.9em;
     }
@@ -131,7 +131,7 @@ const ImageStyling = styled.div`
   }
 
   //Phone view
-  @media (min-width: 320px) and (max-width: 579px) {
+  @media(max-width: 579px) {
     img {
       display: none;
     }

@@ -50,8 +50,8 @@ const [open, SetOpen] = useState(false);
       <p onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>ce.stlouisdupuis@gmail.com</p>
       </GetInTouchEmailContainer>
       <CustomTooltip interactive="true" title="Click for more icon create by Leremy!" followCursor wrapping sx={{color:"white", textDecoration:"unset", textAlign:"center"}}>
-      <a href="https://www.flaticon.com/authors/leremy" target='blank'>
-      <img src={contactMeIcon} alt="Icon of a guy with a telephone"/>
+      <a>
+      <img src={contactMeIcon} alt="Icon of a guy with a telephone, source : https://www.flaticon.com/authors/leremy " />
       </a>
       </CustomTooltip>
       </GetInTouchContainer>
@@ -92,7 +92,7 @@ const MySpan = styled.span`
   }
 
   //Phone view 
-  @media ( min-width: 320px) and (max-width:579px) {
+  @media(max-width:579px) {
     font-size: calc(3vw + 3vh);
   }
 `
@@ -115,7 +115,7 @@ const IntroSection = styled.section`
   } 
 
   //Phone view 
-  @media ( min-width: 320px) and (max-width:579px) {
+  @media (max-width:579px) {
     
     img{
       width:40%;
@@ -137,7 +137,7 @@ const TitleSpacingSection= styled.div`
   }
 
   //Phone view 
-    @media ( min-width: 320px) and (max-width:579px) {
+    @media (max-width:579px) {
       span:nth-child(17) {
       display: block;
       height:0;
@@ -219,7 +219,7 @@ const GetInTouchSection = styled.footer`
   }   
 
   //phone view 
-  @media ( min-width: 320px) and (max-width:579px) {
+  @media (max-width:579px) {
     button {
       font-size: 0.7em;
       width:40%;
@@ -241,22 +241,34 @@ const GetInTouchSection = styled.footer`
 const GetInTouchContainer = styled.div `
 display: flex;
 flex-direction: column;
-
 a {
     align-self: flex-end;
     position: relative;
     bottom:3em;
   }
 
-@media (max-width:700px) {
-  a {
-    align-self: unset;
-    position: unset;
-    bottom:3em;
+  @media ( min-width: 580px) and (max-width:700px){
+    a {
+      margin-top:0.7em;
+      align-self: unset;
+      position: unset;
+    }
   }
 
+   //phone view 
+  @media (max-width:579px) {
+    p {
+      font-size:calc(2vw + 2vh);
+    }
+    h2 {
+      font-size:calc(5vw + 5vh)
+    }
+    a {
+      margin-top:0.7em;
+      align-self: unset;
+      position: unset;
+    }  
   }
-
 `
 
 const CustomTooltip = styled(Tooltip)`
@@ -265,6 +277,13 @@ const CustomTooltip = styled(Tooltip)`
 
   img {
     width:200px;
+  }
+
+   //phone view 
+   @media (max-width:579px) {
+   img {
+    width: calc(20vw + 20vh);
+   }
   }
 `
 
@@ -303,7 +322,7 @@ const SocialMediaIcon = styled.div`
 }
 
 //Phone view
-  @media ( min-width: 320px) and (max-width:579px) {
+  @media (max-width:579px) {
     
     p{
     font-size: 0.8em;

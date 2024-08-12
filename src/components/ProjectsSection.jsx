@@ -79,7 +79,7 @@ const ProjectsGridContainer = styled.div`
 }
 
 //Phone view
-@media ( min-width: 320px) and (max-width:579px) {
+@media(max-width:579px) {
   grid-template-columns: 1fr;
 }`
 
@@ -95,7 +95,7 @@ column-gap: 4%;
 }
 
 //Phone view
-@media ( min-width: 320px) and (max-width:579px) {
+@media(max-width:579px) {
   display:flex;
   flex-direction: column;
 }
@@ -113,7 +113,7 @@ const ProjectDescription = styled.div`
 }
 
 //Phone view
-@media ( min-width: 320px) and (max-width:579px) {
+@media(max-width:579px) {
 
   font-size: 0.7em;
   margin-bottom: 8%;
@@ -210,7 +210,7 @@ border-radius: 15px;
 }
 
 //Phone view
-@media ( min-width: 320px) and (max-width:579px) {
+@media(max-width:579px) {
   p{
     font-size: 0.5em;
   }
