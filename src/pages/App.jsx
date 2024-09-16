@@ -49,11 +49,7 @@ const [open, SetOpen] = useState(false);
       <GetInTouchEmailContainer>
       <p onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>ce.stlouisdupuis@gmail.com</p>
       </GetInTouchEmailContainer>
-      <CustomTooltip interactive="true" title="Click for more icon create by Leremy!" followCursor wrapping sx={{color:"white", textDecoration:"unset", textAlign:"center"}}>
-      <a>
       <img src={contactMeIcon} alt="Icon of a guy with a telephone, source : https://www.flaticon.com/authors/leremy " />
-      </a>
-      </CustomTooltip>
       </GetInTouchContainer>
       <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
       <Alert severity="success">
@@ -241,17 +237,18 @@ const GetInTouchSection = styled.footer`
 const GetInTouchContainer = styled.div `
 display: flex;
 flex-direction: column;
-a {
+img {
+    max-width: 25%;
     align-self: flex-end;
     position: relative;
     bottom:3em;
   }
 
   @media ( min-width: 580px) and (max-width:700px){
-    a {
+  img {
       margin-top:0.7em;
-      align-self: unset;
-      position: unset;
+      align-self: center;
+      position: relative;
     }
   }
 
@@ -263,10 +260,11 @@ a {
     h2 {
       font-size:calc(5vw + 5vh)
     }
-    a {
+    img {
       margin-top:0.7em;
-      align-self: unset;
+      align-self: center;
       position: unset;
+      max-width:75%;
     }  
   }
 `
