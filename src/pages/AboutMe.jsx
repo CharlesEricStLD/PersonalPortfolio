@@ -1,6 +1,5 @@
 //Component of the ABout Me Page
 
-import personalPicture from "../assets/personalPicture.jpg";
 import styled from "styled-components";
 import Header from "../components/Header";
 
@@ -12,13 +11,10 @@ const AboutMe = () => {
         <h1>About me</h1>
         <p>
           To see my <a
-            href="https://drive.google.com/file/d/1kPz0HB6j4SeOb2UHKOsr48wxW50W5APH/view?usp=sharing"
+            href="https://docs.google.com/document/d/16KF_GCG93zHNhRrJZPxIEdToPayID48ZEeMVgLKWGiA/edit?usp=sharing"
             target="_blank"
           >CV</a>     
         .</p> 
-        {/* <ImageStyling>
-          <img src={personalPicture}></img>
-        </ImageStyling> */}
         <Description>
           <h2>My quick story</h2>
           <p>
@@ -77,8 +73,8 @@ const AboutMe = () => {
             passion.
           </p>
         </Description>
-      </AboutMeStyling>
-    </>
+    </AboutMeStyling>
+  </>
   );
 };
 
