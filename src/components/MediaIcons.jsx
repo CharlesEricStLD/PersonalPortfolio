@@ -11,36 +11,50 @@ import { Snackbar, Alert} from '@mui/material'
 
 export const MediaIcons = () => {
   
+  const icons = [
+    {
+      file: emailIcon,
+      altName: "email",
+      link : ""
+    },
+    {
+      file: linkedIcon,
+      altName: "LinkedIn",
+      link : "https://www.linkedin.com/in/charleseric-stlouisdupuis/"
+    },
+    {
+      file: githubIcon,
+      altName: "Github",
+      link : "https://github.com/CharlesEricStLD"
+    },
+    {
+      file : resumeIcon,
+      altName : "resume",
+      link : "https://docs.google.com/document/d/16KF_GCG93zHNhRrJZPxIEdToPayID48ZEeMVgLKWGiA/edit"
+    },
+  ]
+
   const [open, SetOpen] = useState(false);
 
   return (
     <LogoSection>
-
-    <IconContainer>
-    <a href="https://github.com/CharlesEricStLD" target="blank">
-    <img src={resumeIcon} alt={`Icon of resume`}/>
-    </a>
-    </IconContainer>
     
-    <IconContainer>
-    <a href="mailto:ce.stlouisdupuis@gmail.com" onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>
-    <img src={emailIcon} alt={`Icon of email`}/>
-    </a>
-    </IconContainer>
-
-    <IconContainer>
-    <a href="https://www.linkedin.com/in/charleseric-stlouisdupuis/" target="blank">
-    <img src={linkedIcon} alt={`Icon of LinkedIn`}/>
-    </a>
-    </IconContainer>
-
-    <IconContainer>
-    <a href="https://github.com/CharlesEricStLD" target="blank">
-    <img src={githubIcon} alt={`Logo of GitHub`}/>
-    </a>
-    </IconContainer>
-
-        <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
+    {icons.map(icon => (
+      (icon.altName === "email")? (
+        <IconContainer key={icon.altName}>
+        <a href="mailto:ce.stlouisdupuis@gmail.com" onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>
+        <img src={emailIcon} alt={`Icon of email`}/>
+        </a>
+        </IconContainer>
+      ) : (
+      <IconContainer key={icon.altName}>
+      <a href={icon.link} target="blank">
+      <img src={icon.file} alt={`Icon of ${icon.altName}`}/>
+      </a>
+      </IconContainer>
+      )
+))}
+      <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
       <Alert severity="success">
       Email copied to clipboard! 
       </Alert>
@@ -64,8 +78,10 @@ const IconContainer = styled.li`
   justify-content: center;
   align-items: center;
   padding:0 2.5% 0 2.5%;
-  max-width: 2em;
-  max-height: 2em ;
+  min-width: 1em;
+  min-height: 1em;
+  max-width: 3em;
+  max-height: 3em ;
 
   p{
     text-align: center;
@@ -75,13 +91,12 @@ const IconContainer = styled.li`
     object-fit:contain;
     width:100%;
     height:100%;
-    max-width: 2em;
+    filter: invert(41%) sepia(7%) saturate(3096%) hue-rotate(197deg) brightness(97%) contrast(92%);
   }
-
-  a > img[alt='Icon of email'] {
-    height: 100%;
-    width:135%;
-    max-width: 2.7em;
+    a > img[alt='Icon of email'] {
+    height: 150%;
+    width:125%;
+    max-width: 170%;
   }
 
   a > img[alt='Icon of LinkedIn'] {
