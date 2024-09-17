@@ -5,6 +5,7 @@ import styled from "styled-components"
 import githubIcon from "../assets/githubIcon.png"
 import linkedIcon from "../assets/linkedin.png"
 import emailIcon from "../assets/emailIcon.png"
+import resumeIcon from "../assets/resumeIcon.png"
 import { Snackbar, Alert} from '@mui/material'
 
 
@@ -14,6 +15,12 @@ export const MediaIcons = () => {
 
   return (
     <LogoSection>
+
+    <IconContainer>
+    <a href="https://github.com/CharlesEricStLD" target="blank">
+    <img src={resumeIcon} alt={`Icon of resume`}/>
+    </a>
+    </IconContainer>
     
     <IconContainer>
     <a href="mailto:ce.stlouisdupuis@gmail.com" onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>
@@ -32,7 +39,8 @@ export const MediaIcons = () => {
     <img src={githubIcon} alt={`Logo of GitHub`}/>
     </a>
     </IconContainer>
-    <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
+
+        <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
       <Alert severity="success">
       Email copied to clipboard! 
       </Alert>
