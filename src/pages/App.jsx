@@ -176,6 +176,10 @@ const GetInTouchSection = styled.footer`
   padding:unset;
   margin:unset;
 
+  img {
+    filter: invert(41%) sepia(7%) saturate(3096%) hue-rotate(197deg) brightness(97%) contrast(92%);
+  }
+
   h2 {
     margin-bottom: 0.3em;
     font-size: 2.5em;

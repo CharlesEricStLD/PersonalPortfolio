@@ -44,6 +44,7 @@ const IconContainer = styled.li`
     object-fit:contain;
     width:100%;
     height:100%;
+    filter: invert(41%) sepia(7%) saturate(3096%) hue-rotate(197deg) brightness(97%) contrast(92%);
   }
 
   //tablet view
