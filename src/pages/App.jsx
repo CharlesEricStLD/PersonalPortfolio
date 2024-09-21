@@ -46,8 +46,8 @@ const [open, SetOpen] = useState(false);
       <GetInTouchSection id="getInTouchSection">
       <GetInTouchContainer>
       <h2 id="getInTouchTitle" className="GetInTouch">Let's have a chat !</h2>
-      <GetInTouchEmailContainer>
-      <p onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>ce.stlouisdupuis@gmail.com</p>
+      <GetInTouchEmailContainer onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>
+      <p>ce.stlouisdupuis@gmail.com</p>
       </GetInTouchEmailContainer>
       <img src={contactMeIcon} alt="Icon of a guy with a telephone, source : https://www.flaticon.com/authors/leremy " />
       </GetInTouchContainer>
@@ -155,7 +155,6 @@ h2 {
 
 `
 const ProjectSectionStyling = styled.section`
-  /* margin-top: 5%; */
 `
 
 const GetInTouchSection = styled.footer`
@@ -178,16 +177,6 @@ const GetInTouchSection = styled.footer`
     margin:0;
     font-size: 1em;
   }
-
-  button{
-    font-family: "Larken";
-    border-radius: 5px;
-    font-size: 0.7em;
-    margin-left: 2%;
-    text-align: center;
-    background-color: #646cff;
-  }
-
   //Tablet view
   @media ( min-width: 580px) and (max-width:700px)  {
 
@@ -195,35 +184,14 @@ const GetInTouchSection = styled.footer`
     margin-bottom: 0.3em;
     font-size: 1.75em;
   }
-
-  p{
-    font-size: 0.75em;
-  }
-
-    button {
-      font-size: 0.7em;
-      width:20%;
-    }
-
   }   
 
   //phone view 
   @media (max-width:579px) {
-    button {
-      font-size: 0.7em;
-      width:40%;
-      margin-left:65%;
-    }
-
     h2 {
     margin-bottom: 0.3em;
     font-size: 1.75em;
   }
-
-  p {
-    font-size: 0.75em;
-  }
-
   }
 `
 
@@ -235,21 +203,11 @@ img {
     align-self: flex-end;
     position: relative;
     bottom:3em;
-  }
-
-  @media ( min-width: 580px) and (max-width:700px){
-  img {
-      margin-top:0.7em;
-      align-self: center;
-      position: relative;
-    }
+    left: 2.5em;
   }
 
    //phone view 
   @media (max-width:579px) {
-    p {
-      font-size:calc(2vw + 2vh);
-    }
     h2 {
       font-size:calc(5vw + 5vh)
     }
@@ -257,24 +215,8 @@ img {
       margin-top:0.7em;
       align-self: center;
       position: unset;
-      max-width:75%;
+      max-width:50%;
     }  
-  }
-`
-
-const CustomTooltip = styled(Tooltip)`
-  text-align: center;
-  text-decoration: none;
-
-  img {
-    width:200px;
-  }
-
-   //phone view 
-   @media (max-width:579px) {
-   img {
-    width: calc(20vw + 20vh);
-   }
   }
 `
 
@@ -287,41 +229,8 @@ const GetInTouchEmailContainer = styled.div`
   p{
     cursor: pointer;
   }
-
-  `
-
-
-const SocialMediaIcon = styled.div`
-  text-align: center;
-  display: flex;
-  justify-content: center;
-
-  p{
-    font-size: 1.2em;
-  }
-
-  .linkedInIcon {
-    margin-right:5%;
-  }
-
-  //tablet view
-  @media ( min-width: 580px) and (max-width:700px)  {
-
-    p{
-    font-size: 0.8em;
-  }
-}
-
-//Phone view
-  @media (max-width:579px) {
-    
-    p{
-    font-size: 0.8em;
-  }
-
-  div{
-      display: flex;
+  
+  p {
+      font-size:calc(5vw);
     }
-
-  }
-`
+  `
