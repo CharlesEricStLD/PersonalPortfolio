@@ -25,7 +25,7 @@ export const Header = () => {
       </HamburgerMenu>
       <NavigationMenu $ismobilemenuopen={isMobileMenuOpen}>
         {userOnHomePage ? <NavItems to="/"> Home</NavItems> : <NavItems to="/"> Back to Home</NavItems>}
-        {userOnHomePage ? <NavItems to="/Aboutme"> About Me</NavItems> : null}
+        {userOnHomePage ? <NavItems to="/about-me"> About Me</NavItems> : null}
         {userOnHomePage ? <a className="header" href="#projectsSection">Projects</a> : null }
         {userOnHomePage ? <a className="header" href="#getInTouchSection">Get In Touch</a> : null}
       </NavigationMenu>
@@ -53,7 +53,8 @@ export const Header = () => {
     font-size: 1.4em;
 
     a {
-    scroll-behavior:smooth
+    scroll-behavior:smooth;
+    width:max-content
     }
 
     a:hover, .header:hover {
@@ -67,7 +68,7 @@ export const Header = () => {
   //Phone view
   @media (max-width:579px) {
       z-index: 1;
-      font-size  : 1.3em;
+      font-size  : 8vw;
       position: fixed;
       inset : 0 30% 0 0;
       display: flex;
@@ -84,6 +85,7 @@ export const Header = () => {
       translate: ${props => props.$ismobilemenuopen? "0" : "-100%"};
       transition: translate var(--animation-timing);
     }
+
   `
   const HamburgerMenu = styled.label`
     box-sizing: border-box;
@@ -91,7 +93,7 @@ export const Header = () => {
     width: max-content;
     position: fixed;
     top : 7em;
-    right: 4vw;
+    right: 10vw;
     z-index: 1;
     cursor: pointer;
     background-color: black;

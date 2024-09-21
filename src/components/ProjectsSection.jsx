@@ -12,7 +12,6 @@ const ProjectsSection = () => {
 
   const goToNewPage = (path) => {
     navigate(path);
-    window.scrollTo(0, 0)
   } 
 
   const techsUse = ["Javascript", "React", "Node.js", "MongoDB", "Open AI API"]
@@ -34,15 +33,16 @@ const ProjectsSection = () => {
         <p>It's a pain to navigate multiple websites for snow conditions at Quebec’s cross-country centers. This project centralizes up-to-date information, providing a streamlined experience to quickly find conditions for favorite spots. Say goodbye to the hassle and enjoy seamless planning for the next ski trip!</p>
         </ResumeOfProject>
         
-        <ViewProjectButton onClick={() => goToNewPage("/CrossCountryFinder")}>View project</ViewProjectButton>
+        <ViewProjectButton onClick={() => goToNewPage("/cross-country-finder")}>View project</ViewProjectButton>
           </ProjectDescription>
-        <ProjectImage onClick={() => goToNewPage("/CrossCountryFinder")}>
+        <ProjectImage onClick={() => goToNewPage("/cross-country-finder")}>
         {/* <HoverlayEffect> <p>Fullstack website to find update condition of all crossCountry center in Quebec (to deployed soon)</p> </HoverlayEffect> */}
         <img src={crossCountryFinder} alt= "Image of CrossCountry Finder" ></img>
         </ProjectImage>
         
         </ProjectContainer>
       </ProjectsGridContainer>
+      
   )
 }
 

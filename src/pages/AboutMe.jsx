@@ -2,10 +2,12 @@
 
 import styled from "styled-components";
 import Header from "../components/Header";
+import { ScrollRestoration } from "react-router-dom";
 
 const AboutMe = () => {
   return (
     <>
+    <ScrollRestoration/>
       <Header />
       <AboutMeStyling>
         <h1>About me</h1>

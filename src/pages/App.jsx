@@ -9,6 +9,7 @@ import Header from '../components/Header'
 import ProjectsSection from '../components/ProjectsSection'
 import contactMeIcon from "../assets/contactMeIcon.png"
 import {MediaIcons} from "../components/MediaIcons"
+import { ScrollRestoration } from 'react-router-dom'
 
 const name = "Hi, I'm Charles- Eric";
 const lettersArray = name.split('');
@@ -19,6 +20,7 @@ const [open, SetOpen] = useState(false);
 
   return (
     <>
+      <ScrollRestoration/>
       <Header/>
       <IntroSection>
       <img src={homePagePhoto} alt='Picture of Charles-Eric'></img>

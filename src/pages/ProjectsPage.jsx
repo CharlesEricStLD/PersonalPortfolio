@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 import Header from "../components/Header";
-
-//Component of the description of Project Page
-//Alejandro model : https://www.aaspinwall.com/projects/ing
+import { ScrollRestoration } from "react-router-dom";
 
 //Title
 // Read time
@@ -23,6 +21,7 @@ export const ProjectsPage = ({project}) => {
 
   return (
     <>
+    <ScrollRestoration />
     <Header/>
     <ProjectDescription>
     <h1>{project.nameOfProject}</h1>
@@ -39,9 +38,9 @@ export const ProjectsPage = ({project}) => {
     
     {/* Affichage conditionnel des stacks */}
     {project.stacks.length > 3 && !showMore ? (
-        shortStacks.map(stack => <p key={stack}>{stack}</p>)
+        shortStacks.map(stack => <p key={`${stack} short version`}>{stack}</p>)
       ) : (
-        project.stacks.map(stack => <p key={stack}>{stack}</p>)
+        project.stacks.map(stack => <p key={`${stack} long version`}>{stack}</p>)
       )}
       
       {/* Bouton pour basculer entre 'Show more' et 'Show less' */}
@@ -67,12 +66,12 @@ export const ProjectsPage = ({project}) => {
     <p>{project.WebStackAndExplanation}</p>
     <h2>Problems and Thought Process</h2>
     {project.ProblemsAndToughtProcess.map(problem => (
-      <p>{problem}</p>
+      <p key={problem}>{problem}</p>
     ))}
     
     <h2>Lessons Learned & Future Work</h2>
     {project.lessonsLearned.map(lessonLearned => (
-      <p>{lessonLearned}</p>))}   
+      <p key={lessonLearned}>{lessonLearned}</p>))}   
     </ProjectDescription>
     </>
   )
