@@ -44,6 +44,7 @@ const IconContainer = styled.li`
     object-fit:contain;
     width:100%;
     height:100%;
+    filter: invert(41%) sepia(7%) saturate(3096%) hue-rotate(197deg) brightness(97%) contrast(92%);
   }
 
   //tablet view
@@ -56,7 +57,7 @@ const IconContainer = styled.li`
 }
 
 //Phone view
-@media ( min-width: 320px) and (max-width:579px) {
+@media(max-width:579px) {
   max-width: 60px;
 
   p{

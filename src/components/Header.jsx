@@ -65,7 +65,7 @@ export const Header = () => {
       font-size: 0.9em;
     }
   //Phone view
-  @media ( min-width: 320px) and (max-width:579px) {
+  @media (max-width:579px) {
       z-index: 1;
       font-size  : 1.3em;
       position: fixed;
@@ -74,7 +74,7 @@ export const Header = () => {
       flex-direction: column;
       gap:2em;
       margin-top:0;
-      padding-top:calc(var(--hamburger-height) + 2em);
+      padding-top:calc(var(--hamburger-height));
       padding-left:var(--left-mobile-menu-padding);
       background-color: #000000b3;
       background-color: hsl(100 0 0%/0.1);
@@ -90,8 +90,8 @@ export const Header = () => {
     display:none;
     width: max-content;
     position: fixed;
-    top : 16em;
-    left: 75vw;
+    top : 7em;
+    right: 4vw;
     z-index: 1;
     cursor: pointer;
     background-color: black;
@@ -138,7 +138,7 @@ export const Header = () => {
     }
 
     //Phone view
-    @media ( min-width: 320px) and (max-width:579px) {
+    @media(max-width:579px) {
     display:flex;
     flex-direction: column;
     gap:var(--hamburger-gap)

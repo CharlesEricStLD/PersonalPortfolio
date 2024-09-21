@@ -9,6 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 import {Routes} from "react-router-dom";
 import {Route} from "react-router-dom";
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
     <>
     <BrowserRouter>
