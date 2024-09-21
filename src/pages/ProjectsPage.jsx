@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 import Header from "../components/Header";
-
-//Component of the description of Project Page
-//Alejandro model : https://www.aaspinwall.com/projects/ing
+import { ScrollRestoration } from "react-router-dom";
 
 //Title
 // Read time
@@ -23,6 +21,7 @@ export const ProjectsPage = ({project}) => {
 
   return (
     <>
+    <ScrollRestoration />
     <Header/>
     <ProjectDescription>
     <h1>{project.nameOfProject}</h1>

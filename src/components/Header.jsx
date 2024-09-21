@@ -25,7 +25,7 @@ export const Header = () => {
       </HamburgerMenu>
       <NavigationMenu $ismobilemenuopen={isMobileMenuOpen}>
         {userOnHomePage ? <NavItems to="/"> Home</NavItems> : <NavItems to="/"> Back to Home</NavItems>}
-        {userOnHomePage ? <NavItems to="/Aboutme"> About Me</NavItems> : null}
+        {userOnHomePage ? <NavItems to="/about-me"> About Me</NavItems> : null}
         {userOnHomePage ? <a className="header" href="#projectsSection">Projects</a> : null }
         {userOnHomePage ? <a className="header" href="#getInTouchSection">Get In Touch</a> : null}
       </NavigationMenu>
