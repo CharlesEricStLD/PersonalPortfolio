@@ -208,9 +208,6 @@ img {
 
    //phone view 
   @media (max-width:579px) {
-    h2 {
-      font-size:calc(5vw + 5vh)
-    }
     img {
       margin-top:0.7em;
       align-self: center;
@@ -229,8 +226,11 @@ const GetInTouchEmailContainer = styled.div`
   p{
     cursor: pointer;
   }
-  
+
+    //phone view 
+  @media (max-width:579px) {  
   p {
-      font-size:calc(5vw);
+      font-size:5vw;
     }
+  }
   `
