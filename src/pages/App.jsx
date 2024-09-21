@@ -21,7 +21,7 @@ const [open, SetOpen] = useState(false);
     <>
       <Header/>
       <IntroSection>
-      <img src={homePagePhoto}></img>
+      <img src={homePagePhoto} alt='Picture of Charles-Eric'></img>
       <TitleSpacingSection>
       {lettersArray.map((letter, index) => <MySpan $index={index} key={index}>{letter}</MySpan>)}
       </TitleSpacingSection>
@@ -67,7 +67,6 @@ export default App
 
 
 const FlipAnimation = keyframes`
-  
   100% {
     transform: rotateY(360deg) 
   }
@@ -94,8 +93,9 @@ const MySpan = styled.span`
 `
 
 const IntroSection = styled.section`
-  margin-bottom: 15%;
+  margin-bottom: 6%;
   font-size: calc(1.45vw + 1.45vh);
+
   img{
     width:45%;
     position:relative;
@@ -105,7 +105,7 @@ const IntroSection = styled.section`
 
   //tablet view
   @media ( min-width: 580px) and (max-width:700px) {
-    img{
+    img[alt="Picture of Charles-Eric"] {
       padding-bottom:10%;
     }
   } 
@@ -113,16 +113,14 @@ const IntroSection = styled.section`
   //Phone view 
   @media (max-width:579px) {
     
-    img{
-      width:40%;
-      float:left;
-      padding-bottom:10%;
+    img[alt="Picture of Charles-Eric"]{
+      min-width:10em;
     }
   }
 `
 
 const TitleSpacingSection= styled.div`
-  margin-top: 10%;
+  margin-top: 8%;
   span:nth-child(8) {
     display: block;
     height:0;
@@ -139,22 +137,13 @@ const TitleSpacingSection= styled.div`
       height:0;
       background-color: aliceblue;
     }
-  }
-
-   //tablet view
-  @media ( min-width: 580px) and (max-width:700px) {
-    img{
-      width:45%;
-    }
-  }
-`
+  }`
 
 const SubTitleSpacingSection = styled.div`
 font-size: 1.2em;
 `
 
 const ToolsSectionStyling = styled.section`
-
 h2 {
   margin: 0;
 }
@@ -166,7 +155,7 @@ h2 {
 
 `
 const ProjectSectionStyling = styled.section`
-  margin-top: 10%;
+  /* margin-top: 5%; */
 `
 
 const GetInTouchSection = styled.footer`

@@ -67,7 +67,7 @@ export const MediaIcons = () => {
 const LogoSection = styled.ul`
   display:flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
   padding:unset;
   justify-content: flex-start;
 `
@@ -80,32 +80,33 @@ const IconContainer = styled.li`
   padding:0 2.5% 0 2.5%;
   min-width: 1em;
   min-height: 1em;
-  max-width: 3em;
-  max-height: 3em ;
+  max-width: 2.5em;
+  max-height: 2.5em;
 
   p{
     text-align: center;
   }
 
-  a > img{
-    object-fit:contain;
+  a > img {
     width:100%;
     height:100%;
     filter: invert(41%) sepia(7%) saturate(3096%) hue-rotate(197deg) brightness(97%) contrast(92%);
   }
     a > img[alt='Icon of email'] {
-    height: 150%;
-    width:125%;
-    max-width: 170%;
+    min-height:140%;
+    min-width:140%;
+  }
+  &:has(img[alt='Icon of LinkedIn']) {
+    margin-left: 2%;
   }
 
-  a > img[alt='Icon of LinkedIn'] {
-    padding-left: 12%;
-  }
-
-  //tablet view
+//tablet view
 @media ( min-width: 580px) and (max-width:700px) {
-  max-width: 75px;
+  max-width: 3em;  
+
+  &:has(img[alt='Icon of LinkedIn']) {
+    margin-left: 5%;
+  }
 
   p{
     font-size:0.8em;
@@ -114,7 +115,13 @@ const IconContainer = styled.li`
 
 //Phone view
 @media(max-width:579px) {
-  max-width: 60px;
+  max-width: 3em;
+  padding:2.5%;
+  margin-top: 5%;
+
+  &:has(img[alt='Icon of LinkedIn']) {
+    margin-left: 5%;
+  }
 
   p{
     font-size:0.5em;
