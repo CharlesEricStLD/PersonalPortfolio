@@ -68,7 +68,7 @@ export const Header = () => {
   //Phone view
   @media (max-width:579px) {
       z-index: 1;
-      font-size  : 1.3em;
+      font-size  : 8vw;
       position: fixed;
       inset : 0 30% 0 0;
       display: flex;
@@ -85,6 +85,7 @@ export const Header = () => {
       translate: ${props => props.$ismobilemenuopen? "0" : "-100%"};
       transition: translate var(--animation-timing);
     }
+
   `
   const HamburgerMenu = styled.label`
     box-sizing: border-box;
@@ -92,7 +93,7 @@ export const Header = () => {
     width: max-content;
     position: fixed;
     top : 7em;
-    right: 4vw;
+    right: 10vw;
     z-index: 1;
     cursor: pointer;
     background-color: black;
