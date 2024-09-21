@@ -26,7 +26,7 @@ const ProjectsSection = () => {
         <h2>Cross Country Finder</h2>
         <TechsUsed>
           {techsUse.map(tech => 
-          <TechUse><span>{tech}</span></TechUse>
+          <TechUse key={tech}><span>{tech}</span></TechUse>
           )}
         </TechsUsed>
         
