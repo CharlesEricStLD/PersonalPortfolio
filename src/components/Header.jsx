@@ -53,7 +53,8 @@ export const Header = () => {
     font-size: 1.4em;
 
     a {
-    scroll-behavior:smooth
+    scroll-behavior:smooth;
+    width:max-content
     }
 
     a:hover, .header:hover {
