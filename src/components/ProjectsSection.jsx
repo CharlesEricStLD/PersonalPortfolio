@@ -15,6 +15,7 @@ const ProjectsSection = () => {
 
   const goToNewPage = (path) => {
     navigate(path);
+    window.scrollTo(0, 0)
   } 
 
   const techsUse = ["Javascript", "React", "Node.js", "MongoDB", "Open AI API"]
