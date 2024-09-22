@@ -11,15 +11,18 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import Page404 from "./pages/Page404.jsx"
+import { HelmetProvider } from 'react-helmet-async'
+
+const helmetContext = {};
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-    <>
+    <HelmetProvider context={helmetContext}>
     <Route path="/" element={<App/>}></Route>
     <Route path="about-me" element={<AboutMe/>}/>
     <Route path="cross-country-finder" element={<CrossCountryFinder/>}></Route>
     <Route path="*" element={<Page404/>}></Route>
-    </>
+    </HelmetProvider>
     )
 );
 
