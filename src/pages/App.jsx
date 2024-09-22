@@ -10,6 +10,7 @@ import ProjectsSection from '../components/ProjectsSection'
 import contactMeIcon from "../assets/contactMeIcon.png"
 import {MediaIcons} from "../components/MediaIcons"
 import { ScrollRestoration } from 'react-router-dom'
+import Seo from "../components/Seo"
 
 const name = "Hi, I'm Charles- Eric";
 const lettersArray = name.split('');
@@ -20,6 +21,9 @@ const [open, SetOpen] = useState(false);
 
   return (
     <>
+    <Seo title="Charles-Eric St-Louis-Dupuis FullStack developer"
+    description="Looking for a passionate fullstack web developer from Montreal? Discover Charles-Eric St-Louis Dupuis’ journey, projects, and expertise in React, Node.js, and more."
+    type="website" url="https://cstlouidupuis.com/"/>
       <ScrollRestoration/>
       <Header/>
       <IntroSection>

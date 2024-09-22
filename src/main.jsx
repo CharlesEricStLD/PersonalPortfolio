@@ -11,6 +11,9 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import Page404 from "./pages/Page404.jsx"
+import { HelmetProvider } from 'react-helmet-async'
+
+const helmetContext = {};
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -25,6 +28,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
+    <HelmetProvider context={helmetContext}>
     <RouterProvider router={router} />
+    </HelmetProvider>
     </React.StrictMode>
     );
