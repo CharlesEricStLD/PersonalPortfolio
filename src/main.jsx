@@ -10,6 +10,7 @@ import {
     Route,
     RouterProvider,
 } from "react-router-dom";
+import Page404 from "./pages/Page404.jsx"
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App/>}></Route>
     <Route path="about-me" element={<AboutMe/>}/>
     <Route path="cross-country-finder" element={<CrossCountryFinder/>}></Route>
+    <Route path="*" element={<Page404/>}></Route>
     </>
     )
 );
