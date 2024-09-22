@@ -2,7 +2,7 @@
 
 import crossCountryFinderScreenShot from  "../assets/screenShot1CrossCountryFinder.png"
 import { ProjectsPage } from "./ProjectsPage";
-import { Seo } from "../components/Seo";
+import Seo from "../components/Seo"
 
 const CrossCountryProject = 
 {

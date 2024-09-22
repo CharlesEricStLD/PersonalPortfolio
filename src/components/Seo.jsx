@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import portfolioImage from "../assets/portfolioMetaImage.png"
 
-export const Seo = ({title, description, type, url}) => {
+const Seo = ({title, description, type, url}) => {
   return (
   <Helmet>
   { /* Standard metadata tags */ }
@@ -24,4 +24,6 @@ export const Seo = ({title, description, type, url}) => {
   </Helmet>
   )
   }
+
+  export default Seo;
 
