@@ -10,7 +10,7 @@ import ProjectsSection from '../components/ProjectsSection'
 import contactMeIcon from "../assets/contactMeIcon.png"
 import {MediaIcons} from "../components/MediaIcons"
 import { ScrollRestoration } from 'react-router-dom'
-import Seo from "../components/Seo.jsx"
+import Seo from "../components/Seo"
 
 const name = "Hi, I'm Charles- Eric";
 const lettersArray = name.split('');

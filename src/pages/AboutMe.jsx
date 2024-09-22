@@ -3,7 +3,7 @@
 import styled from "styled-components";
 import Header from "../components/Header";
 import { ScrollRestoration } from "react-router-dom";
-import Seo from "../components/Seo.jsx"
+import Seo from "../components/Seo"
 
 const AboutMe = () => {
   return (
