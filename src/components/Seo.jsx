@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import portfolioImage from "../assets/portfolioMetaImage.png"
+import portfolioImage from "../public/portfolioMetaImage.png"
 
 const Seo = ({title, description, type, url}) => {
   return (
