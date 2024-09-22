@@ -3,10 +3,14 @@
 import styled from "styled-components";
 import Header from "../components/Header";
 import { ScrollRestoration } from "react-router-dom";
+import Seo from "../components/Seo.jsx"
 
 const AboutMe = () => {
   return (
     <>
+    <Seo title="About: Charles-Eric St-Louis-Dupuis"
+    description="Looking for a passionate fullstack web developer from Montreal? Discover Charles-Eric St-Louis Dupuis’ journey, projects, and expertise in React, Node.js, and more."
+    type="website" url="https://cstlouidupuis.com/about-me"/>
     <ScrollRestoration/>
       <Header />
       <AboutMeStyling>
