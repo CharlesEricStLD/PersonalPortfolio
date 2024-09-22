@@ -14,6 +14,9 @@ const Seo = ({title, description, type, url}) => {
   <meta property="og:url" content={url} />
   <meta property="og:title" content={title} />
   <meta property="og:image" content={portfolioImage} />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="1520" />
+
   <meta property="og:description" content={description} />
   { /* End Facebook tags */ }
   { /* Twitter tags */ }
