@@ -31,7 +31,6 @@ const portfolioImageSrc = myImage.toURL();
   <meta property="og:image" content={portfolioImageSrc}/>
   <meta property="og:image:width" content="1920" />
   <meta property="og:image:height" content="1520" />
-
   <meta property="og:description" content={description} />
   { /* End Facebook tags */ }
   { /* Twitter tags */ }
