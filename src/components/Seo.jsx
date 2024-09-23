@@ -16,7 +16,7 @@ const cld = new Cloudinary({
 // Instantiate a CloudinaryImage object for the image with the public ID, 'docs/models'.
 const myImage = cld.image('portfolioMetaImage_z9nbot'); 
 
-const portfolioImageSrc = myImage.resize(fill().width(250).height(250)).toURL();
+const portfolioImageSrc = myImage.toURL();
 
   return (
   <Helmet>
