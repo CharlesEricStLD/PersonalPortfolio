@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {fill} from "@cloudinary/url-gen/actions/resize";
 import {Cloudinary} from "@cloudinary/url-gen";
 
 const Seo = ({title, description, type, url}) => {
@@ -17,6 +16,7 @@ const cld = new Cloudinary({
 const myImage = cld.image('portfolioMetaImage_z9nbot'); 
 
 const portfolioImageSrc = myImage.toURL();
+console.log(portfolioImageSrc)
 
   return (
   <Helmet>
