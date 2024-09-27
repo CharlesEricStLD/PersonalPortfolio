@@ -21,7 +21,7 @@ const ProjectsSection = () => {
         
         <ProjectContainer>
         <ProjectDescription>
-        <h5>Personal Project</h5>
+        <p aria-label="Small title">Personal Project</p>
         <h2>Cross Country Finder</h2>
         <TechsUsed>
           {techsUse.map(tech => 
@@ -51,8 +51,8 @@ export default ProjectsSection
 const ProjectsGridContainer = styled.div`
   margin-bottom:4% ;
 
-  h5 {
-    margin:unset;
+  p[aria-label="Small title"] {
+    margin: unset;
   }
 
   h2 {
