@@ -1,7 +1,4 @@
 # Welcome to My Portfolio Website 👋
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
-</p>
 This portfolio website showcases my work as a Fullstack Web Developer. You'll find a range of projects that highlight my expertise in both front-end and back-end development. From professional to personal projects, I use technologies such as React, JavaScript, CSS3, Node.js, MongoDB, HTML5, WordPress, Shopify, Git and RESTful APIs to bring ideas to life.
 
 ## 🌟 Features
