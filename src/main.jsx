@@ -14,7 +14,7 @@ import Page404 from "./pages/Page404.jsx"
 import { HelmetProvider } from 'react-helmet-async'
 
 // import i18n (needs to be bundled ;))
-import './i18n';
+import '../i18n.js';
 
 const helmetContext = {};
 

@@ -11,13 +11,30 @@ import contactMeIcon from "../assets/contactMeIcon.png"
 import {MediaIcons} from "../components/MediaIcons"
 import { ScrollRestoration } from 'react-router-dom'
 import Seo from "../components/Seo"
+import { useTranslation } from 'react-i18next';
+
+//Todo : integrate the browser language detector
+//Todo : Add translation for every element (that willl be long :)
+//TOdo : Style the button.
 
 const name = "Hi, I'm Charles- Eric";
 const lettersArray = name.split('');
 
 function App() {
 
+const { t, i18n } = useTranslation();
+
+const lngs = [
+  { code: "en", native: "English" },
+  { code: "fr", native: "Francais" },
+];
+
+  const handleTrans = (code) => {
+    i18n.changeLanguage(code);
+  };
+
 const [open, SetOpen] = useState(false);
+
 
   return (
     <>
@@ -33,8 +50,12 @@ const [open, SetOpen] = useState(false);
       </TitleSpacingSection>
 
       <SubTitleSpacingSection>
-      <h2>a passionate developper that like to work hard and build nice projects</h2>
-      <h3>If you need a project well done, with passion and good vibes, I'm your dev !</h3>
+      {lngs.map((lng, i) => {
+        const { code, native } = lng;
+        return <button onClick={() => handleTrans(code)}>{native}</button>;
+      })}   
+      <h2> {t ('firstIntro')}</h2>
+      <h3>{t ('secondIntro')}If you need a project well done, with passion and good vibes, I'm your dev !</h3>
       <MediaIcons/>
       </SubTitleSpacingSection>
       </IntroSection>
