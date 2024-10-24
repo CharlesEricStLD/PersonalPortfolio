@@ -30,7 +30,7 @@ const ProjectsSection = () => {
         </TechsUsed>
         
         <ResumeOfProject>
-        <p>It's a pain to navigate multiple websites for snow conditions at Quebec’s cross-country centers. This project centralizes up-to-date information, providing a streamlined experience to quickly find conditions for favorite spots. Say goodbye to the hassle and enjoy seamless planning for the next ski trip!</p>
+        <p>It's a pain to navigate multiple websites for snow conditions at Quebec’s cross-country centers. This project centralizes up-to-date information, providing a streamlined experience to quickly access conditions for your favorite locations. Say goodbye to the hassle and enjoy seamless planning for the next ski trip!</p>
         </ResumeOfProject>
         
         <ViewProjectButton onClick={() => goToNewPage("/cross-country-finder")}>View project</ViewProjectButton>
