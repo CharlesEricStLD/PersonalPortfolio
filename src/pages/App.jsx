@@ -33,7 +33,7 @@ const [open, SetOpen] = useState(false);
       </TitleSpacingSection>
 
       <SubTitleSpacingSection>
-      <h2>a passionate developper that like to work hard and build nice projects</h2>
+      <h2>a passionate developper who likes to work hard and build nice projects.</h2>
       <h3>If you need a project well done, with passion and good vibes, I'm your dev !</h3>
       <MediaIcons/>
       </SubTitleSpacingSection>
