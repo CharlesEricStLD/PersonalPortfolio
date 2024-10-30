@@ -167,8 +167,12 @@ const TitleSpacingSection= styled.div`
   }`
 
 const SubTitleSpacingSection = styled.div`
-margin-top: 15%;
+
 font-size: 1.2em;
+//Phone View
+@media (max-width:579px) {
+margin-top: 15%;
+}
 `
 
 const ToolsSectionStyling = styled.section`
