@@ -8,6 +8,4 @@ export const NavBarPhone = () => {
   <Header></Header>
 }
 
-//Under 580px 
-
 

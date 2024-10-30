@@ -167,6 +167,7 @@ const TitleSpacingSection= styled.div`
   }`
 
 const SubTitleSpacingSection = styled.div`
+margin-top: 15%;
 font-size: 1.2em;
 `
 
