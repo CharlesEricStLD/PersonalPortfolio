@@ -92,7 +92,7 @@ export const Header = () => {
     display:none;
     width: max-content;
     position: fixed;
-    top : 7em;
+    top : 6.3em;
     right: 10vw;
     z-index: 1;
     cursor: pointer;
@@ -140,10 +140,19 @@ export const Header = () => {
     }
 
     //Phone view
-    @media(max-width:579px) {
+    @media(min-width : 391px) and (max-width:579px) {
     display:flex;
     flex-direction: column;
     gap:var(--hamburger-gap)
+    }
+
+    //very small phone view
+    @media(max-width:390px) {
+    display:flex;
+    flex-direction: column;
+    gap:2vw;
+    padding:3.5vw;
+    top:38vw;
     }
 
   `
