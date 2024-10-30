@@ -55,24 +55,24 @@ const [open, SetOpen] = useState(false);
         return <button onClick={() => handleTrans(code)}>{native}</button>;
       })}   
       <h2> {t ('firstIntro')}</h2>
-      <h3>{t ('secondIntro')}If you need a project well done, with passion and good vibes, I'm your dev !</h3>
+      <h3>{t ('secondIntro')}</h3>
       <MediaIcons/>
       </SubTitleSpacingSection>
       </IntroSection>
 
       <ToolsSectionStyling>
-      <h2>Tools I work with</h2>
+      <h2>{t ('myTools')}</h2>
       <ToolsSection/>
       </ToolsSectionStyling> 
   
       <ProjectSectionStyling id="projectsSection">
-      <h2>My current projects</h2>
+      <h2>{t ("projects")}</h2>
       <ProjectsSection/>
       </ProjectSectionStyling>
 
       <GetInTouchSection id="getInTouchSection">
       <GetInTouchContainer>
-      <h2 id="getInTouchTitle" className="GetInTouch">Let's have a chat !</h2>
+      <h2 id="getInTouchTitle" className="GetInTouch">{t("contact")}</h2>
       <GetInTouchEmailContainer onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>
       <p>ce.stlouisdupuis@gmail.com</p>
       </GetInTouchEmailContainer>
@@ -80,7 +80,7 @@ const [open, SetOpen] = useState(false);
       </GetInTouchContainer>
       <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
       <Alert severity="success">
-      Email copied to clipboard! 
+      {t("emailToolTip")}
       </Alert>
       </Snackbar> 
       
