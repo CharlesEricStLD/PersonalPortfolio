@@ -55,10 +55,10 @@ const [open, SetOpen] = useState(false);
       </TitleSpacingSection>
 
       <SubTitleSpacingSection>
-      {lngs.map((lng, i) => {
+      {/* {lngs.map((lng, i) => {
         const { code, native } = lng;
         return <button onClick={() => handleTrans(code)}>{native}</button>;
-      })}   
+      })}    */}
       <h2> {t('firstIntro')}</h2>
       <h3>{t ('secondIntro')}</h3>
       <MediaIcons/>
