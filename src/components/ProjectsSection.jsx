@@ -1,43 +1,41 @@
 //Project Section 
 
 import styled from "styled-components"
-import crossCountryFinder from "../assets/crossCountryFinderScreenShot2.png"
 import { useNavigate } from "react-router-dom"
+import { useTranslation } from 'react-i18next';
 
-
-
-const ProjectsSection = () => {
+const ProjectsSection = ({project}) => {
   
+  const { t, i18n } = useTranslation();
+
   const navigate = useNavigate();
 
   const goToNewPage = (path) => {
     navigate(path);
-  } 
-
-  const techsUse = ["Javascript", "React", "Node.js", "MongoDB", "Open AI API"]
+  }
   
   return (
     <ProjectsGridContainer>
         
         <ProjectContainer>
         <ProjectDescription>
-        <h5>Personal Project</h5>
-        <h2>Cross Country Finder</h2>
+        <h5>{project.type}</h5>
+        <h2>{project.name}</h2>
         <TechsUsed>
-          {techsUse.map(tech => 
+          {project.stacks.map(tech => 
           <TechUse key={tech}><span>{tech}</span></TechUse>
           )}
         </TechsUsed>
         
         <ResumeOfProject>
-        <p>It's a pain to navigate multiple websites for snow conditions at Quebec’s cross-country centers. This project centralizes up-to-date information, providing a streamlined experience to quickly access conditions for your favorite locations. Say goodbye to the hassle and enjoy seamless planning for the next ski trip!</p>
+        <p>{project.shortDescription}</p>
         </ResumeOfProject>
         
-        <ViewProjectButton onClick={() => goToNewPage("/cross-country-finder")}>View project</ViewProjectButton>
+        <ViewProjectButton onClick={() => goToNewPage(project.shortRouteOfProject)}>{t("projectButton")}</ViewProjectButton>
           </ProjectDescription>
-        <ProjectImage onClick={() => goToNewPage("/cross-country-finder")}>
+        <ProjectImage onClick={() => goToNewPage(project.shortRouteOfProject)}>
         {/* <HoverlayEffect> <p>Fullstack website to find update condition of all crossCountry center in Quebec (to deployed soon)</p> </HoverlayEffect> */}
-        <img src={crossCountryFinder} alt= "Image of CrossCountry Finder" ></img>
+        <img src={project.shortImagePath} alt= "Image of CrossCountry Finder" ></img>
         </ProjectImage>
         
         </ProjectContainer>
@@ -45,8 +43,6 @@ const ProjectsSection = () => {
       
   )
 }
-
-export default ProjectsSection
 
 const ProjectsGridContainer = styled.div`
   margin-bottom:4% ;
@@ -148,3 +144,6 @@ const ViewProjectButton = styled.button`
   &:hover, &:focus{
     color:#646cff
   }`
+
+export default ProjectsSection
+

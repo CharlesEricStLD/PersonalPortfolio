@@ -8,6 +8,7 @@ import ToolsSection from "../components/ToolsSection"
 import Header from '../components/Header'
 import ProjectsSection from '../components/ProjectsSection'
 import contactMeIcon from "../assets/contactMeIcon.png"
+import CrossCountryProject from '../assets/projectsList'
 import {MediaIcons} from "../components/MediaIcons"
 import { ScrollRestoration } from 'react-router-dom'
 import Seo from "../components/Seo"
@@ -67,7 +68,7 @@ const [open, SetOpen] = useState(false);
   
       <ProjectSectionStyling id="projectsSection">
       <h2>{t ("projects")}</h2>
-      <ProjectsSection/>
+      <ProjectsSection project={CrossCountryProject}/>
       </ProjectSectionStyling>
 
       <GetInTouchSection id="getInTouchSection">

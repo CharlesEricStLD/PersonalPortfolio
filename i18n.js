@@ -25,7 +25,8 @@ i18n
           projects:"My current projects",
           contact:"Let's have a chat",
           emailToolTip:"email copied to clipboard",
-          crossCountryDescription:"It's a pain to navigate multiple websites for snow conditions at Quebec’s cross-country centers. This project centralizes up-to-date information, providing a streamlined experience to quickly access conditions for your favorite locations. Say goodbye to the hassle and enjoy seamless planning for the next ski trip!"
+          crossCountryDescription:"It's a pain to navigate multiple websites for snow conditions at Quebec’s cross-country centers. This project centralizes up-to-date information, providing a streamlined experience to quickly access conditions for your favorite locations. Say goodbye to the hassle and enjoy seamless planning for the next ski trip!",
+          projectButton:"View project"
         }
       }, 
       fr:{
@@ -36,7 +37,8 @@ i18n
           projects:"Mes projets actuels",
           emailToolTip:"Courriel copié dans le presse-papiers",
           contact:"Contactez-moi!",
-          crossCountryDescription:"Il est fastidieux de naviguer sur plusieurs sites Web pour connaître les conditions de neige dans les centres de ski de fond du Québec. Ce projet centralise l'information à jour, offrant une expérience simplifiée pour accéder rapidement aux conditions de vos endroits préférés. Profitez d'une planification rapide et efficace pour votre prochain voyage de ski de fond."
+          crossCountryDescription:"Il est fastidieux de naviguer sur plusieurs sites Web pour connaître les conditions de neige dans les centres de ski de fond du Québec. Ce projet centralise l'information à jour, offrant une expérience simplifiée pour accéder rapidement aux conditions de vos endroits préférés. Profitez d'une planification rapide et efficace pour votre prochain voyage de ski de fond.",
+          projectButton:"En savoir plus"
         }
       }
     }
