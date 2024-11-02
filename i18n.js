@@ -35,15 +35,6 @@ import LanguageDetector from 'i18next-browser-languagedetector';
     smalldescriptionOfProject:
       "This full-stack website is devoted to finding and presenting the current snow conditions for all cross-country ski centers in Quebec, ensuring users have quick access to the latest updates.",
     type: "Outdoor utility platform",
-    stacks: [
-      "JavaScript",
-      "React",
-      "NodesJS",
-      "Vite",
-      "MongoDB",
-      "OpenAi API",
-      "Puppeteer",
-    ],
     liveLinkTitle: "To be deployed",
     projectPurposeAndGoaltitle:"Project purpose and goal",
     projectPurposeAndGoal:
