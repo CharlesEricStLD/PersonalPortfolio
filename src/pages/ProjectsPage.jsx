@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import Header from "../components/Header";
 import { ScrollRestoration } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 //Title
 // Read time
@@ -15,9 +16,12 @@ import { ScrollRestoration } from "react-router-dom";
 
 
 export const ProjectsPage = ({project}) => {
+  
   let shortStacks = [];
   shortStacks = project.stacks.slice(0,3);
   const [showMore, setShowMore] = useState(false);
+
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -59,7 +63,7 @@ export const ProjectsPage = ({project}) => {
     
     {/* ScreenShot of the app*/}
     
-    <ScreenShot src={project.screenShot1} alt="Screeshot of the Home page of the app"></ScreenShot>
+    <ScreenShot src={project.screenShot1Path} alt="Screeshot of the Home page of the app"></ScreenShot>
     <h2>Project Purpose and Goal</h2>
     <p>{project.projectPurposeAndGoal}</p>
     <h2>Web Stack and Explanation</h2>
