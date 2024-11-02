@@ -4,12 +4,12 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector
-  i18n.use(LanguageDetector)
   // pass the i18n instance to react-i18next.
   i18n.use(initReactI18next)
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
-  await i18n.init({
+  i18n.init({
+    lng: 'en',
     debug: true,
     react: { useSuspense: false },
     fallbackLng: 'en',
