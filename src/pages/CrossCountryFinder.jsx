@@ -2,7 +2,7 @@
 
 import { ProjectsPage } from "./ProjectsPage";
 import Seo from "../components/Seo"
-import CrossCountryProject from "../assets/projectsList";
+import {CrossCountryProject} from "../assets/translations/projectsList";
 
 
 export const CrossCountryFinder = () => {

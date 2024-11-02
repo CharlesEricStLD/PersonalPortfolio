@@ -3,6 +3,9 @@
 import styled from "styled-components"
 import { useNavigate } from "react-router-dom"
 import { useTranslation } from 'react-i18next';
+import { useState, useEffect } from "react";
+import i18next from "i18next";
+
 
 const ProjectsSection = ({project}) => {
   
@@ -13,13 +16,14 @@ const ProjectsSection = ({project}) => {
   const goToNewPage = (path) => {
     navigate(path);
   }
+
+  
   
   return (
     <ProjectsGridContainer>
-        
         <ProjectContainer>
         <ProjectDescription>
-        <h5>{project.type}</h5>
+        <h5>{t('shortType')}</h5>
         <h2>{project.name}</h2>
         <TechsUsed>
           {project.stacks.map(tech => 
@@ -28,7 +32,7 @@ const ProjectsSection = ({project}) => {
         </TechsUsed>
         
         <ResumeOfProject>
-        <p>{project.shortDescription}</p>
+        <p>{t('shortCrossCountryDescription')}</p>
         </ResumeOfProject>
         
         <ViewProjectButton onClick={() => goToNewPage(project.shortRouteOfProject)}>{t("projectButton")}</ViewProjectButton>
@@ -37,7 +41,6 @@ const ProjectsSection = ({project}) => {
         {/* <HoverlayEffect> <p>Fullstack website to find update condition of all crossCountry center in Quebec (to deployed soon)</p> </HoverlayEffect> */}
         <img src={project.shortImagePath} alt= "Image of CrossCountry Finder" ></img>
         </ProjectImage>
-        
         </ProjectContainer>
       </ProjectsGridContainer>
       

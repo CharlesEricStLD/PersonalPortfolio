@@ -8,7 +8,7 @@ import ToolsSection from "../components/ToolsSection"
 import Header from '../components/Header'
 import ProjectsSection from '../components/ProjectsSection'
 import contactMeIcon from "../assets/contactMeIcon.png"
-import CrossCountryProject from '../assets/projectsList'
+import {CrossCountryProject} from '../assets/translations/projectsList'
 import {MediaIcons} from "../components/MediaIcons"
 import { ScrollRestoration } from 'react-router-dom'
 import Seo from "../components/Seo"
@@ -20,6 +20,8 @@ import { useTranslation } from 'react-i18next';
 
 const name = "Hi, I'm Charles- Eric";
 const lettersArray = name.split('');
+
+
 
 function App() {
 
@@ -55,7 +57,7 @@ const [open, SetOpen] = useState(false);
         const { code, native } = lng;
         return <button onClick={() => handleTrans(code)}>{native}</button>;
       })}   
-      <h2> {t ('firstIntro')}</h2>
+      <h2> {t('firstIntro')}</h2>
       <h3>{t ('secondIntro')}</h3>
       <MediaIcons/>
       </SubTitleSpacingSection>
