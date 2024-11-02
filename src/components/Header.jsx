@@ -1,6 +1,10 @@
 import { NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
+import i18next from "i18next";
+import { Language } from "@mui/icons-material";
+
 
 export const Header = () => {
 
@@ -9,6 +13,24 @@ export const Header = () => {
   //Get path of WebBrowser
   const [userOnHomePage] = useState(location.pathname === "/");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  //Get language used
+  const [languageButtonText, setLanguageButtonText] = useState("Francais")
+  const [nextLanguageToUse, setNextLanguageToUse] = useState("fr")
+
+  const { t, i18n } = useTranslation();
+
+  const handleTrans = (code) => {
+    console.log("THE CODE I AM USING NOW !!!" + code)
+    i18n.changeLanguage(code);
+    if (code === "en") {
+      setLanguageButtonText("Francais")
+      setNextLanguageToUse("fr")
+    } else if (code === "fr") {
+      setLanguageButtonText("English")
+      setNextLanguageToUse("en")      
+    }
+  };  
 
   const openMenu = (event) => {
       if ((event.target.checked)) {
@@ -28,6 +50,7 @@ export const Header = () => {
         {userOnHomePage ? <NavItems to="/about-me"> About Me</NavItems> : null}
         {userOnHomePage ? <a className="header" href="#projectsSection">Projects</a> : null }
         {userOnHomePage ? <a className="header" href="#getInTouchSection">Get In Touch</a> : null}
+          <button onClick={() => handleTrans(nextLanguageToUse)}>{languageButtonText}</button>
       </NavigationMenu>
     </HeaderContainer>
 
@@ -59,6 +82,7 @@ export const Header = () => {
 
     a:hover, .header:hover {
     color: #fff3af;
+    cursor:pointer;
     }
 
     //tablet view
