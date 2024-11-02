@@ -15,8 +15,10 @@ import Seo from "../components/Seo"
 import { useTranslation } from 'react-i18next';
 
 //Todo : integrate the browser language detector
-//Todo : Add translation for every element (that willl be long :)
+//Todo : Add translation for al elmeent in the home page (DONE!)
+//Todo : Add translation for the crossCountryProjectPage
 //TOdo : Style the button.
+//Todo LATER : Use multiple file for translation
 
 const name = "Hi, I'm Charles- Eric";
 const lettersArray = name.split('');
