@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 
 
@@ -28,6 +28,14 @@ export const Header = () => {
       setNextLanguageToUse("en")      
     }
   };  
+
+  //Handle case where user move to a new page and language state don't follow.
+  useEffect(() => {
+    if(languageButtonText === "Fr") {
+      setLanguageButtonText("En")
+      setNextLanguageToUse("en")
+    }
+  },[userOnHomePage])
 
   const openMenu = (event) => {
       if ((event.target.checked)) {
