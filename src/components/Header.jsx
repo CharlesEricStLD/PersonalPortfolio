@@ -13,7 +13,7 @@ export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   //Get language used
-  const [languageButtonText, setLanguageButtonText] = useState("Francais")
+  const [languageButtonText, setLanguageButtonText] = useState("Fr")
   const [nextLanguageToUse, setNextLanguageToUse] = useState("fr")
 
   const { t, i18n } = useTranslation();
@@ -21,10 +21,10 @@ export const Header = () => {
   const handleTrans = (code) => {
     i18n.changeLanguage(code);
     if (code === "en") {
-      setLanguageButtonText("Francais")
+      setLanguageButtonText("Fr")
       setNextLanguageToUse("fr")
     } else if (code === "fr") {
-      setLanguageButtonText("English")
+      setLanguageButtonText("En")
       setNextLanguageToUse("en")      
     }
   };  
