@@ -87,6 +87,11 @@ const PropertyOfProject = styled.div`
 display : grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr;
+
+//On smaller device (starting from tablet to phone
+@media (max-width:390px) {
+  grid-template-columns: 1fr;
+}
 `
 
 const ProjectDescription = styled.div`
