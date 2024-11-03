@@ -205,9 +205,9 @@ export const Header = () => {
     @media(max-width:390px) {
     display:flex;
     flex-direction: column;
-    gap:2vw;
-    padding:3.5vw;
-    top:38vw;
+    gap:var(--hamburger-gap);
+    right:2.5vw;
+    z-index:10;
     }
 
   `
