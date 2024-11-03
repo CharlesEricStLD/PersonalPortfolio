@@ -1,9 +1,7 @@
 import { NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from 'react-i18next';
-import i18next from "i18next";
-import { Language } from "@mui/icons-material";
 
 
 export const Header = () => {
@@ -21,7 +19,6 @@ export const Header = () => {
   const { t, i18n } = useTranslation();
 
   const handleTrans = (code) => {
-    console.log("THE CODE I AM USING NOW !!!" + code)
     i18n.changeLanguage(code);
     if (code === "en") {
       setLanguageButtonText("Francais")
@@ -45,12 +42,15 @@ export const Header = () => {
       <HamburgerMenu>
           <input id="mobileCheckbox" type="checkbox" onChange={openMenu}></input>
       </HamburgerMenu>
-      <NavigationMenu $ismobilemenuopen={isMobileMenuOpen}>
+      <a className="languageModifier" onClick={() => handleTrans(nextLanguageToUse)}>{languageButtonText}</a>
+      <NavigationMenu $ismobilemenuopen=
+      
+      {isMobileMenuOpen}>
         {userOnHomePage ? <NavItems to="/"> Home</NavItems> : <NavItems to="/"> Back to Home</NavItems>}
         {userOnHomePage ? <NavItems to="/about-me"> About Me</NavItems> : null}
         {userOnHomePage ? <a className="header" href="#projectsSection">Projects</a> : null }
         {userOnHomePage ? <a className="header" href="#getInTouchSection">Get In Touch</a> : null}
-          <button onClick={() => handleTrans(nextLanguageToUse)}>{languageButtonText}</button>
+        <a className="languageModifier" onClick={() => handleTrans(nextLanguageToUse)}>{languageButtonText}</a>
       </NavigationMenu>
     </HeaderContainer>
 
@@ -67,7 +67,21 @@ export const Header = () => {
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
     --x-width: calc(var(--hamburger-height) * calc(sqrt(2)));
     --left-mobile-menu-padding: 1.5em;
-  `
+
+    a.languageModifier{
+    cursor:pointer;
+    color:#646cff;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2.5%;
+    }
+
+    //Phone view
+  @media (max-width:579px) {
+    a.languageModifier {
+      display:none;
+    }
+  }`
 
   const NavigationMenu = styled.div`
     margin-top: 2%;
@@ -83,6 +97,11 @@ export const Header = () => {
     a:hover, .header:hover {
     color: #fff3af;
     cursor:pointer;
+    }
+
+    a.languageModifier{
+    display:none;
+    color:#646cff;
     }
 
     //tablet view
@@ -108,6 +127,10 @@ export const Header = () => {
 
       translate: ${props => props.$ismobilemenuopen? "0" : "-100%"};
       transition: translate var(--animation-timing);
+
+      a.languageModifier{
+      display:block;
+      }
     }
 
   `

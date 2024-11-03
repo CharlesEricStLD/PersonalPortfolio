@@ -21,16 +21,6 @@ export const ProjectsPage = ({project}) => {
   
   const { t, i18n } = useTranslation();
 
-const lngs = [
-  { code: "en", native: "English" },
-  { code: "fr", native: "Francais" },
-];
-
-  const handleTrans = (code) => {
-    i18n.changeLanguage(code);
-  };
-
-
   let shortStacks = [];
   shortStacks = project.stacks.slice(0,3);
   const [showMore, setShowMore] = useState(false);
@@ -39,10 +29,6 @@ const lngs = [
     <>
     <ScrollRestoration />
     <Header/>
-    {lngs.map((lng, i) => {
-        const { code, native } = lng;
-        return <button onClick={() => handleTrans(code)}>{native}</button>;
-      })}   
     <ProjectDescription>
     <h1>{project.nameOfProject}</h1>
     <p>{t("readTime")}</p>
