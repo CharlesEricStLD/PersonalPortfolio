@@ -24,6 +24,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
           aboutMe : "About Me",
           projectsHeader : "Projects",
           getInTouch : "Get In Touch",
+          name : ["H", "i", ",", " ", "I", "'", "m", " ", "C", "h", "a", "r", "l", "e", "s", "-", " ", "E", "r", "i", "c"]
+          ,
           firstIntro:" a passionate developper who likes to work hard and build nice projects",
           secondIntro:"If you need a project well done, with passion and good vibes, I'm your dev !",
           myTools: "Tools I work with",
@@ -82,6 +84,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
           aboutMe : "Mon parcours",
           projectsHeader : "Projets",
           getInTouch : "Me contacter",
+          name : ["B", "o", "n", "j", "o", "u", "r,", " ", "j", "e", " ", "s", "u", "i", "s", " "," ", "C", "h", "a", "r", "l", "e", "s", "-", "E", "r", "i", "c"]
+          ,
           firstIntro:"un développeur qui aime travailler dur et construire de beaux projets",
           secondIntro: "Si vous avez besoin d'un projet bien fait avec passion et professionnalisme je suis votre développeur!",
           myTools: "Mes outils",

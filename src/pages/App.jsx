@@ -20,11 +20,6 @@ import { useTranslation } from 'react-i18next';
 //TOdo : Style the button.
 //Todo LATER : Use multiple file for translation
 
-const name = "Hi, I'm Charles- Eric";
-const lettersArray = name.split('');
-
-
-
 function App() {
 
 const { t, i18n } = useTranslation();
@@ -51,7 +46,7 @@ const [open, SetOpen] = useState(false);
       <IntroSection>
       <img src={homePagePhoto} alt='Picture of Charles-Eric'></img>
       <TitleSpacingSection>
-      {lettersArray.map((letter, index) => <MySpan $index={index} key={index}>{letter}</MySpan>)}
+      {t("name",{ returnObjects: true }).map((letter, index) => <MySpan $index={index} key={index}>{letter}</MySpan>)}
       </TitleSpacingSection>
 
       <SubTitleSpacingSection>
@@ -107,7 +102,7 @@ const FlipAnimation = keyframes`
 const MySpan = styled.span`
   display: inline-block;
   text-transform: uppercase;
-  font-size: calc(3.8vw + 3.8vh);
+  font-size: calc(2.8vw + 2.8vh);
   animation: ${FlipAnimation} 1s;
   animation-delay: ${(props) => 0.1 * props.$index}s;
   white-space:pre;
@@ -115,12 +110,12 @@ const MySpan = styled.span`
 
   //tablet view
   @media ( min-width: 580px) and (max-width:700px) {
-    font-size: calc(3.5vw + 3.5vh);
+    font-size: calc(3vw + 3vh);
   }
 
   //Phone view 
   @media(max-width:579px) {
-    font-size: calc(3vw + 3vh);
+    font-size: calc(2.8vw + 2.8vh);
   }
 `
 
@@ -156,7 +151,6 @@ const TitleSpacingSection= styled.div`
   span:nth-child(8) {
     display: block;
     height:0;
-    background-color: aliceblue;
   }
   span:nth-child(17) {
     display: none;
@@ -167,7 +161,6 @@ const TitleSpacingSection= styled.div`
       span:nth-child(17) {
       display: block;
       height:0;
-      background-color: aliceblue;
     }
   }`
 
