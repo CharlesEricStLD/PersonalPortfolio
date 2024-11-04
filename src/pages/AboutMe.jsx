@@ -4,8 +4,12 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import { ScrollRestoration } from "react-router-dom";
 import Seo from "../components/Seo"
+import { useTranslation } from "react-i18next";
 
 const AboutMe = () => {
+
+  const { t, i18n } = useTranslation();
+
   return (
     <>
     <Seo title="About: Charles-Eric St-Louis-Dupuis"
@@ -14,69 +18,34 @@ const AboutMe = () => {
     <ScrollRestoration/>
       <Header />
       <AboutMeStyling>
-        <h1>About me</h1>
+        <h1>{t("aboutMe")}</h1>
         <p>
-          To see my <a
+          {t("cv")}<a
             href="https://docs.google.com/document/d/16KF_GCG93zHNhRrJZPxIEdToPayID48ZEeMVgLKWGiA/edit?usp=sharing"
             target="_blank"
           >CV</a>     
         .</p> 
         <Description>
-          <h2>My quick story</h2>
+          <h2>{t("storyTitle")}</h2>
           <p>
-            I have always loved tech from a young age. My journey began with
-            tinkering on the family computer, which sometimes led to unintended
-            mishaps. But just like in coding, breaking things often leads to the
-            best learning experiences. As I often say, even Bill Gates was a
-            novice once! </p>
+            {t("storyText1")}</p>
             
-            <p>My early fascination with technology eventually guided
-            me towards studying Biology to better understand and connect with
-            the natural world. This passion for the outdoors led me to work as
-            an outdoor guide, creating meaningful experiences for clients.
-            However, my love for tech remained strong, and I naturally became
-            the tech go-to wherever I went. This passion culminated in my
-            decision to dive fully into the tech world, leading me to pursue a
-            FullStack Engineering course at Concordia University.
+            <p>{t("storyText2")}</p>
+
+          <h2>{t("developerTitle")}</h2>
+          <p>{t("developerEthos")}
           </p>
 
-          <h2>As a developer</h2>
-          <p>
-            My coding ethos revolves around clarity and reusability. I work hard
-            to ensure that my code is not only functional but also easily
-            reusable by me and my collaborators. I strive to find the best
-            balance between functionality and maintainability, making sure my
-            code is both efficient and adaptable.
-          </p>
+          <h2>{t("personTitle")}</h2>
+          <p>{t("personTraits")}
+            </p>
 
-          <h2>As a person</h2>
-          <p>
-            I’m deeply empathetic and thrive on challenges. I approach problems
-            with a creative mindset, breaking them down and finding innovative
-            solutions. My passion for learning—whether from others or through
-            self-discovery—drives my creativity and helps me navigate complex
-            situations. Curiosity is my constant companion, and I’m always eager
-            to expand my knowledge and skills, which enriches my life and fuels
-            my professional growth.
-          </p>
-
-          <h2>As a colleague</h2>
-          <p>
-            I’m dedicated to supporting my team and fostering a collaborative
-            environment. I’m always ready to lend a hand, help with tasks, or
-            keep morale high. My background as a guide and trainer enables me to
-            break down complex concepts into understandable chunks, making me a
-            reliable and approachable teammate. I’m always down for a coffee or
-            a beer after work. As an outdoor enthusiast at heart, I’m your go-to
-            for your next adventure, and I can cook up a storm both in the
-            kitchen and the forest!
+          <h2>{t("colleagueTitle")}</h2>
+          <p>{t("colleagueDescription")}
           </p>
 
           <p>
-            Even as a new developer, I strive to make my work as high quality
-            and impactful as possible. I’m committed to delivering excellence
-            and am eager to connect and collaborate with others who share this
-            passion.
+            {t("developerMotivation")}
           </p>
         </Description>
     </AboutMeStyling>
