@@ -81,7 +81,8 @@ export const Header = () => {
     --left-mobile-menu-padding: 1.5em;
 
     a.languageModifier{
-    cursor:pointer;
+      font-size: 1.4em;
+      cursor:pointer;
     color:#646cff;
     display: flex;
     justify-content: flex-end;
