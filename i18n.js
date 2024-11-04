@@ -117,13 +117,13 @@ import LanguageDetector from 'i18next-browser-languagedetector';
   storyTitle: "Mon parcours",
   storyText1: "J'ai toujours aimé la technologie depuis mon plus jeune âge. J'ai commencé par bricoler sur l'ordinateur familial, ce qui a parfois eu des conséquences plus ou moins graves. Mais comme pour le codage, c'est souvent en cassant les choses que l'on apprend le mieux. Comme on le dit souvent, même Bill Gates a été novice un jour !",
   storyText2: "Ma fascination précoce pour la technologie et les sciences m'a finalement poussé à étudier la biologie afin de mieux comprendre le monde qui m'entourait. À cette fascination pour la biologie, il s'est rapidement greffé une passion pour le plein air qui m'a conduit à travailler comme guide devant créé les expériences les plus significatives possibles pour les clients. Cependant, mon amour pour la technologie est resté fort, et je suis naturellement devenu la personne à qui s'adresser en matière de technologie partout où j'allais. Cette passion a culminé dans ma décision de lancer pleinement dans le monde de la technologie, ce qui m'a finalement fait suivre un cours de développeur FullStack à l'Université Concordia en 2024.",
-  developerTitle: "En tant que développeur",
+  developerTitle: "Comme développeur",
   developerEthos: "Mon éthique de codage tourne autour de la clarté et de la réutilisation. Je travaille fort pour m'assurer que mon code est non seulement fonctionnel, mais aussi facilement réutilisable par moi et mes collaborateurs. Je m'efforce de trouver le meilleur équilibre entre fonctionnalité et maintenabilité, en m'assurant que mon code est à la fois efficace, compréhensible et adaptable.",
-  personTitle: "En tant que personne",
+  personTitle: "Comme personne",
   personTraits: "Je suis profondément empathique et j'aime relever les défis. J'aborde les problèmes avec un esprit créatif, en les décomposant et en trouvant des solutions innovantes. Ma passion pour l'apprentissage - que ce soit auprès des autres ou par la découverte personnelle - alimente ma créativité et m'aide à naviguer dans des situations complexes. La curiosité est ma compagne de tous les instants, et je suis toujours prêt à me dépasser.",
-  colleagueTitle: "En tant que collègue",
+  colleagueTitle: "Comme collègue",
   colleagueDescription: "Je suis dédié à soutenir mon équipe et à favoriser un environnement collaboratif. Je suis toujours prêt à donner un coup de main, à aider dans les tâches ou à maintenir une bonne ambiance. Mon expérience en tant que guide et formateur me permet de décomposer des concepts complexes en parties compréhensibles, ce qui fait de moi un collègue fiable et accessible. Après le travail, je suis toujours partant pour socialiser autour d'un café ou d'une bière. En tant que passionné de plein air, je suis votre référence pour votre prochaine aventure. Je sais cuisiner comme un chef dans la cuisine comme en forêt !",
-  developerMotivation: "Finalement, même en tant que nouveau développeur, je m'efforce de rendre mon travail aussi qualitatif et impactant que possible. Je suis déterminé à atteindre l'excellence et je suis impatient de me connecter et de collaborer avec d'autres personnes partageant cette passion."
+  developerMotivation: "Finalement, même en étant nouveau développeur, je m'efforce de rendre mon travail aussi qualitatif et impactant que possible. Je suis déterminé à atteindre l'excellence et je suis impatient de me connecter et de collaborer avec d'autres personnes partageant cette passion."
         }
       }
     }
