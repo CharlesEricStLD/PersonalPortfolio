@@ -33,18 +33,12 @@ export const Header = () => {
   //Handle case where user move to a new page and language state don't follow.
   //todo Handle when the user came back to home page,.. nedd a gloab state for that stuck in the nav bar....
   useEffect(() => {
-    console.log("USE EFFECT LAUNCH")
     if(i18n.language === languageButtonText.toLowerCase()) {
       if (languageButtonText === "Fr") {
         setLanguageButtonText("En")
         setNextLanguageToUse("en")
-      }
-      
+      } 
     }
-    // if(languageButtonText === "Fr" && !location.pathname==="/about-me") {
-    //   setLanguageButtonText("En")
-    //   setNextLanguageToUse("en")
-    // }
   },[userOnHomePage])
 
   const openMenu = (event) => {
