@@ -31,7 +31,7 @@ export const Header = () => {
 
   //Handle case where user move to a new page and language state don't follow.
   useEffect(() => {
-    if(languageButtonText === "Fr") {
+    if(languageButtonText === "Fr" && !location.pathname==="/about-me") {
       setLanguageButtonText("En")
       setNextLanguageToUse("en")
     }
