@@ -62,6 +62,10 @@ const AboutMeStyling = styled.section`
     text-decoration: underline;
   }
 
+  p {
+    font-size: 0.8em;
+  }
+
   //tablet view
   @media (min-width: 580px) and (max-width: 700px) {
     h1 {
