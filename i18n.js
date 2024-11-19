@@ -86,8 +86,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
           getInTouch : "Me contacter",
           name : ["B", "o", "n", "j", "o", "u", "r,", " ", "j", "e", " ", "s", "u", "i", "s", " "," ", "C", "h", "a", "r", "l", "e", "s", "-", "E", "r", "i", "c"]
           ,
-          firstIntro:"un développeur qui aime travailler dur et construire de beaux projets",
-          secondIntro: "Si vous avez besoin d'un projet bien fait avec passion et professionnalisme je suis votre développeur!",
+          firstIntro:"Un développeur motivé, prêt à transformer vos idées en réalisations concrètes",
+          secondIntro: "Si vous avez besoin d'un projet professionnel bien fait avec passion, je suis votre dév!",
           myTools: "Mes outils",
           projects:"Mes projets actuels",
           emailToolTip:"Courriel copié dans le presse-papiers",
