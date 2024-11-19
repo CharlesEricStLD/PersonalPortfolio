@@ -1,6 +1,8 @@
 import { NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import { useTranslation } from 'react-i18next';
+
 
 export const Header = () => {
 
@@ -9,6 +11,35 @@ export const Header = () => {
   //Get path of WebBrowser
   const [userOnHomePage] = useState(location.pathname === "/");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  //Get language used
+  const [languageButtonText, setLanguageButtonText] = useState("Fr")
+  const [nextLanguageToUse, setNextLanguageToUse] = useState("fr")
+
+  const { t, i18n } = useTranslation();
+
+  const handleTrans = (code) => {
+    console.log("NEXT LANGUAGE TO USE FOR TRANSLATION " + i18n.language)
+    i18n.changeLanguage(code);
+    if (code === "en") {
+      setLanguageButtonText("Fr")
+      setNextLanguageToUse("fr")
+    } else if (code === "fr") {
+      setLanguageButtonText("En")
+      setNextLanguageToUse("en")      
+    }
+  };  
+
+  //Handle case where user move to a new page and language state don't follow.
+  //todo Handle when the user came back to home page,.. nedd a gloab state for that stuck in the nav bar....
+  useEffect(() => {
+    if(i18n.language === languageButtonText.toLowerCase()) {
+      if (languageButtonText === "Fr") {
+        setLanguageButtonText("En")
+        setNextLanguageToUse("en")
+      } 
+    }
+  },[userOnHomePage])
 
   const openMenu = (event) => {
       if ((event.target.checked)) {
@@ -23,11 +54,15 @@ export const Header = () => {
       <HamburgerMenu>
           <input id="mobileCheckbox" type="checkbox" onChange={openMenu}></input>
       </HamburgerMenu>
-      <NavigationMenu $ismobilemenuopen={isMobileMenuOpen}>
-        {userOnHomePage ? <NavItems to="/"> Home</NavItems> : <NavItems to="/"> Back to Home</NavItems>}
-        {userOnHomePage ? <NavItems to="/about-me"> About Me</NavItems> : null}
-        {userOnHomePage ? <a className="header" href="#projectsSection">Projects</a> : null }
-        {userOnHomePage ? <a className="header" href="#getInTouchSection">Get In Touch</a> : null}
+      <a className="languageModifier" onClick={() => handleTrans(nextLanguageToUse)}>{languageButtonText}</a>
+      <NavigationMenu $ismobilemenuopen=
+      
+      {isMobileMenuOpen}>
+        {userOnHomePage ? <NavItems to="/">{t("home")} </NavItems> : <NavItems to="/"> {t("backToHome")}</NavItems>}
+        {userOnHomePage ? <NavItems to="/about-me">{t("aboutMe")} </NavItems> : null}
+        {userOnHomePage ? <a className="header" href="#projectsSection">{t("projectsHeader")}</a> : null }
+        {userOnHomePage ? <a className="header" href="#getInTouchSection">{t("getInTouch")}</a> : null}
+        <a className="languageModifier" onClick={() => handleTrans(nextLanguageToUse)}>{languageButtonText}</a>
       </NavigationMenu>
     </HeaderContainer>
 
@@ -44,7 +79,22 @@ export const Header = () => {
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
     --x-width: calc(var(--hamburger-height) * calc(sqrt(2)));
     --left-mobile-menu-padding: 1.5em;
-  `
+
+    a.languageModifier{
+      font-size: 1.4em;
+      cursor:pointer;
+    color:#646cff;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2.5%;
+    }
+
+    //Phone view
+  @media (max-width:579px) {
+    a.languageModifier {
+      display:none;
+    }
+  }`
 
   const NavigationMenu = styled.div`
     margin-top: 2%;
@@ -59,6 +109,12 @@ export const Header = () => {
 
     a:hover, .header:hover {
     color: #fff3af;
+    cursor:pointer;
+    }
+
+    a.languageModifier{
+    display:none;
+    color:#646cff;
     }
 
     //tablet view
@@ -84,6 +140,10 @@ export const Header = () => {
 
       translate: ${props => props.$ismobilemenuopen? "0" : "-100%"};
       transition: translate var(--animation-timing);
+
+      a.languageModifier{
+      display:block;
+      }
     }
 
   `
@@ -150,9 +210,9 @@ export const Header = () => {
     @media(max-width:390px) {
     display:flex;
     flex-direction: column;
-    gap:2vw;
-    padding:3.5vw;
-    top:38vw;
+    gap:var(--hamburger-gap);
+    right:2.5vw;
+    z-index:10;
     }
 
   `

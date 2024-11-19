@@ -8,16 +8,33 @@ import ToolsSection from "../components/ToolsSection"
 import Header from '../components/Header'
 import ProjectsSection from '../components/ProjectsSection'
 import contactMeIcon from "../assets/contactMeIcon.png"
+import {CrossCountryProject} from '../assets/translations/projectsList'
 import {MediaIcons} from "../components/MediaIcons"
 import { ScrollRestoration } from 'react-router-dom'
 import Seo from "../components/Seo"
+import { useTranslation } from 'react-i18next';
 
-const name = "Hi, I'm Charles- Eric";
-const lettersArray = name.split('');
+//Todo : integrate the browser language detector
+//Todo : Add translation for al elmeent in the home page (DONE!)
+//Todo : Add translation for the crossCountryProjectPage
+//TOdo : Style the button.
+//Todo LATER : Use multiple file for translation
 
 function App() {
 
+const { t, i18n } = useTranslation();
+
+const lngs = [
+  { code: "en", native: "English" },
+  { code: "fr", native: "Francais" },
+];
+
+  const handleTrans = (code) => {
+    i18n.changeLanguage(code);
+  };
+
 const [open, SetOpen] = useState(false);
+
 
   return (
     <>
@@ -29,29 +46,33 @@ const [open, SetOpen] = useState(false);
       <IntroSection>
       <img src={homePagePhoto} alt='Picture of Charles-Eric'></img>
       <TitleSpacingSection>
-      {lettersArray.map((letter, index) => <MySpan $index={index} key={index}>{letter}</MySpan>)}
+      {t("name",{ returnObjects: true }).map((letter, index) => <MySpan $index={index} key={index}>{letter}</MySpan>)}
       </TitleSpacingSection>
 
       <SubTitleSpacingSection>
-      <h2>a passionate developper who likes to work hard and build nice projects.</h2>
-      <h3>If you need a project well done, with passion and good vibes, I'm your dev !</h3>
+      {/* {lngs.map((lng, i) => {
+        const { code, native } = lng;
+        return <button onClick={() => handleTrans(code)}>{native}</button>;
+      })}    */}
+      <h2> {t('firstIntro')}</h2>
+      <h3>{t ('secondIntro')}</h3>
       <MediaIcons/>
       </SubTitleSpacingSection>
       </IntroSection>
 
       <ToolsSectionStyling>
-      <h2>Tools I work with</h2>
+      <h2>{t ('myTools')}</h2>
       <ToolsSection/>
       </ToolsSectionStyling> 
   
       <ProjectSectionStyling id="projectsSection">
-      <h2>My current projects</h2>
-      <ProjectsSection/>
+      <h2>{t ("projects")}</h2>
+      <ProjectsSection project={CrossCountryProject}/>
       </ProjectSectionStyling>
 
       <GetInTouchSection id="getInTouchSection">
       <GetInTouchContainer>
-      <h2 id="getInTouchTitle" className="GetInTouch">Let's have a chat !</h2>
+      <h2 id="getInTouchTitle" className="GetInTouch">{t("contact")}</h2>
       <GetInTouchEmailContainer onClick={() => {navigator.clipboard.writeText("ce.stlouisdupuis@gmail.com") && SetOpen(true) }}>
       <p>ce.stlouisdupuis@gmail.com</p>
       </GetInTouchEmailContainer>
@@ -59,7 +80,7 @@ const [open, SetOpen] = useState(false);
       </GetInTouchContainer>
       <Snackbar open={open} autoHideDuration={4000} onClose={()=>SetOpen(null)}>
       <Alert severity="success">
-      Email copied to clipboard! 
+      {t("emailToolTip")}
       </Alert>
       </Snackbar> 
       
@@ -81,7 +102,7 @@ const FlipAnimation = keyframes`
 const MySpan = styled.span`
   display: inline-block;
   text-transform: uppercase;
-  font-size: calc(3.8vw + 3.8vh);
+  font-size: calc(2.8vw + 2.8vh);
   animation: ${FlipAnimation} 1s;
   animation-delay: ${(props) => 0.1 * props.$index}s;
   white-space:pre;
@@ -89,12 +110,12 @@ const MySpan = styled.span`
 
   //tablet view
   @media ( min-width: 580px) and (max-width:700px) {
-    font-size: calc(3.5vw + 3.5vh);
+    font-size: calc(3vw + 3vh);
   }
 
   //Phone view 
   @media(max-width:579px) {
-    font-size: calc(3vw + 3vh);
+    font-size: calc(2.8vw + 2.8vh);
   }
 `
 
@@ -130,7 +151,6 @@ const TitleSpacingSection= styled.div`
   span:nth-child(8) {
     display: block;
     height:0;
-    background-color: aliceblue;
   }
   span:nth-child(17) {
     display: none;
@@ -141,13 +161,16 @@ const TitleSpacingSection= styled.div`
       span:nth-child(17) {
       display: block;
       height:0;
-      background-color: aliceblue;
     }
   }`
 
 const SubTitleSpacingSection = styled.div`
-margin-top: 15%;
+
 font-size: 1.2em;
+//Phone View
+@media (max-width:579px) {
+margin-top: 15%;
+}
 `
 
 const ToolsSectionStyling = styled.section`

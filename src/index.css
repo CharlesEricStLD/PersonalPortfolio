@@ -18,8 +18,8 @@ p{
 
 :root {
   --fallbackBackgroundColor: #0f2030;
-
-  font-family: "Larken", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: "Larken", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: "Merriweather";
   line-height: 1.5;
   font-size: 1.5em;
 
